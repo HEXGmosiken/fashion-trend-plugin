@@ -1,0 +1,132 @@
+{
+  "$comment": "冻结的命题。改这里等于改分析口径，改完必须重跑并重新审计。",
+  "claims": [
+    {
+      "id": "C1",
+      "question": "透视/薄纱（sheer）在 SS27 秀场中的出现率是否高于 FW26？",
+      "signal": "sheer",
+      "signalLabel": "透视/薄纱",
+      "unit": "show",
+      "windowA": {
+        "label": "FW26（2026 秋冬）",
+        "start": "2026-02-01",
+        "end": "2026-04-30",
+        "season": "FW26"
+      },
+      "windowB": {
+        "label": "SS27（2027 春夏）",
+        "start": "2026-09-01",
+        "end": "2026-10-31",
+        "season": "SS27"
+      },
+      "direction": "up",
+      "minN": 12,
+      "sampleScope": {
+        "brands": [
+          "Example Brand 1",
+          "Example Brand 2",
+          "Example Brand 3",
+          "Example Brand 4"
+        ],
+        "sourceTypes": [
+          "runway",
+          "media"
+        ],
+        "include": [
+          "四大时装周女装秀场评论"
+        ],
+        "exclude": [
+          "品牌投放",
+          "电商导购",
+          "秀场图集"
+        ]
+      },
+      "codingRule": "造型中出现可透视的薄纱/欧根纱/网眼/蕾丝叠层，且作为外层或主视觉，记为 true；仅袖口、领口镶边不算；同一场秀只编码一次。",
+      "counterNote": "薄纱在 FW25 已经出现过一轮，本轮可能是周期回归而不是新增趋势。"
+    },
+    {
+      "id": "C2",
+      "question": "格纹（check）在 SS27 秀场中的出现率是否低于 FW26？",
+      "signal": "check",
+      "signalLabel": "格纹",
+      "unit": "show",
+      "windowA": {
+        "label": "FW26（2026 秋冬）",
+        "start": "2026-02-01",
+        "end": "2026-04-30",
+        "season": "FW26"
+      },
+      "windowB": {
+        "label": "SS27（2027 春夏）",
+        "start": "2026-09-01",
+        "end": "2026-10-31",
+        "season": "SS27"
+      },
+      "direction": "down",
+      "minN": 12,
+      "sampleScope": {
+        "brands": [
+          "Example Brand 1",
+          "Example Brand 2",
+          "Example Brand 3",
+          "Example Brand 4"
+        ],
+        "sourceTypes": [
+          "runway",
+          "media"
+        ],
+        "include": [
+          "四大时装周女装秀场评论"
+        ],
+        "exclude": [
+          "品牌投放",
+          "电商导购"
+        ]
+      },
+      "codingRule": "以格纹（含威尔士亲王格、苏格兰格、窗格）作为主面料或主图案，覆盖至少 3 个造型，记为 true；配饰上的格纹不算。",
+      "counterNote": "春夏本来就不是格纹的强势季节，季节性可能解释大部分差异。"
+    },
+    {
+      "id": "C3",
+      "question": "定制西装（tailoring）在 SS27 秀场中的出现率是否高于 FW26？",
+      "signal": "tailoring",
+      "signalLabel": "定制西装/剪裁外套",
+      "unit": "show",
+      "windowA": {
+        "label": "FW26（2026 秋冬）",
+        "start": "2026-02-01",
+        "end": "2026-04-30",
+        "season": "FW26"
+      },
+      "windowB": {
+        "label": "SS27（2027 春夏）",
+        "start": "2026-09-01",
+        "end": "2026-10-31",
+        "season": "SS27"
+      },
+      "direction": "up",
+      "minN": 12,
+      "sampleScope": {
+        "brands": [
+          "Example Brand 1",
+          "Example Brand 2",
+          "Example Brand 3",
+          "Example Brand 4"
+        ],
+        "sourceTypes": [
+          "runway",
+          "media"
+        ],
+        "include": [
+          "四大时装周女装秀场评论"
+        ],
+        "exclude": [
+          "品牌投放",
+          "电商导购"
+        ]
+      },
+      "codingRule": "出现成套或单件定制西装外套（有结构肩线、翻领、门襟），且不是针织仿西装，记为 true。",
+      "counterNote": "「西装回归」是媒体常青叙事，报道措辞可能先于实际设计变化。"
+    }
+  ]
+}

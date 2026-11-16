@@ -1,0 +1,329 @@
+{
+ "F01": {
+  "id": "F01",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F01.jpg",
+  "w": 1280,
+  "h": 720
+ },
+ "F02": {
+  "id": "F02",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F02.jpg",
+  "w": 1280,
+  "h": 720
+ },
+ "F03": {
+  "id": "F03",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F03.jpg",
+  "w": 1280,
+  "h": 720
+ },
+ "F04": {
+  "id": "F04",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F04.jpg",
+  "w": 1280,
+  "h": 720
+ },
+ "F05": {
+  "id": "F05",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F05.jpg",
+  "w": 1280,
+  "h": 720
+ },
+ "F06": {
+  "id": "F06",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F06.jpg",
+  "w": 1280,
+  "h": 720
+ },
+ "F07": {
+  "id": "F07",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F07.jpg",
+  "w": 1280,
+  "h": 720
+ },
+ "F08": {
+  "id": "F08",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F08.jpg",
+  "w": 1280,
+  "h": 720
+ },
+ "F09": {
+  "id": "F09",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F09.jpg",
+  "w": 1280,
+  "h": 720
+ },
+ "F10": {
+  "id": "F10",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F10.jpg",
+  "w": 1200,
+  "h": 675
+ },
+ "F11": {
+  "id": "F11",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F11.jpg",
+  "w": 1000,
+  "h": 563
+ },
+ "F12": {
+  "id": "F12",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F12.jpg",
+  "w": 1000,
+  "h": 563
+ },
+ "F13": {
+  "id": "F13",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F13.jpg",
+  "w": 1000,
+  "h": 563
+ },
+ "F14": {
+  "id": "F14",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F14.jpg",
+  "w": 1000,
+  "h": 563
+ },
+ "F15": {
+  "id": "F15",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F15.jpg",
+  "w": 1160,
+  "h": 600
+ },
+ "F16": {
+  "id": "F16",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F16.jpg",
+  "w": 1200,
+  "h": 600
+ },
+ "F17": {
+  "id": "F17",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F17.jpg",
+  "w": 1200,
+  "h": 600
+ },
+ "F18": {
+  "id": "F18",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F18.jpg",
+  "w": 1200,
+  "h": 600
+ },
+ "F19": {
+  "id": "F19",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F19.jpg",
+  "w": 1200,
+  "h": 627
+ },
+ "F20": {
+  "id": "F20",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F20.jpg",
+  "w": 1200,
+  "h": 627
+ },
+ "F21": {
+  "id": "F21",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F21.jpg",
+  "w": 1200,
+  "h": 627
+ },
+ "F22": {
+  "id": "F22",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F22.jpg",
+  "w": 1200,
+  "h": 627
+ },
+ "F23": {
+  "id": "F23",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F23.jpg",
+  "w": 1200,
+  "h": 627
+ },
+ "F24": {
+  "id": "F24",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F24.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ "F25": {
+  "id": "F25",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F25.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ "F26": {
+  "id": "F26",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F26.jpg",
+  "w": 1400,
+  "h": 787
+ },
+ "F27": {
+  "id": "F27",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F27.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ "F28": {
+  "id": "F28",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F28.jpg",
+  "w": 1200,
+  "h": 800
+ },
+ "F29": {
+  "id": "F29",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F29.jpg",
+  "w": 1400,
+  "h": 787
+ },
+ "F30": {
+  "id": "F30",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F30.jpg",
+  "w": 1400,
+  "h": 793
+ },
+ "F31": {
+  "id": "F31",
+  "status": "no-usable-image"
+ },
+ "F32": {
+  "id": "F32",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F32.jpg",
+  "w": 1400,
+  "h": 1050
+ },
+ "F33": {
+  "id": "F33",
+  "status": "no-usable-image"
+ },
+ "F34": {
+  "id": "F34",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F34.jpg",
+  "w": 945,
+  "h": 630
+ },
+ "F35": {
+  "id": "F35",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\F35.jpg",
+  "w": 945,
+  "h": 630
+ },
+ "L01": {
+  "id": "L01",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\L01.jpg",
+  "w": 815,
+  "h": 815
+ },
+ "L02": {
+  "id": "L02",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\L02.jpg",
+  "w": 815,
+  "h": 815
+ },
+ "L03": {
+  "id": "L03",
+  "status": "ok",
+  "file": "D:\\chajian\\assets\\img\\L03.jpg",
+  "w": 1400,
+  "h": 1050,
+  "img": "https://img.jiemian.com/jiemian/original/coze/20261014/a833867d5d1341c689a0836cf5de6c5d.jpg"
+ },
+ "L04": {
+  "id": "L04",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\L04.jpg",
+  "w": 800,
+  "h": 1000
+ },
+ "L05": {
+  "id": "L05",
+  "status": "ok",
+  "file": "D:\\chajian\\assets\\img\\L05.jpg",
+  "w": 1002,
+  "h": 1336,
+  "img": "https://img.jiemian.com/101/original/20260529/178002276951175300.jpeg"
+ },
+ "L06": {
+  "id": "L06",
+  "status": "ok",
+  "file": "D:\\chajian\\assets\\img\\L06.jpg",
+  "w": 1400,
+  "h": 932,
+  "img": "https://idea-cp.cnfin.com/ice/2026/03/31/6523505a4dbe44168485efc433599496.jpeg"
+ },
+ "L07": {
+  "id": "L07",
+  "status": "no-usable-image"
+ },
+ "L08": {
+  "id": "L08",
+  "status": "no-usable-image"
+ },
+ "L09": {
+  "id": "L09",
+  "status": "no-usable-image"
+ },
+ "L10": {
+  "id": "L10",
+  "status": "no-usable-image"
+ },
+ "L11": {
+  "id": "L11",
+  "status": "ok",
+  "file": "D:\\chajian\\assets\\img\\L11.jpg",
+  "w": 1400,
+  "h": 787,
+  "img": "https://cf.dtcj.com/fbf946be-e8fb-4a25-8f7c-6ad3fdf02696.jpg?imageslim"
+ },
+ "L12": {
+  "id": "L12",
+  "status": "no-usable-image"
+ },
+ "L13": {
+  "id": "L13",
+  "status": "no-usable-image"
+ },
+ "L14": {
+  "id": "L14",
+  "status": "cached",
+  "file": "D:\\chajian\\assets\\img\\L14.jpg",
+  "w": 1280,
+  "h": 720
+ },
+ "L15": {
+  "id": "L15",
+  "status": "no-usable-image"
+ }
+}

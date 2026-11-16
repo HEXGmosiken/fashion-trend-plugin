@@ -1,0 +1,27 @@
+{
+  "seasonLabel": "2027 春夏",
+  "seasonCode": "2027 S/S",
+  "periodLabel": "2026 年第四季度",
+  "coverTitle": "女装趋势观察",
+  "coverSub": "从一季的报道里，找出几条能被复核的趋势判断。",
+  "claims": {
+    "C1": {
+      "title": "轻薄透视",
+      "kwA": "薄纱层次",
+      "kwB": "若隐若现",
+      "palette": { "paper": "#EDF1F3", "accent": "#4F7484", "ink": "#18262C" }
+    },
+    "C2": {
+      "title": "格纹淡出",
+      "kwA": "秋冬主场",
+      "kwB": "春夏让位",
+      "palette": { "paper": "#F4EEE4", "accent": "#8A6A3B", "ink": "#241E17" }
+    },
+    "C3": {
+      "title": "定制西装",
+      "kwA": "媒体常青",
+      "kwB": "数据持平",
+      "palette": { "paper": "#EEEDEA", "accent": "#4A5058", "ink": "#1E2024" }
+    }
+  }
+}

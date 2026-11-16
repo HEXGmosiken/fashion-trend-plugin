@@ -1,0 +1,27 @@
+# 依赖与构建
+node_modules/
+*.log
+.env
+
+# 生成物
+reports/
+dist/
+.next/
+
+# 版权受限，不提交：文章全文、媒体配图、由全文生成的中间数据
+assets/img/
+data/external/
+data/articles.real.json
+data/evidence.real.json
+data/trends.json
+foreign.md
+local.md
+
+# 本机环境
+_acl-reports/
+__pycache__/
+.DS_Store
+Thumbs.db
+
+_archive/
+_tools/*.json

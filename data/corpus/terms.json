@@ -1,0 +1,1648 @@
+{
+ "version": "2026-11",
+ "note": "术语表：中文名 / 英文名 / 别名 / 一句话定义 / 所属板块。别名用于合并同义统计。",
+ "sources": [
+  "Vogue Runway 系列报道中的常用术语",
+  "BoF、WWD 的行业表述",
+  "品牌官网材质与工艺页",
+  "中国服装协会流行趋势稿"
+ ],
+ "terms": [
+  {
+   "zh": "风衣",
+   "en": "trench coat",
+   "aliases": [],
+   "def": "双排扣、带腰带的防水外套",
+   "board": "silhouette"
+  },
+  {
+   "zh": "大衣",
+   "en": "coat",
+   "aliases": [
+    "overcoat"
+   ],
+   "def": "及膝或更长的厚重外套",
+   "board": "silhouette"
+  },
+  {
+   "zh": "短大衣",
+   "en": "car coat",
+   "aliases": [],
+   "def": "长度到大腿的直筒外套",
+   "board": "silhouette"
+  },
+  {
+   "zh": "长外套",
+   "en": "long coat",
+   "aliases": [],
+   "def": "过膝的长款外套",
+   "board": "silhouette"
+  },
+  {
+   "zh": "羽绒服",
+   "en": "puffer",
+   "aliases": [
+    "down jacket"
+   ],
+   "def": "充绒的保暖外套",
+   "board": "silhouette"
+  },
+  {
+   "zh": "皮夹克",
+   "en": "leather jacket",
+   "aliases": [
+    "biker jacket"
+   ],
+   "def": "皮革制短外套",
+   "board": "silhouette"
+  },
+  {
+   "zh": "飞行夹克",
+   "en": "bomber jacket",
+   "aliases": [
+    "bomber"
+   ],
+   "def": "收口下摆的短夹克",
+   "board": "silhouette"
+  },
+  {
+   "zh": "牛仔夹克",
+   "en": "denim jacket",
+   "aliases": [
+    "trucker jacket"
+   ],
+   "def": "牛仔布短外套",
+   "board": "silhouette"
+  },
+  {
+   "zh": "西装外套",
+   "en": "blazer",
+   "aliases": [
+    "suit jacket"
+   ],
+   "def": "有翻领与结构的西式外套",
+   "board": "silhouette"
+  },
+  {
+   "zh": "无领外套",
+   "en": "collarless jacket",
+   "aliases": [],
+   "def": "去掉翻领的简洁外套",
+   "board": "silhouette"
+  },
+  {
+   "zh": "长裙",
+   "en": "maxi skirt",
+   "aliases": [
+    "maxi"
+   ],
+   "def": "长度到脚踝的裙装",
+   "board": "silhouette"
+  },
+  {
+   "zh": "中长裙",
+   "en": "midi skirt",
+   "aliases": [
+    "midi"
+   ],
+   "def": "长度过膝到小腿的裙装",
+   "board": "silhouette"
+  },
+  {
+   "zh": "迷你裙",
+   "en": "mini skirt",
+   "aliases": [
+    "mini"
+   ],
+   "def": "膝盖以上的短裙",
+   "board": "silhouette"
+  },
+  {
+   "zh": "铅笔裙",
+   "en": "pencil skirt",
+   "aliases": [],
+   "def": "贴合臀腿的窄裙",
+   "board": "silhouette"
+  },
+  {
+   "zh": "伞裙",
+   "en": "full skirt",
+   "aliases": [
+    "circle skirt"
+   ],
+   "def": "下摆展开的蓬松裙",
+   "board": "silhouette"
+  },
+  {
+   "zh": "百褶裙",
+   "en": "pleated skirt",
+   "aliases": [],
+   "def": "压出规则褶裥的裙装",
+   "board": "silhouette"
+  },
+  {
+   "zh": "连衣裙",
+   "en": "dress",
+   "aliases": [
+    "one-piece"
+   ],
+   "def": "上下连体的裙装",
+   "board": "silhouette"
+  },
+  {
+   "zh": "吊带裙",
+   "en": "slip dress",
+   "aliases": [],
+   "def": "细肩带的简洁裙装",
+   "board": "silhouette"
+  },
+  {
+   "zh": "衬衫裙",
+   "en": "shirt dress",
+   "aliases": [],
+   "def": "借衬衫结构的连衣裙",
+   "board": "silhouette"
+  },
+  {
+   "zh": "针织裙",
+   "en": "knit dress",
+   "aliases": [],
+   "def": "针织面料的连衣裙",
+   "board": "silhouette"
+  },
+  {
+   "zh": "阔腿裤",
+   "en": "wide-leg trousers",
+   "aliases": [
+    "wide leg"
+   ],
+   "def": "裤腿宽松的长裤",
+   "board": "silhouette"
+  },
+  {
+   "zh": "直筒裤",
+   "en": "straight-leg trousers",
+   "aliases": [
+    "straight leg"
+   ],
+   "def": "裤型平直的長裤",
+   "board": "silhouette"
+  },
+  {
+   "zh": "紧身裤",
+   "en": "skinny trousers",
+   "aliases": [
+    "skinny"
+   ],
+   "def": "贴合腿型的裤装",
+   "board": "silhouette"
+  },
+  {
+   "zh": "骑行裤",
+   "en": "biker shorts",
+   "aliases": [
+    "cycling shorts"
+   ],
+   "def": "及膝的紧身短裤",
+   "board": "silhouette"
+  },
+  {
+   "zh": "短裤",
+   "en": "shorts",
+   "aliases": [],
+   "def": "膝盖以上的裤装",
+   "board": "silhouette"
+  },
+  {
+   "zh": "工装裤",
+   "en": "cargo trousers",
+   "aliases": [
+    "cargo pants"
+   ],
+   "def": "带大口袋的宽松长裤",
+   "board": "silhouette"
+  },
+  {
+   "zh": "低腰",
+   "en": "low-rise",
+   "aliases": [
+    "low waist"
+   ],
+   "def": "腰线低于自然腰位的版型",
+   "board": "silhouette"
+  },
+  {
+   "zh": "高腰",
+   "en": "high-waist",
+   "aliases": [
+    "high waist"
+   ],
+   "def": "腰线高于自然腰位的版型",
+   "board": "silhouette"
+  },
+  {
+   "zh": "收腰",
+   "en": "cinched waist",
+   "aliases": [
+    "waist-cinching"
+   ],
+   "def": "腰部收紧的廓形",
+   "board": "silhouette"
+  },
+  {
+   "zh": "落肩",
+   "en": "dropped shoulder",
+   "aliases": [],
+   "def": "肩线落到上臂的版型",
+   "board": "silhouette"
+  },
+  {
+   "zh": "垫肩",
+   "en": "padded shoulder",
+   "aliases": [
+    "shoulder pad"
+   ],
+   "def": "加垫抬高肩线的结构",
+   "board": "silhouette"
+  },
+  {
+   "zh": "廓形",
+   "en": "silhouette",
+   "aliases": [
+    "shape"
+   ],
+   "def": "服装整体的外轮廓",
+   "board": "silhouette"
+  },
+  {
+   "zh": "量感",
+   "en": "volume",
+   "aliases": [],
+   "def": "面料与结构形成的体积感",
+   "board": "silhouette"
+  },
+  {
+   "zh": "短款",
+   "en": "cropped",
+   "aliases": [],
+   "def": "衣长明显缩短的版型",
+   "board": "silhouette"
+  },
+  {
+   "zh": "长线条",
+   "en": "longline",
+   "aliases": [],
+   "def": "纵向拉长的廓形",
+   "board": "silhouette"
+  },
+  {
+   "zh": "领口",
+   "en": "neckline",
+   "aliases": [],
+   "def": "衣领围合的形状",
+   "board": "silhouette"
+  },
+  {
+   "zh": "袖型",
+   "en": "sleeve",
+   "aliases": [
+    "sleeve shape"
+   ],
+   "def": "袖子的宽窄与长短",
+   "board": "silhouette"
+  },
+  {
+   "zh": "下摆",
+   "en": "hem",
+   "aliases": [],
+   "def": "衣服下缘的形状与处理",
+   "board": "silhouette"
+  },
+  {
+   "zh": "不对称",
+   "en": "asymmetry",
+   "aliases": [
+    "asymmetric"
+   ],
+   "def": "左右不平衡的剪裁",
+   "board": "silhouette"
+  },
+  {
+   "zh": "套装",
+   "en": "suit",
+   "aliases": [
+    "two-piece"
+   ],
+   "def": "上下同料的成套服装",
+   "board": "silhouette"
+  },
+  {
+   "zh": "剪裁",
+   "en": "tailoring",
+   "aliases": [
+    "tailored"
+   ],
+   "def": "按人体结构塑形的工艺",
+   "board": "construction"
+  },
+  {
+   "zh": "版型",
+   "en": "cut",
+   "aliases": [
+    "pattern cut"
+   ],
+   "def": "服装的平面结构方案",
+   "board": "construction"
+  },
+  {
+   "zh": "结构",
+   "en": "structure",
+   "aliases": [
+    "construction"
+   ],
+   "def": "衣片之间的连接与支撑",
+   "board": "construction"
+  },
+  {
+   "zh": "省道",
+   "en": "dart",
+   "aliases": [],
+   "def": "收去多余面料的结构线",
+   "board": "construction"
+  },
+  {
+   "zh": "褶裥",
+   "en": "pleat",
+   "aliases": [
+    "pleating"
+   ],
+   "def": "压出规则折痕的工艺",
+   "board": "construction"
+  },
+  {
+   "zh": "褶皱",
+   "en": "gathering",
+   "aliases": [
+    "ruching"
+   ],
+   "def": "抽缩面料形成的纹理",
+   "board": "construction"
+  },
+  {
+   "zh": "围裹",
+   "en": "wrap",
+   "aliases": [
+    "wrapped"
+   ],
+   "def": "用面料包裹身体的穿法",
+   "board": "construction"
+  },
+  {
+   "zh": "斜裁",
+   "en": "bias cut",
+   "aliases": [
+    "bias"
+   ],
+   "def": "沿纱线斜向裁剪以贴合身体",
+   "board": "construction"
+  },
+  {
+   "zh": "拼接",
+   "en": "patchwork",
+   "aliases": [
+    "panelling"
+   ],
+   "def": "不同面料拼接成衣",
+   "board": "construction"
+  },
+  {
+   "zh": "解构",
+   "en": "deconstruction",
+   "aliases": [
+    "deconstructed"
+   ],
+   "def": "拆解原有结构再重组",
+   "board": "construction"
+  },
+  {
+   "zh": "毛边",
+   "en": "raw edge",
+   "aliases": [],
+   "def": "不做锁边的原始边缘",
+   "board": "construction"
+  },
+  {
+   "zh": "绗缝",
+   "en": "quilting",
+   "aliases": [
+    "quilted"
+   ],
+   "def": "缝出格纹的夹层工艺",
+   "board": "construction"
+  },
+  {
+   "zh": "编织",
+   "en": "weave",
+   "aliases": [
+    "woven"
+   ],
+   "def": "交织纱线形成面料",
+   "board": "construction"
+  },
+  {
+   "zh": "钩针",
+   "en": "crochet",
+   "aliases": [],
+   "def": "用钩针编结的工艺",
+   "board": "construction"
+  },
+  {
+   "zh": "镂空",
+   "en": "cut-out",
+   "aliases": [
+    "openwork"
+   ],
+   "def": "面料上开出孔洞",
+   "board": "construction"
+  },
+  {
+   "zh": "抽绳",
+   "en": "drawstring",
+   "aliases": [],
+   "def": "用绳带收放的结构",
+   "board": "construction"
+  },
+  {
+   "zh": "系带",
+   "en": "lacing",
+   "aliases": [
+    "tie"
+   ],
+   "def": "用带子固定的结构",
+   "board": "construction"
+  },
+  {
+   "zh": "盘扣",
+   "en": "knot button",
+   "aliases": [
+    "frog closure"
+   ],
+   "def": "中式盘结纽扣",
+   "board": "construction"
+  },
+  {
+   "zh": "立领",
+   "en": "mandarin collar",
+   "aliases": [
+    "stand collar"
+   ],
+   "def": "竖立的窄领",
+   "board": "construction"
+  },
+  {
+   "zh": "翻领",
+   "en": "lapel",
+   "aliases": [],
+   "def": "向外翻折的衣领",
+   "board": "construction"
+  },
+  {
+   "zh": "内衬",
+   "en": "lining",
+   "aliases": [],
+   "def": "衣服内部的衬层",
+   "board": "construction"
+  },
+  {
+   "zh": "刺绣",
+   "en": "embroidery",
+   "aliases": [
+    "embroidered"
+   ],
+   "def": "在面料上绣出图案",
+   "board": "construction"
+  },
+  {
+   "zh": "珠绣",
+   "en": "beading",
+   "aliases": [
+    "beaded"
+   ],
+   "def": "缝缀珠子做装饰",
+   "board": "construction"
+  },
+  {
+   "zh": "亮片",
+   "en": "sequin",
+   "aliases": [
+    "sequined"
+   ],
+   "def": "缝缀反光亮片",
+   "board": "construction"
+  },
+  {
+   "zh": "流苏",
+   "en": "fringe",
+   "aliases": [],
+   "def": "垂挂的线穗装饰",
+   "board": "construction"
+  },
+  {
+   "zh": "荷叶边",
+   "en": "ruffle",
+   "aliases": [
+    "frill"
+   ],
+   "def": "波浪状边缘装饰",
+   "board": "construction"
+  },
+  {
+   "zh": "开衩",
+   "en": "slit",
+   "aliases": [],
+   "def": "下摆或裙侧开出的缝",
+   "board": "construction"
+  },
+  {
+   "zh": "层叠",
+   "en": "layering",
+   "aliases": [
+    "layered"
+   ],
+   "def": "多层叠加的穿法",
+   "board": "construction"
+  },
+  {
+   "zh": "腰封",
+   "en": "waist belt",
+   "aliases": [
+    "belted"
+   ],
+   "def": "束在腰部的带状结构",
+   "board": "construction"
+  },
+  {
+   "zh": "双面呢",
+   "en": "double-face",
+   "aliases": [],
+   "def": "双面可穿的毛呢工艺",
+   "board": "construction"
+  },
+  {
+   "zh": "立体裁剪",
+   "en": "draping",
+   "aliases": [
+    "drape on stand"
+   ],
+   "def": "在人台上直接塑形",
+   "board": "construction"
+  },
+  {
+   "zh": "薄纱",
+   "en": "sheer",
+   "aliases": [
+    "sheer fabric"
+   ],
+   "def": "轻薄透明的纱质面料",
+   "board": "material"
+  },
+  {
+   "zh": "欧根纱",
+   "en": "organza",
+   "aliases": [],
+   "def": "硬挺透明的薄纱",
+   "board": "material"
+  },
+  {
+   "zh": "网纱",
+   "en": "tulle",
+   "aliases": [
+    "mesh"
+   ],
+   "def": "网眼结构的薄纱",
+   "board": "material"
+  },
+  {
+   "zh": "蕾丝",
+   "en": "lace",
+   "aliases": [],
+   "def": "镂空花纹的织物",
+   "board": "material"
+  },
+  {
+   "zh": "雪纺",
+   "en": "chiffon",
+   "aliases": [],
+   "def": "轻薄飘逸的纱质面料",
+   "board": "material"
+  },
+  {
+   "zh": "真丝",
+   "en": "silk",
+   "aliases": [],
+   "def": "蚕丝织物",
+   "board": "material"
+  },
+  {
+   "zh": "缎面",
+   "en": "satin",
+   "aliases": [],
+   "def": "表面光滑有光泽的织物",
+   "board": "material"
+  },
+  {
+   "zh": "丝绒",
+   "en": "velvet",
+   "aliases": [],
+   "def": "表面有短绒的厚重织物",
+   "board": "material"
+  },
+  {
+   "zh": "灯芯绒",
+   "en": "corduroy",
+   "aliases": [],
+   "def": "表面有纵向绒条的棉织物",
+   "board": "material"
+  },
+  {
+   "zh": "麂皮",
+   "en": "suede",
+   "aliases": [],
+   "def": "打磨出绒毛的皮革",
+   "board": "material"
+  },
+  {
+   "zh": "皮革",
+   "en": "leather",
+   "aliases": [],
+   "def": "动物皮或仿皮材质",
+   "board": "material"
+  },
+  {
+   "zh": "漆皮",
+   "en": "patent leather",
+   "aliases": [
+    "patent"
+   ],
+   "def": "表面高光泽的皮革",
+   "board": "material"
+  },
+  {
+   "zh": "纳帕皮",
+   "en": "nappa",
+   "aliases": [],
+   "def": "柔软细腻的羊皮",
+   "board": "material"
+  },
+  {
+   "zh": "羊羔毛",
+   "en": "shearling",
+   "aliases": [],
+   "def": "带毛的羊皮",
+   "board": "material"
+  },
+  {
+   "zh": "皮草",
+   "en": "fur",
+   "aliases": [],
+   "def": "动物毛皮",
+   "board": "material"
+  },
+  {
+   "zh": "仿皮草",
+   "en": "faux fur",
+   "aliases": [],
+   "def": "人造毛皮",
+   "board": "material"
+  },
+  {
+   "zh": "粗花呢",
+   "en": "tweed",
+   "aliases": [
+    "bouclé"
+   ],
+   "def": "表面粗糙的羊毛织物",
+   "board": "material"
+  },
+  {
+   "zh": "羊毛",
+   "en": "wool",
+   "aliases": [],
+   "def": "绵羊毛织物",
+   "board": "material"
+  },
+  {
+   "zh": "羊绒",
+   "en": "cashmere",
+   "aliases": [],
+   "def": "山羊绒织物",
+   "board": "material"
+  },
+  {
+   "zh": "马海毛",
+   "en": "mohair",
+   "aliases": [],
+   "def": "安哥拉山羊毛织物",
+   "board": "material"
+  },
+  {
+   "zh": "针织",
+   "en": "knit",
+   "aliases": [
+    "knitwear"
+   ],
+   "def": "线圈串套的织物",
+   "board": "material"
+  },
+  {
+   "zh": "罗纹",
+   "en": "rib",
+   "aliases": [
+    "ribbed"
+   ],
+   "def": "纵向凸条的针织结构",
+   "board": "material"
+  },
+  {
+   "zh": "提花",
+   "en": "jacquard",
+   "aliases": [],
+   "def": "织出图案的织物",
+   "board": "material"
+  },
+  {
+   "zh": "牛仔",
+   "en": "denim",
+   "aliases": [],
+   "def": "斜纹棉布",
+   "board": "material"
+  },
+  {
+   "zh": "帆布",
+   "en": "canvas",
+   "aliases": [],
+   "def": "厚实平纹棉布",
+   "board": "material"
+  },
+  {
+   "zh": "塔夫绸",
+   "en": "taffeta",
+   "aliases": [],
+   "def": "硬挺有光泽的丝织物",
+   "board": "material"
+  },
+  {
+   "zh": "科技面料",
+   "en": "technical fabric",
+   "aliases": [
+    "performance fabric"
+   ],
+   "def": "功能性合成面料",
+   "board": "material"
+  },
+  {
+   "zh": "醋酸",
+   "en": "acetate",
+   "aliases": [],
+   "def": "半合成纤维面料",
+   "board": "material"
+  },
+  {
+   "zh": "粘胶",
+   "en": "viscose",
+   "aliases": [
+    "rayon"
+   ],
+   "def": "再生纤维素纤维",
+   "board": "material"
+  },
+  {
+   "zh": "亚麻",
+   "en": "linen",
+   "aliases": [],
+   "def": "亚麻纤维织物",
+   "board": "material"
+  },
+  {
+   "zh": "棉",
+   "en": "cotton",
+   "aliases": [],
+   "def": "棉纤维织物",
+   "board": "material"
+  },
+  {
+   "zh": "泡泡纱",
+   "en": "seersucker",
+   "aliases": [],
+   "def": "表面起泡的轻薄棉布",
+   "board": "material"
+  },
+  {
+   "zh": "金属丝",
+   "en": "metallic",
+   "aliases": [
+    "metallic yarn"
+   ],
+   "def": "混入金属光泽的纱线",
+   "board": "material"
+  },
+  {
+   "zh": "压纹",
+   "en": "embossed",
+   "aliases": [],
+   "def": "压出凹凸纹理的工艺",
+   "board": "material"
+  },
+  {
+   "zh": "做旧",
+   "en": "washed",
+   "aliases": [
+    "distressed"
+   ],
+   "def": "刻意做出使用痕迹",
+   "board": "material"
+  },
+  {
+   "zh": "磨毛",
+   "en": "brushed",
+   "aliases": [],
+   "def": "表面起绒的处理",
+   "board": "material"
+  },
+  {
+   "zh": "光泽",
+   "en": "sheen",
+   "aliases": [
+    "luster"
+   ],
+   "def": "面料表面的反光感",
+   "board": "material"
+  },
+  {
+   "zh": "哑光",
+   "en": "matte",
+   "aliases": [],
+   "def": "低反光的表面",
+   "board": "material"
+  },
+  {
+   "zh": "厚重",
+   "en": "heavyweight",
+   "aliases": [],
+   "def": "克重高、有分量的面料",
+   "board": "material"
+  },
+  {
+   "zh": "轻薄",
+   "en": "lightweight",
+   "aliases": [],
+   "def": "克重低、轻盈的面料",
+   "board": "material"
+  },
+  {
+   "zh": "大地色",
+   "en": "earth tone",
+   "aliases": [
+    "earth tones"
+   ],
+   "def": "取自自然的棕黄灰色系",
+   "board": "color"
+  },
+  {
+   "zh": "驼色",
+   "en": "camel",
+   "aliases": [],
+   "def": "偏黄的浅棕色",
+   "board": "color"
+  },
+  {
+   "zh": "焦糖",
+   "en": "caramel",
+   "aliases": [],
+   "def": "偏红的棕黄色",
+   "board": "color"
+  },
+  {
+   "zh": "巧克力棕",
+   "en": "chocolate brown",
+   "aliases": [
+    "chocolate"
+   ],
+   "def": "深棕偏黑的褐色",
+   "board": "color"
+  },
+  {
+   "zh": "咖啡棕",
+   "en": "brown",
+   "aliases": [
+    "coffee"
+   ],
+   "def": "中等深度的棕色",
+   "board": "color"
+  },
+  {
+   "zh": "米色",
+   "en": "beige",
+   "aliases": [],
+   "def": "浅米黄的中性色",
+   "board": "color"
+  },
+  {
+   "zh": "象牙白",
+   "en": "ivory",
+   "aliases": [],
+   "def": "偏黄的白色",
+   "board": "color"
+  },
+  {
+   "zh": "纯白",
+   "en": "white",
+   "aliases": [],
+   "def": "无彩的白色",
+   "board": "color"
+  },
+  {
+   "zh": "黑色",
+   "en": "black",
+   "aliases": [],
+   "def": "无彩的黑色",
+   "board": "color"
+  },
+  {
+   "zh": "炭灰",
+   "en": "charcoal",
+   "aliases": [],
+   "def": "接近黑的深灰",
+   "board": "color"
+  },
+  {
+   "zh": "鸽灰",
+   "en": "dove grey",
+   "aliases": [
+    "grey"
+   ],
+   "def": "带蓝调的浅灰",
+   "board": "color"
+  },
+  {
+   "zh": "酒红",
+   "en": "burgundy",
+   "aliases": [
+    "oxblood"
+   ],
+   "def": "深沉的暗红",
+   "board": "color"
+  },
+  {
+   "zh": "樱桃红",
+   "en": "cherry red",
+   "aliases": [
+    "cherry"
+   ],
+   "def": "明亮偏冷的红",
+   "board": "color"
+  },
+  {
+   "zh": "辣椒红",
+   "en": "chili red",
+   "aliases": [],
+   "def": "偏橙的高饱和红",
+   "board": "color"
+  },
+  {
+   "zh": "正红",
+   "en": "red",
+   "aliases": [],
+   "def": "纯正的红色",
+   "board": "color"
+  },
+  {
+   "zh": "珊瑚粉",
+   "en": "coral",
+   "aliases": [],
+   "def": "偏橙的粉色",
+   "board": "color"
+  },
+  {
+   "zh": "玫瑰粉",
+   "en": "rose",
+   "aliases": [
+    "rose pink"
+   ],
+   "def": "带灰调的粉",
+   "board": "color"
+  },
+  {
+   "zh": "裸粉",
+   "en": "nude pink",
+   "aliases": [
+    "nude"
+   ],
+   "def": "接近肤色的粉",
+   "board": "color"
+  },
+  {
+   "zh": "雾霾蓝",
+   "en": "dusty blue",
+   "aliases": [],
+   "def": "掺灰的浅蓝",
+   "board": "color"
+  },
+  {
+   "zh": "公主蓝",
+   "en": "princess blue",
+   "aliases": [],
+   "def": "明度较高的蓝",
+   "board": "color"
+  },
+  {
+   "zh": "夜光蓝",
+   "en": "luminous blue",
+   "aliases": [],
+   "def": "带荧光感的亮蓝",
+   "board": "color"
+  },
+  {
+   "zh": "藏青",
+   "en": "navy",
+   "aliases": [],
+   "def": "偏黑的深蓝",
+   "board": "color"
+  },
+  {
+   "zh": "牛仔蓝",
+   "en": "denim blue",
+   "aliases": [],
+   "def": "水洗牛仔的蓝",
+   "board": "color"
+  },
+  {
+   "zh": "湖绿",
+   "en": "lagoon",
+   "aliases": [],
+   "def": "清透的蓝绿",
+   "board": "color"
+  },
+  {
+   "zh": "橄榄绿",
+   "en": "olive",
+   "aliases": [],
+   "def": "偏黄的暗绿",
+   "board": "color"
+  },
+  {
+   "zh": "苔藓绿",
+   "en": "moss",
+   "aliases": [],
+   "def": "偏灰的自然绿",
+   "board": "color"
+  },
+  {
+   "zh": "薄荷绿",
+   "en": "mint",
+   "aliases": [],
+   "def": "浅而清透的绿",
+   "board": "color"
+  },
+  {
+   "zh": "黄油黄",
+   "en": "butter yellow",
+   "aliases": [
+    "butter"
+   ],
+   "def": "柔和的浅黄",
+   "board": "color"
+  },
+  {
+   "zh": "茴香黄",
+   "en": "anise",
+   "aliases": [],
+   "def": "偏绿的浅黄",
+   "board": "color"
+  },
+  {
+   "zh": "姜黄",
+   "en": "turmeric",
+   "aliases": [],
+   "def": "偏橙的深黄",
+   "board": "color"
+  },
+  {
+   "zh": "琥珀",
+   "en": "amber",
+   "aliases": [],
+   "def": "暖调的黄棕",
+   "board": "color"
+  },
+  {
+   "zh": "金属色",
+   "en": "metallic",
+   "aliases": [],
+   "def": "带金属反光的色",
+   "board": "color"
+  },
+  {
+   "zh": "香槟金",
+   "en": "champagne",
+   "aliases": [],
+   "def": "偏白的浅金",
+   "board": "color"
+  },
+  {
+   "zh": "银色",
+   "en": "silver",
+   "aliases": [],
+   "def": "金属银灰",
+   "board": "color"
+  },
+  {
+   "zh": "紫色",
+   "en": "purple",
+   "aliases": [],
+   "def": "红蓝之间的色相",
+   "board": "color"
+  },
+  {
+   "zh": "梅子紫",
+   "en": "plum",
+   "aliases": [],
+   "def": "偏红的深紫",
+   "board": "color"
+  },
+  {
+   "zh": "荧光色",
+   "en": "neon",
+   "aliases": [
+    "fluorescent"
+   ],
+   "def": "高饱和的亮色",
+   "board": "color"
+  },
+  {
+   "zh": "撞色",
+   "en": "color-block",
+   "aliases": [
+    "color blocking"
+   ],
+   "def": "强对比配色",
+   "board": "color"
+  },
+  {
+   "zh": "静奢",
+   "en": "quiet luxury",
+   "aliases": [
+    "stealth wealth"
+   ],
+   "def": "去掉标识、强调材质的富感",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "老钱",
+   "en": "old money",
+   "aliases": [],
+   "def": "承袭式的上流审美",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "极简",
+   "en": "minimalism",
+   "aliases": [
+    "minimal"
+   ],
+   "def": "做减法的设计取向",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "繁复",
+   "en": "maximalism",
+   "aliases": [
+    "maximal"
+   ],
+   "def": "叠加装饰的设计取向",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "新中式",
+   "en": "light Chinese",
+   "aliases": [
+    "new Chinese style"
+   ],
+   "def": "把东方结构日常化的设计",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "国风",
+   "en": "guofeng",
+   "aliases": [
+    "chinoiserie"
+   ],
+   "def": "取中国传统元素的风格",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "东方美学",
+   "en": "oriental aesthetic",
+   "aliases": [
+    "eastern aesthetic"
+   ],
+   "def": "以东方意境为内核的审美",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "浪漫主义",
+   "en": "romanticism",
+   "aliases": [
+    "romantic"
+   ],
+   "def": "强调情绪与柔软的表达",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "波西米亚",
+   "en": "bohemian",
+   "aliases": [
+    "boho"
+   ],
+   "def": "自由、游牧式的穿法",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "学院风",
+   "en": "preppy",
+   "aliases": [
+    "collegiate"
+   ],
+   "def": "源自校园制服的风格",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "摇滚",
+   "en": "rock",
+   "aliases": [
+    "punk"
+   ],
+   "def": "带反叛气质的街头风格",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "垃圾摇滚",
+   "en": "grunge",
+   "aliases": [],
+   "def": "九十年代西雅图的颓废风格",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "暗黑",
+   "en": "dark",
+   "aliases": [
+    "gothic"
+   ],
+   "def": "以黑与破损为核心的审美",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "复古",
+   "en": "vintage",
+   "aliases": [
+    "retro"
+   ],
+   "def": "取用旧时代的元素",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "未来主义",
+   "en": "futurism",
+   "aliases": [
+    "futuristic"
+   ],
+   "def": "强调科技感的取向",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "机能",
+   "en": "techwear",
+   "aliases": [
+    "technical"
+   ],
+   "def": "以功能为先的都市装备风",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "户外",
+   "en": "gorpcore",
+   "aliases": [
+    "outdoor"
+   ],
+   "def": "借登山装备的日常穿法",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "运动风",
+   "en": "sporty",
+   "aliases": [
+    "sportswear"
+   ],
+   "def": "借运动单品的风格",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "街头",
+   "en": "streetwear",
+   "aliases": [
+    "street style"
+   ],
+   "def": "源自街头的穿着方式",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "度假风",
+   "en": "resort",
+   "aliases": [
+    "resortwear"
+   ],
+   "def": "轻松的假日穿着",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "田园",
+   "en": "cottagecore",
+   "aliases": [],
+   "def": "回归乡野的浪漫想象",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "菜园",
+   "en": "garden-core",
+   "aliases": [],
+   "def": "以园艺与劳作为灵感的风格",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "女神",
+   "en": "goddess-core",
+   "aliases": [],
+   "def": "以垂坠长裙为核心的女神意象",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "芭蕾风",
+   "en": "balletcore",
+   "aliases": [],
+   "def": "借芭蕾练功服的风格",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "少女",
+   "en": "coquette",
+   "aliases": [],
+   "def": "强调娇俏与蕾丝的少女感",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "权力着装",
+   "en": "power dressing",
+   "aliases": [],
+   "def": "用西装建立权威的穿法",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "实用主义",
+   "en": "utilitarianism",
+   "aliases": [
+    "utilitarian"
+   ],
+   "def": "以功能与耐穿为先",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "装饰主义",
+   "en": "ornamentalism",
+   "aliases": [
+    "ornamental"
+   ],
+   "def": "以装饰为核心的取向",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "超现实",
+   "en": "surrealism",
+   "aliases": [
+    "surreal"
+   ],
+   "def": "打破现实逻辑的想象",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "中性",
+   "en": "unisex",
+   "aliases": [],
+   "def": "不区分性别的设计",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "无性别",
+   "en": "genderless",
+   "aliases": [
+    "gender-neutral"
+   ],
+   "def": "弱化性别特征的设计",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "手作",
+   "en": "craft",
+   "aliases": [
+    "handmade"
+   ],
+   "def": "强调手工痕迹的取向",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "侘寂",
+   "en": "wabi-sabi",
+   "aliases": [],
+   "def": "接受不完美与时间的审美",
+   "board": "aesthetic"
+  },
+  {
+   "zh": "通勤",
+   "en": "office",
+   "aliases": [
+    "commute"
+   ],
+   "def": "上班场景的穿着",
+   "board": "occasion"
+  },
+  {
+   "zh": "职场",
+   "en": "workwear",
+   "aliases": [
+    "work"
+   ],
+   "def": "职业场景的着装",
+   "board": "occasion"
+  },
+  {
+   "zh": "日常",
+   "en": "everyday",
+   "aliases": [
+    "daily"
+   ],
+   "def": "非正式场合的基础穿着",
+   "board": "occasion"
+  },
+  {
+   "zh": "周末",
+   "en": "weekend",
+   "aliases": [],
+   "def": "休闲时段的穿着",
+   "board": "occasion"
+  },
+  {
+   "zh": "度假",
+   "en": "resort",
+   "aliases": [
+    "holiday"
+   ],
+   "def": "旅行与假日的穿着",
+   "board": "occasion"
+  },
+  {
+   "zh": "派对",
+   "en": "party",
+   "aliases": [],
+   "def": "聚会与夜生活的穿着",
+   "board": "occasion"
+  },
+  {
+   "zh": "晚宴",
+   "en": "evening",
+   "aliases": [
+    "eveningwear"
+   ],
+   "def": "正式晚间的着装",
+   "board": "occasion"
+  },
+  {
+   "zh": "红毯",
+   "en": "red carpet",
+   "aliases": [],
+   "def": "公开典礼的着装",
+   "board": "occasion"
+  },
+  {
+   "zh": "婚礼",
+   "en": "wedding",
+   "aliases": [
+    "bridal"
+   ],
+   "def": "婚礼相关的穿着",
+   "board": "occasion"
+  },
+  {
+   "zh": "音乐节",
+   "en": "festival",
+   "aliases": [],
+   "def": "户外音乐活动的穿着",
+   "board": "occasion"
+  },
+  {
+   "zh": "徒步",
+   "en": "hiking",
+   "aliases": [
+    "outdoor"
+   ],
+   "def": "户外行走的装备",
+   "board": "occasion"
+  },
+  {
+   "zh": "运动健身",
+   "en": "gym",
+   "aliases": [
+    "workout"
+   ],
+   "def": "训练场景的穿着",
+   "board": "occasion"
+  },
+  {
+   "zh": "瑜伽",
+   "en": "yoga",
+   "aliases": [],
+   "def": "瑜伽练习的服装",
+   "board": "occasion"
+  },
+  {
+   "zh": "骑行",
+   "en": "cycling",
+   "aliases": [],
+   "def": "骑车场景的服装",
+   "board": "occasion"
+  },
+  {
+   "zh": "旅行",
+   "en": "travel",
+   "aliases": [],
+   "def": "出行途中的穿着",
+   "board": "occasion"
+  },
+  {
+   "zh": "居家",
+   "en": "loungewear",
+   "aliases": [
+    "homewear"
+   ],
+   "def": "在家穿着的舒适服装",
+   "board": "occasion"
+  },
+  {
+   "zh": "泳装",
+   "en": "swimwear",
+   "aliases": [
+    "swim"
+   ],
+   "def": "水中活动服装",
+   "board": "occasion"
+  },
+  {
+   "zh": "演出",
+   "en": "performance",
+   "aliases": [
+    "stage"
+   ],
+   "def": "舞台表演服装",
+   "board": "occasion"
+  },
+  {
+   "zh": "约会",
+   "en": "date",
+   "aliases": [],
+   "def": "私人社交场合的穿着",
+   "board": "occasion"
+  },
+  {
+   "zh": "开学",
+   "en": "campus",
+   "aliases": [
+    "back to school"
+   ],
+   "def": "校园场景的穿着",
+   "board": "occasion"
+  },
+  {
+   "zh": "新年",
+   "en": "lunar new year",
+   "aliases": [
+    "CNY"
+   ],
+   "def": "春节相关的穿着",
+   "board": "occasion"
+  },
+  {
+   "zh": "换季",
+   "en": "transitional",
+   "aliases": [],
+   "def": "季节交替时的穿着",
+   "board": "occasion"
+  }
+ ]
+}

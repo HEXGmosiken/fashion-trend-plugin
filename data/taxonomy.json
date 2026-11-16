@@ -1,0 +1,10 @@
+{
+  "boards": [
+    { "key": "silhouette", "name": "廓形款式", "en": "Silhouette", "desc": "这一季衣服长什么形状" },
+    { "key": "construction", "name": "结构工艺", "en": "Construction", "desc": "这个形状是怎么做出来的" },
+    { "key": "material", "name": "材质肌理", "en": "Material", "desc": "用什么料子做出这个手感" },
+    { "key": "color", "name": "色彩", "en": "Colour", "desc": "这一季在用什么颜色" },
+    { "key": "aesthetic", "name": "风格美学", "en": "Aesthetic", "desc": "整体在表达哪一种气质" },
+    { "key": "occasion", "name": "场景穿着", "en": "Occasion", "desc": "这些衣服穿去哪儿" }
+  ]
+}

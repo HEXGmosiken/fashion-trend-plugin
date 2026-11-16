@@ -1,0 +1,91 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "question": "在 Q4 的媒体话语里，「透视/薄纱」在 SS27 报道中的提及率是否高于 FW26 报道？",
+      "signal": "sheer",
+      "signalLabel": "透视/薄纱",
+      "unit": "article",
+      "windowA": {
+        "label": "FW26 报道（2026 秋冬）",
+        "season": "FW26",
+        "start": "2026-02-01",
+        "end": "2026-10-31"
+      },
+      "windowB": {
+        "label": "SS27 报道（2027 春夏）",
+        "season": "SS27",
+        "start": "2026-09-01",
+        "end": "2026-11-30"
+      },
+      "direction": "up",
+      "minN": 10,
+      "sampleScope": {
+        "brands": [],
+        "sourceTypes": ["runway", "media", "forecast", "trade"],
+        "include": ["以该季为主题的秀场评论、趋势盘点"],
+        "exclude": ["零售与消费数据稿", "单一品牌投放", "纯购物清单"]
+      },
+      "codingRule": "正文中出现至少 2 处关于薄纱/透视/网眼/欧根纱的实质讨论，或 1 处明确的趋势判断句，记为 true；仅出现在单件服装描述、图注、比喻（如 see-through 用于透明化）中不算。",
+      "counterNote": "薄纱在 SS26 已有一轮讨论，本轮可能只是延续而非新增；且春夏本来就更适合薄透面料，季节性是主要替代解释。"
+    },
+    {
+      "id": "C2",
+      "question": "在 Q4 的媒体话语里，「格纹」在 SS27 报道中的提及率是否低于 FW26 报道？",
+      "signal": "check",
+      "signalLabel": "格纹",
+      "unit": "article",
+      "windowA": {
+        "label": "FW26 报道（2026 秋冬）",
+        "season": "FW26",
+        "start": "2026-02-01",
+        "end": "2026-10-31"
+      },
+      "windowB": {
+        "label": "SS27 报道（2027 春夏）",
+        "season": "SS27",
+        "start": "2026-09-01",
+        "end": "2026-11-30"
+      },
+      "direction": "down",
+      "minN": 10,
+      "sampleScope": {
+        "brands": [],
+        "sourceTypes": ["runway", "media", "forecast", "trade"],
+        "include": ["以该季为主题的秀场评论、趋势盘点"],
+        "exclude": ["零售与消费数据稿", "单一品牌投放", "纯购物清单"]
+      },
+      "codingRule": "正文中出现至少 2 处关于格纹（tartan / plaid / 千鸟格 / 威尔士亲王格）的实质讨论，或 1 处明确的趋势判断句，记为 true；搭配建议里顺带提到不算；gut-check 这类词形不算。",
+      "counterNote": "格纹是秋冬的结构性品类，春夏占比低属于季节性常态，不能直接读成「格纹失宠」。"
+    },
+    {
+      "id": "C3",
+      "question": "在 Q4 的媒体话语里，「定制西装/剪裁」在 SS27 报道中的提及率是否高于 FW26 报道？",
+      "signal": "tailoring",
+      "signalLabel": "定制西装/剪裁",
+      "unit": "article",
+      "windowA": {
+        "label": "FW26 报道（2026 秋冬）",
+        "season": "FW26",
+        "start": "2026-02-01",
+        "end": "2026-10-31"
+      },
+      "windowB": {
+        "label": "SS27 报道（2027 春夏）",
+        "season": "SS27",
+        "start": "2026-09-01",
+        "end": "2026-11-30"
+      },
+      "direction": "up",
+      "minN": 10,
+      "sampleScope": {
+        "brands": [],
+        "sourceTypes": ["runway", "media", "forecast", "trade"],
+        "include": ["以该季为主题的秀场评论、趋势盘点"],
+        "exclude": ["零售与消费数据稿", "单一品牌投放", "纯购物清单"]
+      },
+      "codingRule": "正文中出现至少 2 处关于西装/剪裁外套/定制（tailoring、suit、blazer）的实质讨论，或 1 处明确的趋势判断句，记为 true；「剪裁利落」这类泛用形容词只算 0.5 不计入；bodysuit 不算。",
+      "counterNote": "「西装回归」是媒体常青叙事，报道措辞可能先于实际设计变化；本语料只能证明「媒体在说」，不能证明「秀场在做」。"
+    }
+  ]
+}

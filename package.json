@@ -1,0 +1,28 @@
+{
+  "name": "trend-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "服装趋势分析插件：证据台账 → 指标 → 结论 → 审计 → 报告（可复核、低幻觉）",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "demo": "node src/cli/index.ts demo",
+    "validate": "node src/cli/index.ts validate --input data/evidence.sample.json",
+    "analyze": "node src/cli/index.ts analyze",
+    "audit": "node src/cli/index.ts audit --input data/evidence.sample.json",
+    "check": "node src/cli/index.ts audit --input data/evidence.sample.json",
+    "test": "node --test \"tests/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "real": "node src/cli/index.ts analyze --input data/evidence.real.json --claims data/claims.real.json --sources data/sources.real.json --trends data/trends.json --out reports/curated",
+    "ingest": "node src/cli/index.ts ingest"
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.2",
+    "typescript": "^5.9.3"
+  }
+}

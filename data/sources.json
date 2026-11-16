@@ -1,0 +1,173 @@
+{
+  "$comment": "来源注册表。domain 使用 example 保留域，全部为演示数据。真实使用时替换成实际站点。",
+  "sources": [
+    {
+      "id": "src-vogue",
+      "name": "Vogue",
+      "domain": "vogue.example",
+      "publisherGroup": "conde-nast",
+      "language": "en",
+      "region": "us",
+      "type": "media",
+      "tier": 2,
+      "paywall": true,
+      "crawlable": false
+    },
+    {
+      "id": "src-vogue-uk",
+      "name": "Vogue UK",
+      "domain": "vogue.co.uk.example",
+      "publisherGroup": "conde-nast",
+      "language": "en",
+      "region": "uk",
+      "type": "media",
+      "tier": 2,
+      "paywall": true,
+      "crawlable": false
+    },
+    {
+      "id": "src-wwd",
+      "name": "WWD",
+      "domain": "wwd.example",
+      "publisherGroup": "wwd",
+      "language": "en",
+      "region": "us",
+      "type": "media",
+      "tier": 2,
+      "paywall": true,
+      "crawlable": false
+    },
+    {
+      "id": "src-bof",
+      "name": "Business of Fashion",
+      "domain": "businessoffashion.example",
+      "publisherGroup": "bof",
+      "language": "en",
+      "region": "global",
+      "type": "media",
+      "tier": 2,
+      "paywall": true,
+      "crawlable": false
+    },
+    {
+      "id": "src-hb",
+      "name": "Harper's Bazaar",
+      "domain": "harpersbazaar.example",
+      "publisherGroup": "hearst",
+      "language": "en",
+      "region": "us",
+      "type": "media",
+      "tier": 2,
+      "paywall": false,
+      "crawlable": true
+    },
+    {
+      "id": "src-www",
+      "name": "Who What Wear",
+      "domain": "whowhatwear.example",
+      "publisherGroup": "future-plc",
+      "language": "en",
+      "region": "us",
+      "type": "media",
+      "tier": 2,
+      "paywall": false,
+      "crawlable": true
+    },
+    {
+      "id": "src-tzr",
+      "name": "The Zoe Report",
+      "domain": "thezoereport.example",
+      "publisherGroup": "bustle-group",
+      "language": "en",
+      "region": "us",
+      "type": "media",
+      "tier": 2,
+      "paywall": false,
+      "crawlable": true
+    },
+    {
+      "id": "src-fu",
+      "name": "FashionUnited",
+      "domain": "fashionunited.example",
+      "publisherGroup": "fashionunited",
+      "language": "en",
+      "region": "global",
+      "type": "media",
+      "tier": 2,
+      "paywall": false,
+      "crawlable": true
+    },
+    {
+      "id": "src-wgsn",
+      "name": "WGSN",
+      "domain": "wgsn.example",
+      "publisherGroup": "wgsn",
+      "language": "en",
+      "region": "global",
+      "type": "forecast",
+      "tier": 1,
+      "paywall": true,
+      "crawlable": false
+    },
+    {
+      "id": "src-pv",
+      "name": "Première Vision",
+      "domain": "premierevision.example",
+      "publisherGroup": "premiere-vision",
+      "language": "en",
+      "region": "global",
+      "type": "trade",
+      "tier": 1,
+      "paywall": false,
+      "crawlable": true
+    },
+    {
+      "id": "src-zh-vogue",
+      "name": "Vogue China",
+      "domain": "vogue.com.cn.example",
+      "publisherGroup": "conde-nast",
+      "language": "zh",
+      "region": "cn",
+      "type": "media",
+      "tier": 2,
+      "paywall": false,
+      "crawlable": true
+    },
+    {
+      "id": "src-zh-jiemian",
+      "name": "界面新闻",
+      "domain": "jiemian.example",
+      "publisherGroup": "jiemian",
+      "language": "zh",
+      "region": "cn",
+      "type": "media",
+      "tier": 2,
+      "paywall": false,
+      "crawlable": true
+    },
+    {
+      "id": "src-zh-ladymax",
+      "name": "LADYMAX",
+      "domain": "ladymax.example",
+      "publisherGroup": "ladymax",
+      "language": "zh",
+      "region": "cn",
+      "type": "media",
+      "tier": 3,
+      "paywall": false,
+      "crawlable": true
+    },
+    {
+      "id": "src-zh-cbndata",
+      "name": "CBNData",
+      "domain": "cbndata.example",
+      "publisherGroup": "cbndata",
+      "language": "zh",
+      "region": "cn",
+      "type": "commerce",
+      "tier": 3,
+      "paywall": false,
+      "crawlable": true
+    }
+  ]
+}

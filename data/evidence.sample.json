@@ -1,0 +1,626 @@
+{
+  "dataset": "synthetic-demo-v1",
+  "synthetic": true,
+  "evidence": [
+    {
+      "id": "E-A01",
+      "sourceId": "src-vogue",
+      "url": "https://demo.runway.example/fw26/review-01",
+      "title": "FW26 秀场评论 #01（合成示例）",
+      "publishedAt": "2026-02-05",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 2",
+      "category": "womenswear",
+      "excerpt": "The report says that the silhouettes were built by structure rather than transparency; prince-of-wales check suiting dominated the lineup.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": true,
+        "tailoring": true
+      }
+    },
+    {
+      "id": "E-A02",
+      "sourceId": "src-vogue-uk",
+      "url": "https://demo.runway.example/fw26/review-02",
+      "title": "FW26 秀场评论 #02（合成示例）",
+      "publishedAt": "2026-02-10",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 3",
+      "category": "womenswear",
+      "excerpt": "Editors observed that sheer organza was layered over tailoring as an outer shell; prints were florals and abstract colour blocks; no check appeared.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": false,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-A03",
+      "sourceId": "src-wwd",
+      "url": "https://demo.runway.example/fw26/review-03",
+      "title": "FW26 秀场评论 #03（合成示例）",
+      "publishedAt": "2026-02-15",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 4",
+      "category": "womenswear",
+      "excerpt": "The show review notes that the fabric story was opaque wool and leather, with no sheer layering; prince-of-wales check suiting dominated the lineup.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": true,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-A04",
+      "sourceId": "src-hb",
+      "url": "https://demo.runway.example/fw26/review-04",
+      "title": "FW26 秀场评论 #04（合成示例）",
+      "publishedAt": "2026-02-20",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 5",
+      "category": "womenswear",
+      "excerpt": "The show review notes that the silhouettes were built by structure rather than transparency; tartan coats ran through the whole show.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": true,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-A05",
+      "sourceId": "src-www",
+      "url": "https://demo.runway.example/fw26/review-05",
+      "title": "FW26 秀场评论 #05（合成示例）",
+      "publishedAt": "2026-02-25",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 6",
+      "category": "womenswear",
+      "excerpt": "The report says that the fabric story was opaque wool and leather, with no sheer layering; the surface story was solid twill and leather.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": false,
+        "tailoring": true
+      }
+    },
+    {
+      "id": "E-A06",
+      "sourceId": "src-fu",
+      "url": "https://demo.runway.example/fw26/review-06",
+      "title": "FW26 秀场评论 #06（合成示例）",
+      "publishedAt": "2026-03-02",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 1",
+      "category": "womenswear",
+      "excerpt": "The report says that the fabric story was opaque wool and leather, with no sheer layering; prince-of-wales check suiting dominated the lineup.",
+      "originality": "reprint",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": true,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-A07",
+      "sourceId": "src-bof",
+      "url": "https://demo.runway.example/fw26/review-07",
+      "title": "FW26 秀场评论 #07（合成示例）",
+      "publishedAt": "2026-03-07",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 2",
+      "category": "womenswear",
+      "excerpt": "The show review notes that gauze dresses deliberately revealed the underlayer; prints were florals and abstract colour blocks; no check appeared.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": false,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-A08",
+      "sourceId": "src-vogue",
+      "url": "https://demo.runway.example/fw26/review-08",
+      "title": "FW26 秀场评论 #08（合成示例）",
+      "publishedAt": "2026-03-12",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 3",
+      "category": "womenswear",
+      "excerpt": "The show review notes that the fabric story was opaque wool and leather, with no sheer layering; tartan coats ran through the whole show.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": true,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-A09",
+      "sourceId": "src-vogue-uk",
+      "url": "https://demo.runway.example/fw26/review-09",
+      "title": "FW26 秀场评论 #09（合成示例）",
+      "publishedAt": "2026-03-17",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 4",
+      "category": "womenswear",
+      "excerpt": "The show review notes that the fabric story was opaque wool and leather, with no sheer layering; tartan coats ran through the whole show.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": true,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-A10",
+      "sourceId": "src-wwd",
+      "url": "https://demo.runway.example/fw26/review-10",
+      "title": "FW26 秀场评论 #10（合成示例）",
+      "publishedAt": "2026-03-22",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 5",
+      "category": "womenswear",
+      "excerpt": "The report says that the fabric story was opaque wool and leather, with no sheer layering; tartan coats ran through the whole show.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": true,
+        "tailoring": true
+      }
+    },
+    {
+      "id": "E-A11",
+      "sourceId": "src-hb",
+      "url": "https://demo.runway.example/fw26/review-11",
+      "title": "FW26 秀场评论 #11（合成示例）",
+      "publishedAt": "2026-03-27",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 6",
+      "category": "womenswear",
+      "excerpt": "Editors observed that sheer organza was layered over tailoring as an outer shell; prints were florals and abstract colour blocks; no check appeared.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": false,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-A12",
+      "sourceId": "src-www",
+      "url": "https://demo.runway.example/fw26/review-12",
+      "title": "FW26 秀场评论 #12（合成示例）",
+      "publishedAt": "2026-04-01",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 1",
+      "category": "womenswear",
+      "excerpt": "The report says that the silhouettes were built by structure rather than transparency; the surface story was solid twill and leather.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": false,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-A13",
+      "sourceId": "src-fu",
+      "url": "https://demo.runway.example/fw26/review-13",
+      "title": "FW26 秀场评论 #13（合成示例）",
+      "publishedAt": "2026-04-06",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 2",
+      "category": "womenswear",
+      "excerpt": "The show review notes that the silhouettes were built by structure rather than transparency; tartan coats ran through the whole show.",
+      "originality": "original",
+      "isSponsored": true,
+      "codings": {
+        "sheer": false,
+        "check": true,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-A14",
+      "sourceId": "src-bof",
+      "url": "https://demo.runway.example/fw26/review-14",
+      "title": "FW26 秀场评论 #14（合成示例）",
+      "publishedAt": "2026-04-11",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 3",
+      "category": "womenswear",
+      "excerpt": "The report says that the fabric story was opaque wool and leather, with no sheer layering; prints were florals and abstract colour blocks; no check appeared.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": false,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-A15",
+      "sourceId": "src-vogue",
+      "url": "https://demo.runway.example/fw26/review-15",
+      "title": "FW26 秀场评论 #15（合成示例）",
+      "publishedAt": "2026-04-16",
+      "accessedAt": "2026-11-01",
+      "season": "FW26",
+      "window": "A",
+      "brand": "Example Brand 4",
+      "category": "womenswear",
+      "excerpt": "The report says that the silhouettes were built by structure rather than transparency; the surface story was solid twill and leather.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": false,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-B01",
+      "sourceId": "src-vogue",
+      "url": "https://demo.runway.example/ss27/review-01",
+      "title": "SS27 秀场评论 #01（合成示例）",
+      "publishedAt": "2026-09-05",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 2",
+      "category": "womenswear",
+      "excerpt": "The show review notes that gauze dresses deliberately revealed the underlayer; the surface story was solid twill and leather.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": false,
+        "tailoring": true
+      }
+    },
+    {
+      "id": "E-B02",
+      "sourceId": "src-wwd",
+      "url": "https://demo.runway.example/ss27/review-02",
+      "title": "SS27 秀场评论 #02（合成示例）",
+      "publishedAt": "2026-09-08",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 3",
+      "category": "womenswear",
+      "excerpt": "The show review notes that gauze dresses deliberately revealed the underlayer; prince-of-wales check suiting dominated the lineup.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": true,
+        "tailoring": true
+      }
+    },
+    {
+      "id": "E-B03",
+      "sourceId": "src-hb",
+      "url": "https://demo.runway.example/ss27/review-03",
+      "title": "SS27 秀场评论 #03（合成示例）",
+      "publishedAt": "2026-09-11",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 4",
+      "category": "womenswear",
+      "excerpt": "The report says that gauze dresses deliberately revealed the underlayer; the surface story was solid twill and leather.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": false,
+        "tailoring": true
+      }
+    },
+    {
+      "id": "E-B04",
+      "sourceId": "src-www",
+      "url": "https://demo.runway.example/ss27/review-04",
+      "title": "SS27 秀场评论 #04（合成示例）",
+      "publishedAt": "2026-09-14",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 5",
+      "category": "womenswear",
+      "excerpt": "The report says that the fabric story was opaque wool and leather, with no sheer layering; the surface story was solid twill and leather.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": false,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-B05",
+      "sourceId": "src-tzr",
+      "url": "https://demo.runway.example/ss27/review-05",
+      "title": "SS27 秀场评论 #05（合成示例）",
+      "publishedAt": "2026-09-17",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 6",
+      "category": "womenswear",
+      "excerpt": "The show review notes that gauze dresses deliberately revealed the underlayer; the surface story was solid twill and leather.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": false,
+        "tailoring": true
+      }
+    },
+    {
+      "id": "E-B06",
+      "sourceId": "src-fu",
+      "url": "https://demo.runway.example/ss27/review-06",
+      "title": "SS27 秀场评论 #06（合成示例）",
+      "publishedAt": "2026-09-20",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 1",
+      "category": "womenswear",
+      "excerpt": "The report says that sheer organza was layered over tailoring as an outer shell; the surface story was solid twill and leather.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": false,
+        "tailoring": true
+      }
+    },
+    {
+      "id": "E-B07",
+      "sourceId": "src-zh-vogue",
+      "url": "https://demo.runway.example/ss27/review-07",
+      "title": "SS27 秀场评论 #07（合成示例）",
+      "publishedAt": "2026-09-23",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 2",
+      "category": "womenswear",
+      "excerpt": "订货会反馈显示，透视针织与蕾丝拼接，能看见内层结构。整体以威尔士亲王格纹套装为主。",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": true,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-B08",
+      "sourceId": "src-zh-jiemian",
+      "url": "https://demo.runway.example/ss27/review-08",
+      "title": "SS27 秀场评论 #08（合成示例）",
+      "publishedAt": "2026-09-26",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 3",
+      "category": "womenswear",
+      "excerpt": "订货会反馈显示，透视针织与蕾丝拼接，能看见内层结构。面料以纯色斜纹与皮革为主，格纹缺席。",
+      "originality": "translation",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": false,
+        "tailoring": true
+      }
+    },
+    {
+      "id": "E-B09",
+      "sourceId": "src-zh-ladymax",
+      "url": "https://demo.runway.example/ss27/review-09",
+      "title": "SS27 秀场评论 #09（合成示例）",
+      "publishedAt": "2026-09-29",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 4",
+      "category": "womenswear",
+      "excerpt": "订货会反馈显示，廓形靠结构撑起，而不是靠透明面料。面料以纯色斜纹与皮革为主，格纹缺席。",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": false,
+        "tailoring": true
+      }
+    },
+    {
+      "id": "E-B10",
+      "sourceId": "src-vogue",
+      "url": "https://demo.runway.example/ss27/review-10",
+      "title": "SS27 秀场评论 #10（合成示例）",
+      "publishedAt": "2026-10-02",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 5",
+      "category": "womenswear",
+      "excerpt": "Editors observed that gauze dresses deliberately revealed the underlayer; the surface story was solid twill and leather.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": false,
+        "tailoring": true
+      }
+    },
+    {
+      "id": "E-B11",
+      "sourceId": "src-wwd",
+      "url": "https://demo.runway.example/ss27/review-11",
+      "title": "SS27 秀场评论 #11（合成示例）",
+      "publishedAt": "2026-10-05",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 6",
+      "category": "womenswear",
+      "excerpt": "Editors observed that gauze dresses deliberately revealed the underlayer; prints were florals and abstract colour blocks; no check appeared.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": false,
+        "tailoring": true
+      }
+    },
+    {
+      "id": "E-B12",
+      "sourceId": "src-hb",
+      "url": "https://demo.runway.example/ss27/review-12",
+      "title": "SS27 秀场评论 #12（合成示例）",
+      "publishedAt": "2026-10-08",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 1",
+      "category": "womenswear",
+      "excerpt": "The show review notes that sheer organza was layered over tailoring as an outer shell; prince-of-wales check suiting dominated the lineup.",
+      "originality": "original",
+      "isSponsored": true,
+      "codings": {
+        "sheer": true,
+        "check": true,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-B13",
+      "sourceId": "src-www",
+      "url": "https://demo.runway.example/ss27/review-13",
+      "title": "SS27 秀场评论 #13（合成示例）",
+      "publishedAt": "2026-10-11",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 2",
+      "category": "womenswear",
+      "excerpt": "Editors observed that sheer organza was layered over tailoring as an outer shell; the surface story was solid twill and leather.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": false,
+        "tailoring": true
+      }
+    },
+    {
+      "id": "E-B14",
+      "sourceId": "src-tzr",
+      "url": "https://demo.runway.example/ss27/review-14",
+      "title": "SS27 秀场评论 #14（合成示例）",
+      "publishedAt": "2026-10-14",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 3",
+      "category": "womenswear",
+      "excerpt": "Editors observed that the fabric story was opaque wool and leather, with no sheer layering; prints were florals and abstract colour blocks; no check appeared.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": false,
+        "check": false,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-B15",
+      "sourceId": "src-fu",
+      "url": "https://demo.runway.example/ss27/review-15",
+      "title": "SS27 秀场评论 #15（合成示例）",
+      "publishedAt": "2026-10-17",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 4",
+      "category": "womenswear",
+      "excerpt": "The report says that gauze dresses deliberately revealed the underlayer; prints were florals and abstract colour blocks; no check appeared.",
+      "originality": "original",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": false,
+        "tailoring": false
+      }
+    },
+    {
+      "id": "E-B16",
+      "sourceId": "src-vogue-uk",
+      "url": "https://demo.runway.example/ss27/review-01?utm_source=newsletter",
+      "title": "SS27 秀场评论 #01（合成示例）",
+      "publishedAt": "2026-09-06",
+      "accessedAt": "2026-11-01",
+      "season": "SS27",
+      "window": "B",
+      "brand": "Example Brand 1",
+      "category": "womenswear",
+      "excerpt": "The report says that gauze dresses deliberately revealed the underlayer; the surface story was solid twill and leather.",
+      "originality": "reprint",
+      "isSponsored": false,
+      "codings": {
+        "sheer": true,
+        "check": false,
+        "tailoring": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,425 @@
+{
+ "version": "2026-11",
+ "note": "分析句式库：模板只定骨架，槽位由趋势数据或原文填充；每个模板至少两个例句，避免全文一个腔调。",
+ "types": [
+  "shift",
+  "structure",
+  "pairing",
+  "color",
+  "evidence",
+  "contrast",
+  "conclusion",
+  "thesis"
+ ],
+ "patterns": [
+  {
+   "id": "P01",
+   "type": "shift",
+   "template": "从{A}转向{B}",
+   "slots": {
+    "A": "旧范式",
+    "B": "新范式"
+   },
+   "examples": [
+    "从静奢的克制，转向带情绪的浪漫",
+    "from understated dressing to a more expressive approach"
+   ],
+   "when": "两个时代或两种审美之间的更替，适合开篇立论"
+  },
+  {
+   "id": "P02",
+   "type": "shift",
+   "template": "{A}正在退潮，{B}开始抬头",
+   "slots": {
+    "A": "退场的一方",
+    "B": "兴起的一方"
+   },
+   "examples": [
+    "静奢与老钱审美开始退潮，繁荣主义与轻盈感同时抬头"
+   ],
+   "when": "双方力量对比发生变化，适合做总论点"
+  },
+  {
+   "id": "P03",
+   "type": "shift",
+   "template": "不再追求{A}，转而{B}",
+   "slots": {
+    "A": "被放弃的取向",
+    "B": "新的取向"
+   },
+   "examples": [
+    "不再思考还能往上加什么，转而思考还能去掉什么",
+    "不再执着于对鼎盛时代的性感崇拜，而是聚焦身体本身"
+   ],
+   "when": "强调设计方法的转向，适合材质与结构段"
+  },
+  {
+   "id": "P04",
+   "type": "shift",
+   "template": "{A}被{B}取代",
+   "slots": {
+    "A": "原有主角",
+    "B": "新的主角"
+   },
+   "examples": [
+    "斜纹软呢正在取代针织衫，成为衣橱里的材质主角"
+   ],
+   "when": "有明确的替代关系时使用，需要有数据支撑"
+  },
+  {
+   "id": "P05",
+   "type": "shift",
+   "template": "{A}让位于{B}",
+   "slots": {
+    "A": "旧的选择",
+    "B": "新的选择"
+   },
+   "examples": [
+    "把繁复堆砌让位于轻盈",
+    "宽松不再只是风格选项，而成为一种设计语法"
+   ],
+   "when": "语气比『取代』缓和，适合趋势尚未定型的阶段"
+  },
+  {
+   "id": "P06",
+   "type": "structure",
+   "template": "{X}把{A}推到了{B}的位置",
+   "slots": {
+    "X": "设计动作",
+    "A": "元素",
+    "B": "位置"
+   },
+   "examples": [
+    "把腰线推到了胯部",
+    "把肩线放到了自然肩之外"
+   ],
+   "when": "讲廓形的位移，适合款式段"
+  },
+  {
+   "id": "P07",
+   "type": "structure",
+   "template": "{A}成为新的廓形语法",
+   "slots": {
+    "A": "结构特征"
+   },
+   "examples": [
+    "宽松与垂坠成为新的廓形语法",
+    "低腰成为这一季的廓形语法"
+   ],
+   "when": "总结一类结构成为普遍做法时使用"
+  },
+  {
+   "id": "P08",
+   "type": "structure",
+   "template": "{A}与{B}之间形成新的比例",
+   "slots": {
+    "A": "上装/肩线",
+    "B": "下装/腰线"
+   },
+   "examples": [
+    "短上装与长下装之间形成新的比例"
+   ],
+   "when": "讲比例关系，适合成套搭配的分析"
+  },
+  {
+   "id": "P09",
+   "type": "structure",
+   "template": "在{A}与{B}之间找到平衡",
+   "slots": {
+    "A": "结构感",
+    "B": "松弛感"
+   },
+   "examples": [
+    "在结构感与松弛感之间找到平衡",
+    "在宽松量感与局部收束之间形成张力"
+   ],
+   "when": "描述折中方案，适合『松弛西装』这类混合趋势"
+  },
+  {
+   "id": "P10",
+   "type": "pairing",
+   "template": "{A}配{B}，把{C}拉回{D}",
+   "slots": {
+    "A": "单品",
+    "B": "单品",
+    "C": "原本的场景",
+    "D": "新的场景"
+   },
+   "examples": [
+    "西装外套配运动内搭，把正式感拉回日常",
+    "皮革配长裙，把硬朗拉回柔和"
+   ],
+   "when": "讲跨场景搭配，适合场景板块"
+  },
+  {
+   "id": "P11",
+   "type": "pairing",
+   "template": "{A}成为调节{B}的关键单品",
+   "slots": {
+    "A": "单品",
+    "B": "整体气质"
+   },
+   "examples": [
+    "运动夹克成为调节正式感与年轻感的关键单品",
+    "腰封成为调节比例的关键单品"
+   ],
+   "when": "强调单品的功能角色，避免只罗列单品"
+  },
+  {
+   "id": "P12",
+   "type": "pairing",
+   "template": "用{A}中和{B}的{C}",
+   "slots": {
+    "A": "柔和元素",
+    "B": "硬朗元素",
+    "C": "气质"
+   },
+   "examples": [
+    "用薄纱中和皮革的硬朗",
+    "用针织中和西装的正式"
+   ],
+   "when": "讲材质或气质的互补，适合搭配建议"
+  },
+  {
+   "id": "P13",
+   "type": "color",
+   "template": "{A}重新进入{B}",
+   "slots": {
+    "A": "颜色",
+    "B": "风格"
+   },
+   "examples": [
+    "酒红重新进入摇滚与学院",
+    "棕色重新进入通勤"
+   ],
+   "when": "颜色与风格结合时使用，避免单独说颜色"
+  },
+  {
+   "id": "P14",
+   "type": "color",
+   "template": "调色盘从{A}转向{B}",
+   "slots": {
+    "A": "旧色系",
+    "B": "新色系"
+   },
+   "examples": [
+    "调色盘从高饱和转向低饱和的大地色",
+    "from brights to muted earth tones"
+   ],
+   "when": "整体色彩倾向变化时使用"
+  },
+  {
+   "id": "P15",
+   "type": "color",
+   "template": "{A}成为{B}的替代品",
+   "slots": {
+    "A": "新颜色",
+    "B": "原有默认色"
+   },
+   "examples": [
+    "酒红成为秋冬的黑色替代品",
+    "棕色成为黑色的替代品"
+   ],
+   "when": "颜色承担了原本属于另一颜色的功能"
+  },
+  {
+   "id": "P16",
+   "type": "evidence",
+   "template": "在{n}篇报道里，{X}被提到{k}次",
+   "slots": {
+    "n": "样本量",
+    "X": "对象",
+    "k": "次数"
+   },
+   "examples": [
+    "在 24 篇报道里，西装外套被提到 41 次"
+   ],
+   "when": "论据句：给出样本与次数，必须可回链"
+  },
+  {
+   "id": "P17",
+   "type": "contrast",
+   "template": "与{A}相比，{B}高出{d}点",
+   "slots": {
+    "A": "上一季",
+    "B": "这一季",
+    "d": "差值"
+   },
+   "examples": [
+    "与 2026 秋冬相比，2027 春夏高出 23 点"
+   ],
+   "when": "论据句：同一口径下的对比"
+  },
+  {
+   "id": "P18",
+   "type": "contrast",
+   "template": "{A}是{a}%，{B}是{b}%",
+   "slots": {
+    "A": "窗口A",
+    "B": "窗口B",
+    "a": "比例",
+    "b": "比例"
+   },
+   "examples": [
+    "2026 秋冬是 27%，2027 春夏是 50%"
+   ],
+   "when": "论据句：极简数字对比，适合配图表"
+  },
+  {
+   "id": "P19",
+   "type": "contrast",
+   "template": "一边是{A}，一边是{B}",
+   "slots": {
+    "A": "一种取向",
+    "B": "另一种取向"
+   },
+   "examples": [
+    "一边是繁荣主义的装饰，一边是轻盈感的减法"
+   ],
+   "when": "呈现并行而非替代的两股力量"
+  },
+  {
+   "id": "P20",
+   "type": "contrast",
+   "template": "{A}解决的是{B}，{C}解决的是{D}",
+   "slots": {
+    "A": "趋势一",
+    "B": "问题一",
+    "C": "趋势二",
+    "D": "问题二"
+   },
+   "examples": [
+    "繁荣主义解决情绪出口，轻盈感解决日常落点"
+   ],
+   "when": "把两条趋势放在同一框架里解释"
+  },
+  {
+   "id": "P21",
+   "type": "conclusion",
+   "template": "{A}提供情绪出口，{B}提供日常落点",
+   "slots": {
+    "A": "外放的一支",
+    "B": "内收的一支"
+   },
+   "examples": [
+    "繁荣主义提供情绪出口，轻盈感提供日常落点"
+   ],
+   "when": "收束句：两条线合并成一句判断"
+  },
+  {
+   "id": "P22",
+   "type": "conclusion",
+   "template": "这不是{A}，而是{B}",
+   "slots": {
+    "A": "表层解释",
+    "B": "结构性解释"
+   },
+   "examples": [
+    "这不是简单的风格轮换，而是消费心态的结构性调整"
+   ],
+   "when": "收束句：把现象上升到结构"
+  },
+  {
+   "id": "P23",
+   "type": "thesis",
+   "template": "{S}的关键词是{A}与{B}",
+   "slots": {
+    "S": "季节",
+    "A": "关键词一",
+    "B": "关键词二"
+   },
+   "examples": [
+    "2027 春夏的关键词是轻盈与张力"
+   ],
+   "when": "开篇总论点，两个词必须能贯穿全文"
+  },
+  {
+   "id": "P24",
+   "type": "thesis",
+   "template": "审美转向发生在{A}与{B}之间",
+   "slots": {
+    "A": "一种审美",
+    "B": "另一种审美"
+   },
+   "examples": [
+    "审美的转向发生在克制与表达之间"
+   ],
+   "when": "开篇立论，适合不确定单一方向的时期"
+  },
+  {
+   "id": "P25",
+   "type": "shift",
+   "template": "{A} is the new {B}",
+   "slots": {
+    "A": "新事物",
+    "B": "旧默认"
+   },
+   "examples": [
+    "The bra top is the new T-shirt"
+   ],
+   "when": "英文媒体最常用的『替代』句式，适合开篇或分论点"
+  },
+  {
+   "id": "P26",
+   "type": "shift",
+   "template": "{A} is back",
+   "slots": {
+    "A": "回归的对象"
+   },
+   "examples": [
+    "The straight leg jean is back and here to stay"
+   ],
+   "when": "回归叙事，语气比 『取代』轻，适合单品"
+  },
+  {
+   "id": "P27",
+   "type": "shift",
+   "template": "{A} has replaced {B} as {C}",
+   "slots": {
+    "A": "新主角",
+    "B": "旧主角",
+    "C": "位置"
+   },
+   "examples": [
+    "Rider's Celine Maison belt has officially replaced the Gucci Marmont belt as the waist-cincher du jour"
+   ],
+   "when": "有明确替代关系且需要一个『位置』时使用"
+  },
+  {
+   "id": "P28",
+   "type": "shift",
+   "template": "leave behind the {A} era",
+   "slots": {
+    "A": "旧时代"
+   },
+   "examples": [
+    "as we slowly leave behind the quiet luxury, clean girl era"
+   ],
+   "when": "一个时代结束的叙事，适合总述的转折段"
+  },
+  {
+   "id": "P29",
+   "type": "shift",
+   "template": "{A} is having a moment",
+   "slots": {
+    "A": "正在走红的对象"
+   },
+   "examples": [
+    "the decadent footwear trend is having a moment this fall"
+   ],
+   "when": "比『流行』更克制的说法，适合单点观察"
+  },
+  {
+   "id": "P30",
+   "type": "shift",
+   "template": "no longer beholden to {A}",
+   "slots": {
+    "A": "旧规则"
+   },
+   "examples": [
+    "we're no longer beholden to the style diktats of yore"
+   ],
+   "when": "拒绝旧规则的叙述，适合风格美学板块"
+  }
+ ]
+}
