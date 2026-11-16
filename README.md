@@ -17,12 +17,14 @@
 
 ```bash
 pnpm install
-pnpm ingest
+pnpm demo        # 用合成数据跑通全链路，不需要语料
 ```
 
-打开 `reports/index.html`，从那里进任何一种报告。
+打开 `reports/index.html`，从那里进报告。
 
-`pnpm ingest` 默认读 `data/articles.real.json`（仓库里那 50 篇文章），输出到 `reports/auto/`。
+> 仓库里**不含**文章全文和媒体图片（版权原因，见 `data/README.md`）。想跑真实语料，先按 `data/README.md` 把 `articles.real.json` 放回 `data/`，再执行 `pnpm ingest`。
+
+`pnpm ingest` 默认读 `data/articles.real.json`，输出到 `reports/auto/`。
 
 换成你自己的文章：
 
