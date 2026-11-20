@@ -1,12 +1,17 @@
 {
  "version": "2026-11",
- "note": "术语表：中文名 / 英文名 / 别名 / 一句话定义 / 所属板块。别名用于合并同义统计。",
+ "note": "术语表：中文名 / 英文名 / 别名 / 一句话定义 / 所属板块；新增条目附 parent（上位类）/ criterion（判据）/ confusable（易混词）。",
  "sources": [
   "Vogue Runway 系列报道中的常用术语",
   "BoF、WWD 的行业表述",
   "品牌官网材质与工艺页",
   "中国服装协会流行趋势稿"
  ],
+ "stats": {
+  "before": 204,
+  "added": 67,
+  "total": 271
+ },
  "terms": [
   {
    "zh": "风衣",
@@ -496,7 +501,7 @@
    "aliases": [
     "stand collar"
    ],
-   "def": "竖立的窄领",
+   "def": "沿领口竖立、高约 3–6 厘米且不翻折的窄领",
    "board": "construction"
   },
   {
@@ -640,7 +645,7 @@
    "zh": "真丝",
    "en": "silk",
    "aliases": [],
-   "def": "蚕丝织物",
+   "def": "以桑蚕丝织成的面料，光泽柔和、手感滑糯",
    "board": "material"
   },
   {
@@ -698,21 +703,21 @@
    "zh": "羊羔毛",
    "en": "shearling",
    "aliases": [],
-   "def": "带毛的羊皮",
+   "def": "羊羔皮毛一体的材质，毛面短密、皮板柔软",
    "board": "material"
   },
   {
    "zh": "皮草",
    "en": "fur",
    "aliases": [],
-   "def": "动物毛皮",
+   "def": "以动物毛皮制成的材质，毛长且密、保暖性强",
    "board": "material"
   },
   {
    "zh": "仿皮草",
    "en": "faux fur",
    "aliases": [],
-   "def": "人造毛皮",
+   "def": "以化纤仿制的毛皮，外观接近真皮草但基布为织物",
    "board": "material"
   },
   {
@@ -728,14 +733,14 @@
    "zh": "羊毛",
    "en": "wool",
    "aliases": [],
-   "def": "绵羊毛织物",
+   "def": "以绵羊毛纤维织成的面料，保暖、有弹性、易起球",
    "board": "material"
   },
   {
    "zh": "羊绒",
    "en": "cashmere",
    "aliases": [],
-   "def": "山羊绒织物",
+   "def": "山羊底层细绒纺成的面料，轻软保暖、产量低",
    "board": "material"
   },
   {
@@ -773,8 +778,10 @@
   {
    "zh": "牛仔",
    "en": "denim",
-   "aliases": [],
-   "def": "斜纹棉布",
+   "aliases": [
+    "丹宁"
+   ],
+   "def": "以靛蓝经纱织成的斜纹棉布，耐磨、易褪色",
    "board": "material"
   },
   {
@@ -827,7 +834,7 @@
    "zh": "棉",
    "en": "cotton",
    "aliases": [],
-   "def": "棉纤维织物",
+   "def": "以棉纤维织成的面料，吸湿透气、易皱",
    "board": "material"
   },
   {
@@ -839,7 +846,7 @@
   },
   {
    "zh": "金属丝",
-   "en": "metallic",
+   "en": "metallic thread",
    "aliases": [
     "metallic yarn"
    ],
@@ -1500,7 +1507,7 @@
   },
   {
    "zh": "度假",
-   "en": "resort",
+   "en": "resort wear",
    "aliases": [
     "holiday"
    ],
@@ -1643,6 +1650,866 @@
    "aliases": [],
    "def": "季节交替时的穿着",
    "board": "occasion"
+  },
+  {
+   "zh": "插肩",
+   "en": "raglan sleeve",
+   "aliases": [
+    "插肩袖",
+    "raglan"
+   ],
+   "def": "肩线从领口斜向下连到腋下的袖型，肩部没有横向拼缝",
+   "board": "construction",
+   "parent": "袖型",
+   "criterion": "肩部看不到横向拼缝，拼接线从领口斜着连到下腋",
+   "confusable": "落肩：肩线整体横向下移，仍有横缝；插肩是斜线"
+  },
+  {
+   "zh": "装袖",
+   "en": "set-in sleeve",
+   "aliases": [
+    "装袖袖",
+    "set-in"
+   ],
+   "def": "袖窿处有横向拼缝、袖子为单独裁片的常规袖型",
+   "board": "construction",
+   "parent": "袖型",
+   "criterion": "肩点处有一条明显横缝，袖山有吃势（微微鼓起的余量）",
+   "confusable": "插肩：拼接线是斜的，肩部无横缝"
+  },
+  {
+   "zh": "明线",
+   "en": "topstitching",
+   "aliases": [
+    "明缉线",
+    "top stitch"
+   ],
+   "def": "在衣片表面可见的装饰性或加固性缝线",
+   "board": "construction",
+   "parent": "缝制",
+   "criterion": "距边缘 1–5 毫米处有一道或多道可见线迹",
+   "confusable": "嵌线：嵌线是夹在缝里的细条，不是线迹"
+  },
+  {
+   "zh": "门襟",
+   "en": "placket",
+   "aliases": [
+    "前襟",
+    "门襟片"
+   ],
+   "def": "衣服前中开合处的重叠部分，承担扣合功能",
+   "board": "construction",
+   "parent": "门襟",
+   "criterion": "前中有上下贯通的开口与重叠量，通常带扣、拉链或暗门襟",
+   "confusable": "开衩：开衩多在侧缝或后中，不承担开合"
+  },
+  {
+   "zh": "育克",
+   "en": "yoke",
+   "aliases": [
+    "过肩",
+    "yoke panel"
+   ],
+   "def": "肩背部或臀部的横向分割片，常与主体不同方向或不同材质",
+   "board": "construction",
+   "parent": "分割",
+   "criterion": "肩背或臀部有一条横向分割线，分割线上下材质或纹理方向不同",
+   "confusable": "拼接：育克是特定位置的横向分割，拼接泛指任何拼接方式"
+  },
+  {
+   "zh": "精纺",
+   "en": "worsted",
+   "aliases": [
+    "精纺羊毛",
+    "worsted wool"
+   ],
+   "def": "用精梳长纤维纺成、表面光洁的羊毛织物",
+   "board": "material",
+   "parent": "羊毛织物",
+   "criterion": "表面平整无明显毛羽，纹路清晰，垂坠挺括",
+   "confusable": "粗花呢：表面有颗粒感和杂色纱"
+  },
+  {
+   "zh": "府绸",
+   "en": "poplin",
+   "aliases": [
+    "popeline"
+   ],
+   "def": "经密明显高于纬密的平纹棉布，手感滑爽、表面细腻",
+   "board": "material",
+   "parent": "棉织物",
+   "criterion": "表面细腻并带细密横向棱纹，比普通平布更挺",
+   "confusable": "牛津纺：牛津纺为双经双纬，颗粒更粗、更透气"
+  },
+  {
+   "zh": "华达呢",
+   "en": "gabardine",
+   "aliases": [
+    "轧别丁",
+    "gabardine fabric"
+   ],
+   "def": "紧密斜纹、表面有陡斜纹路的羊毛或混纺织物",
+   "board": "material",
+   "parent": "羊毛织物",
+   "criterion": "斜纹角度陡（约 60 度以上），表面光滑耐磨",
+   "confusable": "斜纹布：斜纹角度更平缓，密度更低"
+  },
+  {
+   "zh": "铜氨丝",
+   "en": "cupro",
+   "aliases": [
+    "铜氨纤维",
+    "cuprammonium"
+   ],
+   "def": "由棉短绒经铜氨溶液处理制成的再生纤维素纤维，垂坠感强",
+   "board": "material",
+   "parent": "再生纤维",
+   "criterion": "光泽柔和似丝、手感凉滑、悬垂性明显强于棉",
+   "confusable": "醋酸：醋酸光泽更亮、手感更挺"
+  },
+  {
+   "zh": "泡泡袖",
+   "en": "puff sleeve",
+   "aliases": [
+    "灯笼袖",
+    "puff"
+   ],
+   "def": "袖山处抽褶或加省、形成明显隆起的短袖型",
+   "board": "construction",
+   "parent": "袖型",
+   "criterion": "肩部到袖口之间有明显的鼓起，袖山处能看到抽褶或分割线",
+   "confusable": "羊腿袖：羊腿袖是上臂鼓、向下收紧；泡泡袖整体蓬松"
+  },
+  {
+   "zh": "青果领",
+   "en": "shawl collar",
+   "aliases": [
+    "圆角领",
+    "shawl"
+   ],
+   "def": "无驳头、领面与驳头连成一条圆弧的翻领",
+   "board": "construction",
+   "parent": "领型",
+   "criterion": "领口呈连续圆弧，看不到驳头与领子的分界缺口",
+   "confusable": "平驳领：平驳领有上下两片和明显的缺口"
+  },
+  {
+   "zh": "戗驳领",
+   "en": "peak lapel",
+   "aliases": [
+    "尖驳领",
+    "peaked lapel"
+   ],
+   "def": "驳头尖端向上翘起的西装领型",
+   "board": "construction",
+   "parent": "领型",
+   "criterion": "驳头外侧有一个朝上翘的尖角，通常配双排扣",
+   "confusable": "平驳领：平驳领的缺口朝外、没有上翘的尖角"
+  },
+  {
+   "zh": "平驳领",
+   "en": "notch lapel",
+   "aliases": [
+    "notched lapel"
+   ],
+   "def": "最常见的西装领型，领与驳头之间呈 V 形缺口",
+   "board": "construction",
+   "parent": "领型",
+   "criterion": "领面与驳头交界处有一个水平方向的 V 形缺口",
+   "confusable": "戗驳领：戗驳领的角朝上翘，没有这个缺口"
+  },
+  {
+   "zh": "公主线",
+   "en": "princess seam",
+   "aliases": [
+    "princess line",
+    "公主缝"
+   ],
+   "def": "从肩部或袖窿经胸点到下摆的纵向分割线，替代省道塑形",
+   "board": "construction",
+   "parent": "分割",
+   "criterion": "正面有一条从肩/袖窿向下贯通到裙摆的弧线分割，线上无横向断点",
+   "confusable": "育克：育克是横向分割，公主线是纵向"
+  },
+  {
+   "zh": "包边",
+   "en": "binding",
+   "aliases": [
+    "滚边",
+    "bias binding"
+   ],
+   "def": "用布条包裹毛边、形成一圈明显边界的收口工艺",
+   "board": "construction",
+   "parent": "缝制",
+   "criterion": "边缘有一圈宽度一致的包覆条，正反两面都能看到",
+   "confusable": "嵌线：嵌线是夹在缝里的细绳，包边是包住边缘"
+  },
+  {
+   "zh": "嵌线",
+   "en": "piping",
+   "aliases": [
+    "嵌条",
+    "piping trim"
+   ],
+   "def": "夹在接缝中的细绳或窄条，使缝线处凸起一道棱",
+   "board": "construction",
+   "parent": "缝制",
+   "criterion": "接缝处有一条细而凸起的棱线，通常与主体异色",
+   "confusable": "包边：包边包住边缘，嵌线藏在缝里"
+  },
+  {
+   "zh": "压褶",
+   "en": "pleating",
+   "aliases": [
+    "热压褶",
+    "accordion pleat"
+   ],
+   "def": "经高温定型、褶形持久不散的规则褶工艺",
+   "board": "construction",
+   "parent": "褶",
+   "criterion": "褶宽均匀、边缘锐利，下垂后仍保持同样形态",
+   "confusable": "褶裥：褶裥是褶的形态本身，压褶强调定型工艺"
+  },
+  {
+   "zh": "抽褶",
+   "en": "ruching",
+   "aliases": [
+    "抽缩褶",
+    "ruched"
+   ],
+   "def": "用缝线抽紧面料、形成不规则细密褶皱的工艺",
+   "board": "construction",
+   "parent": "褶",
+   "criterion": "褶皱细密且不规则，常见于侧缝、胸口或袖中段",
+   "confusable": "褶皱：褶皱是抽缩后的形态，抽褶是产生它的动作"
+  },
+  {
+   "zh": "斜插袋",
+   "en": "slash pocket",
+   "aliases": [
+    "侧插袋",
+    "斜袋"
+   ],
+   "def": "袋口呈斜线、手从侧前方斜向插入的口袋",
+   "board": "construction",
+   "parent": "口袋",
+   "criterion": "袋口是一条斜向开口，通常在大衣或裤装两侧",
+   "confusable": "贴袋：贴袋是缝在表面的整块布，斜插袋是开口"
+  },
+  {
+   "zh": "贴袋",
+   "en": "patch pocket",
+   "aliases": [
+    "明袋"
+   ],
+   "def": "整块布料缝在衣片表面的口袋",
+   "board": "construction",
+   "parent": "口袋",
+   "criterion": "口袋是独立一块布，四周有明显缝线凸起",
+   "confusable": "斜插袋：斜插袋是开在衣片里的开口"
+  },
+  {
+   "zh": "后中开衩",
+   "en": "back vent",
+   "aliases": [
+    "背衩",
+    "center vent"
+   ],
+   "def": "西装或大衣后中下摆处的纵向开口，便于行走",
+   "board": "construction",
+   "parent": "开衩",
+   "criterion": "从背面看，下摆正中有一条垂直开口，长度约 15–30 厘米",
+   "confusable": "开衩：开衩泛指任何开口，后中开衩特指位置在后中"
+  },
+  {
+   "zh": "暗门襟",
+   "en": "hidden placket",
+   "aliases": [
+    "暗襟",
+    "concealed placket"
+   ],
+   "def": "扣子被门襟布遮住、正面看不到扣合件的门襟",
+   "board": "construction",
+   "parent": "门襟",
+   "criterion": "正面看不到扣子或拉链，只有一条覆盖布与缝线",
+   "confusable": "门襟：门襟是开合结构的总称，暗门襟是其中一种做法"
+  },
+  {
+   "zh": "堆堆领",
+   "en": "cowl neck",
+   "aliases": [
+    "荡领",
+    "cowl"
+   ],
+   "def": "领口面料自然垂坠、堆叠成柔和的弧形褶皱",
+   "board": "construction",
+   "parent": "领型",
+   "criterion": "领口有连续下垂的弧形褶皱，无明显立起或翻折",
+   "confusable": "立领：立领是竖起来贴着脖子的，堆堆领是垂下来的"
+  },
+  {
+   "zh": "无领",
+   "en": "collarless",
+   "aliases": [
+    "领口无领",
+    "collar-less"
+   ],
+   "def": "没有独立领片、领口直接由衣片边缘收口的款式",
+   "board": "construction",
+   "parent": "领型",
+   "criterion": "领口处看不到独立的领片结构，只有一条收边",
+   "confusable": "立领：立领有独立领片，无领没有"
+  },
+  {
+   "zh": "麦尔登呢",
+   "en": "melton",
+   "aliases": [
+    "麦尔登",
+    "melton wool"
+   ],
+   "def": "表面经缩绒处理、看不到织纹的厚重羊毛织物",
+   "board": "material",
+   "parent": "羊毛织物",
+   "criterion": "表面呈毡化质感、无可见斜纹或平纹，边缘不散纱",
+   "confusable": "华达呢：华达呢表面有清晰陡斜纹，麦尔登没有织纹"
+  },
+  {
+   "zh": "牛津纺",
+   "en": "oxford",
+   "aliases": [
+    "牛津布",
+    "oxford cloth"
+   ],
+   "def": "双经双纬交织、表面有细密颗粒感的棉质衬衫布",
+   "board": "material",
+   "parent": "棉织物",
+   "criterion": "表面有均匀小颗粒、比府绸粗，透光看结构疏松",
+   "confusable": "府绸：府绸是单经单纬、表面更细腻光滑"
+  },
+  {
+   "zh": "烂花",
+   "en": "burnout",
+   "aliases": [
+    "烧花",
+    "devoré"
+   ],
+   "def": "用化学浆料腐蚀混纺中的一种纤维、留下半透明花纹的工艺",
+   "board": "material",
+   "parent": "表面肌理",
+   "criterion": "花纹处明显更薄更透，与底布形成绒面/透光对比",
+   "confusable": "提花：提花是织出来的浮纹，烂花是腐蚀出来的透"
+  },
+  {
+   "zh": "压皱",
+   "en": "crinkle",
+   "aliases": [
+    "皱感面料",
+    "crinkled"
+   ],
+   "def": "经定型处理、表面呈持久细密不规则皱痕的面料",
+   "board": "material",
+   "parent": "表面肌理",
+   "criterion": "整块布面有均匀细碎的皱痕，抚平后仍会回皱",
+   "confusable": "抽褶：抽褶是缝出来的局部褶，压皱是整块布的处理"
+  },
+  {
+   "zh": "莫代尔",
+   "en": "modal",
+   "aliases": [
+    "modal fiber"
+   ],
+   "def": "由山毛榉木浆制成的再生纤维素纤维，柔软且垂坠",
+   "board": "material",
+   "parent": "再生纤维",
+   "criterion": "手感极软、垂坠贴身，光泽弱于铜氨丝",
+   "confusable": "莱赛尔：莱赛尔更挺、光泽略强"
+  },
+  {
+   "zh": "莱赛尔",
+   "en": "lyocell",
+   "aliases": [
+    "天丝",
+    "tencel"
+   ],
+   "def": "用溶剂法生产的再生纤维素纤维，兼具柔顺与挺括",
+   "board": "material",
+   "parent": "再生纤维",
+   "criterion": "垂坠但有骨架，表面有轻微丝光，褶皱回弹快",
+   "confusable": "莫代尔：莫代尔更软更贴身，莱赛尔更挺"
+  },
+  {
+   "zh": "锦纶",
+   "en": "nylon",
+   "aliases": [
+    "尼龙",
+    "polyamide"
+   ],
+   "def": "聚酰胺纤维，强度高、耐磨、易染色",
+   "board": "material",
+   "parent": "合成纤维",
+   "criterion": "表面光滑有塑料感光泽，轻薄但结实，常见于外套和运动装",
+   "confusable": "涤纶：涤纶更挺更硬，锦纶更软更亮"
+  },
+  {
+   "zh": "氨纶",
+   "en": "spandex",
+   "aliases": [
+    "莱卡",
+    "elastane",
+    "lycra"
+   ],
+   "def": "弹性纤维，少量混入即可让织物明显回弹",
+   "board": "material",
+   "parent": "合成纤维",
+   "criterion": "面料能被明显拉伸并快速回弹，常见于紧身或运动款式",
+   "confusable": "锦纶：锦纶提供强度，氨纶提供弹性，常混用"
+  },
+  {
+   "zh": "阿尔帕卡",
+   "en": "alpaca",
+   "aliases": [
+    "羊驼毛",
+    "alpaca wool"
+   ],
+   "def": "羊驼毛，纤维细长、光泽柔和且保暖",
+   "board": "material",
+   "parent": "动物纤维",
+   "criterion": "表面有丝样柔光、毛羽顺滑下垂，手感比羊毛滑",
+   "confusable": "马海毛：马海毛毛羽更长更蓬，阿尔帕卡更顺滑"
+  },
+  {
+   "zh": "抓绒",
+   "en": "fleece",
+   "aliases": [
+    "摇粒绒",
+    "polar fleece"
+   ],
+   "def": "化纤起绒织物，表面有短密绒毛、轻便保暖",
+   "board": "material",
+   "parent": "功能面料",
+   "criterion": "表面均匀短绒、无明显织纹，边缘不散，常见于户外中层",
+   "confusable": "羊羔毛：羊羔毛是天然皮毛一体，抓绒是化纤起绒"
+  },
+  {
+   "zh": "珠地布",
+   "en": "piqué",
+   "aliases": [
+    "珠地网眼",
+    "pique"
+   ],
+   "def": "表面呈凹凸珠粒状网眼的针织面料，常用于 Polo 衫",
+   "board": "material",
+   "parent": "针织",
+   "criterion": "表面有规则的小凹坑颗粒，透光看呈网眼结构",
+   "confusable": "罗纹：罗纹是纵向条棱，珠地布是凹凸颗粒"
+  },
+  {
+   "zh": "雪尼尔",
+   "en": "chenille",
+   "aliases": [
+    "绳绒",
+    "chenille fabric"
+   ],
+   "def": "表面呈绒绳状、柔软有厚度的织物",
+   "board": "material",
+   "parent": "表面肌理",
+   "criterion": "表面像一根根短绒绳排列，触感厚软，边缘易掉绒",
+   "confusable": "灯芯绒：灯芯绒是纵向绒条，雪尼尔是绒绳状"
+  },
+  {
+   "zh": "涂层布",
+   "en": "coated fabric",
+   "aliases": [
+    "涂层",
+    "coated"
+   ],
+   "def": "表面覆有树脂或聚氨酯薄膜、具有防风防水效果的面料",
+   "board": "material",
+   "parent": "功能面料",
+   "criterion": "表面呈均匀膜感、比织物更亮或更哑，折痕处易发白",
+   "confusable": "漆皮：漆皮是高光泽皮革，涂层布基材是织物"
+  },
+  {
+   "zh": "羊腿袖",
+   "en": "leg-of-mutton sleeve",
+   "aliases": [
+    "羊腿袖型",
+    "gigot sleeve"
+   ],
+   "def": "上臂明显蓬起、向肘部与手腕收窄的袖型",
+   "board": "construction",
+   "parent": "袖型",
+   "criterion": "肩部到肘部之间鼓胀，肘以下迅速收紧贴合手臂",
+   "confusable": "泡泡袖：泡泡袖整体蓬松，羊腿袖上膨下收"
+  },
+  {
+   "zh": "蝙蝠袖",
+   "en": "batwing sleeve",
+   "aliases": [
+    "蝴蝶袖",
+    "dolman sleeve"
+   ],
+   "def": "袖身与衣身连成一片、腋下开口很低的宽大袖型",
+   "board": "construction",
+   "parent": "袖型",
+   "criterion": "腋下没有独立袖窿缝线，袖子与衣身连成一块",
+   "confusable": "插肩：插肩有斜向拼缝，蝙蝠袖没有袖窿结构"
+  },
+  {
+   "zh": "高领",
+   "en": "turtleneck",
+   "aliases": [
+    "樽领",
+    "roll neck"
+   ],
+   "def": "领片向上翻折、包住脖子的针织领型",
+   "board": "construction",
+   "parent": "领型",
+   "criterion": "领口有一段包裹脖颈的高度（8 厘米以上），常见翻折",
+   "confusable": "堆堆领：堆堆领是垂坠堆叠，高领是贴身包裹"
+  },
+  {
+   "zh": "一字领",
+   "en": "boat neck",
+   "aliases": [
+    "船领",
+    "bateau neck"
+   ],
+   "def": "前后领口呈横向一条直线、露出锁骨的宽领型",
+   "board": "construction",
+   "parent": "领型",
+   "criterion": "领口横向平直，肩部两侧几乎开到肩点",
+   "confusable": "方领：方领是竖向方框，一字领是横线"
+  },
+  {
+   "zh": "方领",
+   "en": "square neck",
+   "aliases": [
+    "方口领"
+   ],
+   "def": "领口呈方形开口、露出锁骨与部分胸口的领型",
+   "board": "construction",
+   "parent": "领型",
+   "criterion": "领口有明确的横向与竖向边，形成直角",
+   "confusable": "一字领：一字领只有横线，没有竖向边"
+  },
+  {
+   "zh": "挂脖",
+   "en": "halter",
+   "aliases": [
+    "吊颈",
+    "halter neck"
+   ],
+   "def": "肩带绕过颈后固定、肩背大部分裸露的领型",
+   "board": "construction",
+   "parent": "领型",
+   "criterion": "布料从胸前绕到颈后打结或扣合，肩部无肩带",
+   "confusable": "露肩：露肩仍保留肩部横向布带，挂脖靠颈后固定"
+  },
+  {
+   "zh": "露肩",
+   "en": "off-shoulder",
+   "aliases": [
+    "一字肩",
+    "bardot"
+   ],
+   "def": "领口落在上臂、双肩完全露出的款式结构",
+   "board": "construction",
+   "parent": "领型",
+   "criterion": "肩点以下才出现衣身边缘，肩头完全裸露",
+   "confusable": "挂脖：挂脖靠颈后固定，露肩靠上臂支撑"
+  },
+  {
+   "zh": "拉链",
+   "en": "zipper",
+   "aliases": [
+    "拉锁",
+    "zip"
+   ],
+   "def": "以齿链咬合开合的金属或尼龙闭合件",
+   "board": "construction",
+   "parent": "闭合件",
+   "criterion": "能看到连续齿链与拉头，通常沿门襟、侧缝或后背",
+   "confusable": "纽扣：纽扣是点状扣合，拉链是线状连续闭合"
+  },
+  {
+   "zh": "纽扣",
+   "en": "button",
+   "aliases": [
+    "扣子"
+   ],
+   "def": "以扣眼固定的点状闭合件，兼有装饰作用",
+   "board": "construction",
+   "parent": "闭合件",
+   "criterion": "有独立圆形或异形扣件，并配有对应扣眼或系带",
+   "confusable": "铆钉：铆钉是固定件，不承担开合"
+  },
+  {
+   "zh": "打褶",
+   "en": "tuck",
+   "aliases": [
+    "褶裥缝",
+    "pin tuck"
+   ],
+   "def": "将面料折起后缝住一道、形成细长褶线的工艺",
+   "board": "construction",
+   "parent": "褶",
+   "criterion": "有等距平行的细褶线，褶宽一致且缝死",
+   "confusable": "褶裥：褶裥是压出的褶形，打褶是用缝线固定褶"
+  },
+  {
+   "zh": "袢带",
+   "en": "tab",
+   "aliases": [
+    "襻带",
+    "strap tab"
+   ],
+   "def": "缝在衣片上的短带，用于固定腰带、袖口或装饰",
+   "board": "construction",
+   "parent": "细节",
+   "criterion": "有一小段横向或纵向的带状结构，两端缝死、中间可穿带",
+   "confusable": "肩章：肩章固定在肩线，袢带位置更自由"
+  },
+  {
+   "zh": "胸省",
+   "en": "bust dart",
+   "aliases": [
+    "胸褶"
+   ],
+   "def": "从胸点向外收去的三角形省道，用于塑造胸部立体",
+   "board": "construction",
+   "parent": "省道",
+   "criterion": "从胸点向侧缝、肩或腰方向有一条逐渐收窄的缝线",
+   "confusable": "腰省：腰省在腰部收，胸省从胸点出发"
+  },
+  {
+   "zh": "涤纶",
+   "en": "polyester",
+   "aliases": [
+    "聚酯纤维",
+    "pet"
+   ],
+   "def": "聚酯类合成纤维，强度高、抗皱、易干",
+   "board": "material",
+   "parent": "合成纤维",
+   "criterion": "表面较挺、光泽偏亮或偏塑料感，揉搓后回弹快",
+   "confusable": "锦纶：锦纶更软更亮，涤纶更挺"
+  },
+  {
+   "zh": "丝光棉",
+   "en": "mercerized cotton",
+   "aliases": [
+    "丝光处理棉"
+   ],
+   "def": "经碱液处理、表面光洁并带丝样光泽的棉织物",
+   "board": "material",
+   "parent": "棉织物",
+   "criterion": "棉质手感但表面有柔和光泽，比普通棉更挺括",
+   "confusable": "府绸：府绸靠织法细密，丝光棉靠后处理增光"
+  },
+  {
+   "zh": "毛圈布",
+   "en": "terry",
+   "aliases": [
+    "毛巾布",
+    "terry cloth"
+   ],
+   "def": "表面有未割断纱圈、吸水性强的高密针织布",
+   "board": "material",
+   "parent": "针织",
+   "criterion": "表面布满均匀小线圈，按压有弹性，常见于卫衣与浴袍",
+   "confusable": "抓绒：抓绒是割断起绒，毛圈布是未割断的圈"
+  },
+  {
+   "zh": "网眼布",
+   "en": "mesh",
+   "aliases": [
+    "网布",
+    "mesh fabric"
+   ],
+   "def": "织成规则孔洞、透气性强的织物",
+   "board": "material",
+   "parent": "针织",
+   "criterion": "透光可见规则孔洞，孔形多为六角或方形",
+   "confusable": "蕾丝：蕾丝孔洞不规则并带花纹，网眼布孔洞规则"
+  },
+  {
+   "zh": "羽绒",
+   "en": "down",
+   "aliases": [
+    "羽绒填充",
+    "down fill"
+   ],
+   "def": "以水禽绒朵为填充、通过绗缝固定的保暖材料",
+   "board": "material",
+   "parent": "填充",
+   "criterion": "表面鼓起呈分格状，按压回弹慢，重量轻",
+   "confusable": "棉服：棉服填充为化纤棉，回弹更快、更重"
+  },
+  {
+   "zh": "织锦",
+   "en": "brocade",
+   "aliases": [
+    "锦缎",
+    "brocade fabric"
+   ],
+   "def": "以提花方式织出浮雕感花纹的厚重织物",
+   "board": "material",
+   "parent": "表面肌理",
+   "criterion": "花纹凸起于底布、正反面纹路不同，光泽随角度变化",
+   "confusable": "提花：提花泛指织出花纹，织锦强调厚重与金银线"
+  },
+  {
+   "zh": "无纺布",
+   "en": "nonwoven",
+   "aliases": [
+    "不织布"
+   ],
+   "def": "不经纺纱织造、直接由纤维粘合成型的材料",
+   "board": "material",
+   "parent": "功能面料",
+   "criterion": "看不到经纬织纹，边缘不散纱，手感偏硬或偏纸感",
+   "confusable": "涂层布：涂层布有织物基布，无纺布没有织纹"
+  },
+  {
+   "zh": "素皮",
+   "en": "vegan leather",
+   "aliases": [
+    "环保皮",
+    "pu leather"
+   ],
+   "def": "以织物或化纤为基布、表面覆聚氨酯的仿皮革材料",
+   "board": "material",
+   "parent": "仿制材料",
+   "criterion": "表面有皮革纹理但背面可见织物基布，折痕处易发白",
+   "confusable": "皮革：皮革基材是动物皮，素皮基材是织物"
+  },
+  {
+   "zh": "竹纤维",
+   "en": "bamboo fiber",
+   "aliases": [
+    "竹浆纤维"
+   ],
+   "def": "由竹浆制成的再生纤维素纤维，柔软且吸湿",
+   "board": "material",
+   "parent": "再生纤维",
+   "criterion": "手感柔软滑爽、垂坠，光泽弱于莫代尔",
+   "confusable": "莫代尔：莫代尔原料为山毛榉，竹纤维为竹浆"
+  },
+  {
+   "zh": "羊羔绒",
+   "en": "faux shearling",
+   "aliases": [
+    "仿羊羔绒",
+    "sherpa"
+   ],
+   "def": "以化纤仿制的羊羔毛面料，正面绒毛、背面为织物",
+   "board": "material",
+   "parent": "仿制材料",
+   "criterion": "正面卷曲短绒、背面可见针织或梭织底布",
+   "confusable": "羊羔毛：羊羔毛是皮毛一体，羊羔绒是化纤仿制"
+  },
+  {
+   "zh": "金银丝",
+   "en": "metallic yarn",
+   "aliases": [
+    "金属纱线",
+    "lurex"
+   ],
+   "def": "混入织物中的金属光泽纱线，形成细闪效果",
+   "board": "material",
+   "parent": "表面肌理",
+   "criterion": "布面有细密点状或线状反光，随角度闪动",
+   "confusable": "金属丝：金属丝指材料本身，金银丝指混纺后的纱线"
+  },
+  {
+   "zh": "烫金",
+   "en": "foil print",
+   "aliases": [
+    "烫印",
+    "hot foil"
+   ],
+   "def": "以高温将金属箔压印到面料表面的工艺",
+   "board": "material",
+   "parent": "表面肌理",
+   "criterion": "表面有整片或图案化的金属反光层，边缘锐利",
+   "confusable": "金银丝：金银丝织在纱线里，烫金是表面压印"
+  },
+  {
+   "zh": "压胶",
+   "en": "seam sealing",
+   "aliases": [
+    "压胶条",
+    "taped seam"
+   ],
+   "def": "在缝线处热压防水胶条、阻断渗水的工艺",
+   "board": "material",
+   "parent": "功能面料",
+   "criterion": "内缝处可见一条半透明或同色胶条，表面略凸",
+   "confusable": "包边：包边用于收口，压胶用于防水"
+  },
+  {
+   "zh": "立体花",
+   "en": "3d applique",
+   "aliases": [
+    "立体贴花",
+    "appliqué"
+   ],
+   "def": "缝制或粘合在面料表面的立体花饰",
+   "board": "material",
+   "parent": "表面肌理",
+   "criterion": "花纹凸出于布面、有厚度，边缘可看到缝线或胶痕",
+   "confusable": "刺绣：刺绣是线迹构成，立体花是独立构件贴合"
+  },
+  {
+   "zh": "反光面料",
+   "en": "reflective fabric",
+   "aliases": [
+    "反光布",
+    "retro-reflective"
+   ],
+   "def": "表面含玻璃微珠或反光涂层、遇光强烈回射的面料",
+   "board": "material",
+   "parent": "功能面料",
+   "criterion": "弱光下用闪光灯拍摄会出现强烈白色反光斑",
+   "confusable": "涂层布：涂层布只有膜感，反光面料有回射效果"
+  },
+  {
+   "zh": "记忆面料",
+   "en": "memory fabric",
+   "aliases": [
+    "形状记忆布"
+   ],
+   "def": "受力后留下折痕、加热或抚平后可恢复的合成面料",
+   "board": "material",
+   "parent": "功能面料",
+   "criterion": "抓握后留下明显褶痕，松手不回弹，需抚平才恢复",
+   "confusable": "压皱：压皱是永久皱感，记忆面料是可恢复的折痕"
+  },
+  {
+   "zh": "再生涤纶",
+   "en": "recycled polyester",
+   "aliases": [
+    "rpet",
+    "再生聚酯"
+   ],
+   "def": "以回收塑料瓶或废丝为原料制成的涤纶纤维",
+   "board": "material",
+   "parent": "合成纤维",
+   "criterion": "外观与普通涤纶几乎无异，需依赖吊牌或成分标识别",
+   "confusable": "涤纶：手感外观相同，只能靠标识区分"
+  },
+  {
+   "zh": "有机棉",
+   "en": "organic cotton",
+   "aliases": [
+    "有机棉花"
+   ],
+   "def": "按有机农业标准种植、不使用合成农药的棉花",
+   "board": "material",
+   "parent": "棉织物",
+   "criterion": "外观与普通棉无异，需依赖认证标识识别",
+   "confusable": "棉：外观相同，只能靠认证区分"
   }
  ]
 }
