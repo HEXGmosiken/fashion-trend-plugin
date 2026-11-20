@@ -88,12 +88,16 @@ const CLOUD_MASK: Record<string, MaskName> = {
 };
 
 function cloud(kws: { t: string; n: number }[], board: string): string {
-  const layout = layoutCloud(kws, { width: 460, height: 360, mask: CLOUD_MASK[board] ?? "heart" });
+  const W = 460;
+  const H = 340;
+  const layout = layoutCloud(kws, { width: W, height: H, mask: CLOUD_MASK[board] ?? "heart" });
   return layout.words
-    .map(
-      (w) =>
-        `<span style="left:${w.x}px;top:${w.y}px;font-size:${w.size}px;font-weight:${w.weight}">${esc(w.t)}</span>`,
-    )
+    .map((w) => {
+      const left = ((w.x / W) * 100).toFixed(2);
+      const top = ((w.y / H) * 100).toFixed(2);
+      const fs = ((w.size / W) * 100).toFixed(2);
+      return `<span style="left:${left}%;top:${top}%;font-size:${fs}cqw;font-weight:${w.weight}">${esc(w.t)}</span>`;
+    })
     .join("");
 }
 
@@ -124,7 +128,15 @@ function assetSrc(path: string, prefix: string): string {
   return prefix + clean;
 }
 
-function trendPage(t: Trend, i: number, boards: Board[], total: number, prefix: string): string {
+function trendPage(
+  t: Trend,
+  i: number,
+  boards: Board[],
+  total: number,
+  prefix: string,
+  prevId?: string,
+  nextId?: string,
+): string {
   const board = boards.find((b) => b.key === t.board);
   const theme = ACCENT[t.board] ?? ACCENT.silhouette!;
   const quotes = t.quotes
@@ -140,7 +152,7 @@ function trendPage(t: Trend, i: number, boards: Board[], total: number, prefix: 
   return `
   <section class="trend" id="${t.id}" style="--accent:${theme.accent};--ink:${theme.ink};--paper:${theme.paper}">
     <div class="hero">
-      ${t.images[0] ? `<img src="${esc(assetSrc(t.images[0].src, prefix))}" alt="${esc(t.name)}" loading="lazy" />` : ""}
+      ${t.images[0] ? `<img src="${esc(assetSrc(t.images[0].src, prefix))}" alt="${esc(t.name)}" loading="eager" fetchpriority="high" onerror="this.style.visibility='hidden'" />` : ""}
       <div class="hero-tag"><span>${esc(board?.name ?? "")}</span><span>${String(i + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}</span></div>
     </div>
 
@@ -171,26 +183,37 @@ function trendPage(t: Trend, i: number, boards: Board[], total: number, prefix: 
       <div class="strip">
         ${t.images
           .slice(1, 4)
-          .map((im) => `<figure class="shot"><img src="${esc(assetSrc(im.src, prefix))}" alt="" loading="lazy" /><figcaption>${esc(im.source ?? "")}</figcaption></figure>`)
+          .map((im) => `<figure class="shot"><img src="${esc(assetSrc(im.src, prefix))}" alt="" loading="lazy" onerror="this.style.visibility='hidden'" /><figcaption>${esc(im.source ?? "")}</figcaption></figure>`)
           .join("")}
       </div>
 
       <div class="quotes">${quotes}</div>
+
+      <nav class="pager">
+        ${prevId ? `<a href="#${prevId}">← 上一条</a>` : "<span></span>"}
+        ${nextId ? `<a href="#${nextId}">下一条 →</a>` : "<span></span>"}
+      </nav>
     </div>
   </section>`;
 }
 
 function indexPage(book: TrendBook): string {
-  const cards = book.boards
-    .map((b) => {
+  const ROT = [-3.5, 2.6, -2.2, 3.2, -2.8, 1.9, -1.5, 2.9];
+  const DY = [0, 30, -16, 22, -22, 10, 26, -8];
+
+  const brushes = book.boards
+    .map((b, i) => {
       const items = book.trends.filter((t) => t.board === b.key);
       const theme = ACCENT[b.key] ?? ACCENT.silhouette!;
+      const rot = ROT[i % ROT.length];
+      const dy = DY[i % DY.length];
       return `
-      <a class="board" href="#${items[0]?.id ?? ""}" style="--accent:${theme.accent}">
-        <p class="b-name">${esc(b.name)}</p>
-        <p class="b-en">${esc(b.en)}</p>
-        <p class="b-desc">${esc(b.desc)}</p>
-        <ul>${items.map((t) => `<li><span>${esc(t.name)}</span><i>${esc(t.code)}</i></li>`).join("")}</ul>
+      <a class="brush" href="#${items[0]?.id ?? ""}" style="--accent:${theme.accent};--rot:${rot}deg;--dy:${dy}px;--h:${330 + (i % 3) * 26}px"
+         aria-label="${esc(b.name)}，${items.length} 条趋势">
+        <span class="brush-bg" aria-hidden="true"></span>
+        <span class="brush-name">${esc(b.name)}</span>
+        <span class="brush-en">${esc(b.en)}</span>
+        <span class="brush-count">${items.length}</span>
       </a>`;
     })
     .join("");
@@ -199,8 +222,9 @@ function indexPage(book: TrendBook): string {
   <section class="index">
     <div class="inner">
       <p class="eyebrow">目录</p>
-      <h2 class="index-title">${book.boards.length} 个板块 · ${book.trends.length} 条趋势</h2>
-      <div class="boards">${cards}</div>
+      <h2 class="index-title">${book.trends.length} 条趋势，分在 ${book.boards.length} 个板块</h2>
+      <div class="brush-grid">${brushes}</div>
+      <p class="index-hint">点任意板块，进入该板块的第一条趋势</p>
     </div>
   </section>`;
 }
@@ -282,9 +306,9 @@ export function renderMagazine(
   .eyebrow { font-size:11px; letter-spacing:.24em; color:var(--accent); margin:0 0 14px; }
 
   /* 封面 */
-  .cover { min-height:100vh; display:flex; align-items:center; position:relative; overflow:hidden; background:#faf8f4; }
+  .cover { min-height:100dvh; display:flex; align-items:center; position:relative; overflow:hidden; background:#faf8f4; }
   .cover h1 { font-size:clamp(46px,7vw,92px); font-weight:600; letter-spacing:-.02em; margin:0; line-height:1.05; }
-  .cover .season { font-family:"Songti SC","STSong",Georgia,serif; font-size:clamp(24px,3vw,38px); color:var(--accent); margin:16px 0 0; letter-spacing:.06em; }
+  .cover .season { font-family:"Songti SC","STSong","Noto Serif SC","SimSun",Georgia,serif; font-size:clamp(24px,3vw,38px); color:var(--accent); margin:16px 0 0; letter-spacing:.06em; }
   .cover .intro { max-width:560px; color:var(--muted); margin:30px 0 0; line-height:2; font-size:16px; }
   .cover .meta { display:flex; gap:34px; margin-top:64px; font-size:13px; color:var(--muted); letter-spacing:.1em; }
   .cover-wm { position:absolute; right:-2vw; bottom:-3vw; font-size:16vw; font-weight:700; color:rgba(27,26,23,.04); line-height:.8; user-select:none; }
@@ -295,33 +319,39 @@ export function renderMagazine(
   .sum-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:44px; margin-top:64px; }
   .sum-block h3 { font-size:17px; margin:0 0 12px; font-weight:600; }
   .sum-block p { font-size:14px; line-height:1.95; margin:0; color:#3a352e; }
-  .data-line { margin-top:10px !important; font-size:11.5px !important; color:#a39b8e !important; letter-spacing:.04em; }
+  .data-line { margin-top:10px !important; font-size:12.5px !important; color:#7d766a !important; letter-spacing:.04em; }
   .sum-counter { margin-top:52px; padding-top:26px; border-top:1px dashed var(--line); }
   .sum-counter h3 { font-size:12px; letter-spacing:.2em; color:var(--muted); margin:0 0 10px; font-weight:500; }
   .sum-counter p { font-size:14px; line-height:1.95; margin:0; color:#3a352e; }
   .sum-close { margin:40px 0 0; font-size:19px; line-height:1.8; color:var(--ink); }
 
   /* 目录 */
-  .index { padding:120px 0; background:#fff; }
-  .index-title { font-size:clamp(30px,3.6vw,46px); font-weight:600; margin:0 0 56px; letter-spacing:-.01em; }
-  .boards { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
-  .board { background:#fff; padding:34px 30px 30px; text-decoration:none; min-height:220px; }
-  .board:hover { background:#fcfaf6; }
-  .b-name { font-size:22px; font-weight:600; margin:0; }
-  .b-en { font-size:11px; letter-spacing:.18em; color:var(--accent); margin:6px 0 0; }
-  .b-desc { color:var(--muted); font-size:13px; margin:16px 0 22px; }
-  .board ul { list-style:none; padding:0; margin:0; display:grid; gap:10px; }
-  .board li { display:flex; justify-content:space-between; gap:12px; font-size:14px; border-top:1px solid var(--line); padding-top:10px; }
-  .board li i { font-style:normal; color:var(--muted); font-size:11px; letter-spacing:.08em; }
+  /* 目录：毛笔色块 + 竖排字 */
+  .index { padding:120px 0 140px; background:#f6f2ea; }
+  .index-title { font-size:clamp(26px,3vw,40px); font-weight:600; margin:0 0 76px; letter-spacing:-.01em; }
+  .brush-grid { display:grid; grid-template-columns:repeat(3, 170px); justify-content:center; gap:26px 46px; align-items:start; }
+  .brush { position:relative; display:block; --h:340px; height:calc(var(--h) + 34px); text-decoration:none;
+           transform:rotate(var(--rot)) translateY(var(--dy)); transition:transform .3s ease; }
+  .brush:hover { transform:rotate(0deg) translateY(var(--dy)) scale(1.03); }
+  .brush-bg { position:absolute; left:50%; top:0; width:132px; height:var(--h); margin-left:-66px;
+              background:color-mix(in srgb, var(--accent) 68%, #fff);
+              border-radius:46% 54% 43% 57% / 7% 9% 6% 8%; }
+  .brush-name { position:absolute; top:46px; left:50%; transform:translateX(-50%);
+                writing-mode:vertical-rl; font-family:"KaiTi","STKaiti","楷体",serif;
+                font-size:42px; letter-spacing:.05em; line-height:1.12; color:#17130f; }
+  .brush-en { position:absolute; bottom:0; left:50%; transform:translateX(-50%);
+              font-size:10px; letter-spacing:.16em; color:rgba(0,0,0,.45); white-space:nowrap; }
+  .brush-count { position:absolute; top:12px; left:calc(50% + 72px); font-size:10px; color:rgba(0,0,0,.4); }
+  .index-hint { margin:78px 0 0; font-size:12px; color:var(--muted); letter-spacing:.06em; text-align:center; }
 
   /* 趋势页 */
   .trend { background:var(--paper); color:var(--ink); padding-bottom:96px; }
-  .hero { position:relative; height:clamp(300px,42vh,440px); overflow:hidden; background:#e8e4dc; }
-  .hero img { width:100%; height:100%; object-fit:cover; object-position:center 28%; }
+  .hero { position:relative; height:auto; overflow:hidden; background:color-mix(in srgb, var(--accent) 10%, #e8e4dc); }
+  .hero img { display:block; width:100%; height:auto; }
   .hero-tag { position:absolute; right:20px; top:16px; display:flex; gap:16px; color:#fff; font-size:10px; letter-spacing:.18em; background:rgba(20,18,15,.38); padding:6px 11px; backdrop-filter:blur(3px); }
   .thead { padding:44px 0 0; }
   .thead h2 { font-size:clamp(36px,4.4vw,58px); font-weight:600; margin:0; letter-spacing:.01em; line-height:1.1; }
-  .en { font-family:"Songti SC","STSong",Georgia,serif; color:var(--accent); font-size:17px; letter-spacing:.1em; margin:10px 0 0; }
+  .en { font-family:"Songti SC","STSong","Noto Serif SC","SimSun",Georgia,serif; color:var(--accent); font-size:17px; letter-spacing:.1em; margin:10px 0 0; }
   .tags { display:flex; gap:10px; margin:18px 0 0; }
   .tags span { font-size:11px; letter-spacing:.14em; color:var(--muted); border:1px solid var(--line); padding:3px 9px; border-radius:2px; }
 
@@ -335,7 +365,7 @@ export function renderMagazine(
   .expr { margin:26px 0 0; font-size:14px; line-height:1.95; color:var(--muted); border-left:2px solid var(--accent); padding-left:16px; }
 
   .viz { display:grid; gap:26px; align-content:start; }  .viz-cap { font-size:10px; letter-spacing:.2em; color:var(--muted); margin:0; }
-  .cloud { position:relative; width:460px; max-width:100%; height:360px; }
+  .cloud { position:relative; width:100%; aspect-ratio:460/340; container-type:inline-size; }
   .cloud span { position:absolute; transform:translate(-50%, -50%); white-space:nowrap; line-height:1;
                 color:color-mix(in srgb, var(--accent) 72%, var(--ink)); letter-spacing:.01em; }
 
@@ -354,7 +384,7 @@ export function renderMagazine(
 
   .strip { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:52px; }
   .shot { margin:0; }
-  .shot img { width:100%; height:240px; object-fit:cover; }
+  .shot img { width:100%; height:250px; object-fit:contain; background:color-mix(in srgb, var(--accent) 8%, #ece8e0); }
   .shot figcaption { font-size:10px; color:var(--muted); margin-top:7px; letter-spacing:.08em; }
 
   .quotes { display:grid; grid-template-columns:repeat(3,1fr); gap:36px; margin-top:56px; border-top:1px solid var(--line); padding-top:32px; }
@@ -383,15 +413,27 @@ export function renderMagazine(
   .progress { position:fixed; left:0; top:0; height:2px; background:var(--accent); width:0; z-index:40; }
   .toggle { position:fixed; right:22px; bottom:22px; z-index:40; border:1px solid var(--line); background:#fff; color:var(--muted);
             font-size:11px; letter-spacing:.1em; padding:8px 12px; cursor:pointer; }
+  .pager { display:flex; justify-content:space-between; margin-top:44px; padding-top:22px; border-top:1px solid var(--line); font-size:13px; }
+  .pager a { color:var(--ink); text-decoration:none; border-bottom:1px solid rgba(27,26,23,.25); padding-bottom:2px; }
+  .pager a:hover { color:var(--accent); border-color:var(--accent); }
   @media (max-width:1100px) { .rail { display:none; } }
   @media (max-width:900px) {
     .inner { padding:0 24px; }
-    .boards { grid-template-columns:1fr; }
+    .brush-grid { grid-template-columns:repeat(2, 140px); gap:20px 30px; }
+    .brush { height:320px; transform:rotate(var(--rot)) translateY(0); }
+    .brush-bg { width:110px; margin-left:-55px; height:300px; }
+    .brush-name { font-size:34px; top:38px; }
     .grid { grid-template-columns:1fr; gap:36px; }
     .strip, .quotes { grid-template-columns:1fr; }
     .hero-tag { left:24px; }
   }
-  @media print { .rail,.toggle,.progress { display:none; } .trend { page-break-after:always; } }
+  @media print {
+    .rail, .toggle, .progress { display:none; }
+    .cover, .summary, .index, .trend, .appendix { page-break-after:always; page-break-inside:avoid; min-height:0; }
+    .cover { min-height:auto; padding:60px 0; }
+    .hero { height:auto; max-height:60vh; }
+    * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  }
 </style>
 </head>
 <body>
@@ -412,7 +454,11 @@ export function renderMagazine(
   ${opts.summary ? summarySection(opts.summary) : ""}
 
   ${indexPage(book)}
-  ${book.trends.map((t, i) => trendPage(t, i, book.boards, book.trends.length, prefix)).join("")}
+  ${book.trends
+    .map((t, i) =>
+      trendPage(t, i, book.boards, book.trends.length, prefix, book.trends[i - 1]?.id, book.trends[i + 1]?.id),
+    )
+    .join("")}
   ${appendix(r, book)}
 
   <button class="toggle" id="toggle">关闭缓动</button>
