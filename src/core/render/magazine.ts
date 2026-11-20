@@ -202,17 +202,12 @@ function trendPage(
 }
 
 function indexPage(book: TrendBook): string {
-  const ROT = [-3.5, 2.6, -2.2, 3.2, -2.8, 1.9, -1.5, 2.9];
-  const DY = [0, 30, -16, 22, -22, 10, 26, -8];
-
   const brushes = book.boards
     .map((b, i) => {
       const items = book.trends.filter((t) => t.board === b.key);
       const theme = ACCENT[b.key] ?? ACCENT.silhouette!;
-      const rot = ROT[i % ROT.length];
-      const dy = DY[i % DY.length];
       return `
-      <a class="brush" href="#${items[0]?.id ?? ""}" style="--accent:${theme.accent};--rot:${rot}deg;--dy:${dy}px;--h:${330 + (i % 3) * 26}px"
+      <a class="brush" href="#${items[0]?.id ?? ""}" style="--accent:${theme.accent}"
          aria-label="${esc(b.name)}，${items.length} 条趋势">
         <span class="brush-bg" aria-hidden="true"></span>
         <span class="brush-name">${esc(b.name)}</span>
@@ -339,10 +334,9 @@ export function renderMagazine(
   .index { padding:120px 0 140px; background:#f6f2ea; }
   .index-title { font-size:clamp(26px,3vw,40px); font-weight:600; margin:0 0 76px; letter-spacing:-.01em; }
   .brush-grid { display:grid; grid-template-columns:repeat(3, 170px); justify-content:center; gap:26px 46px; align-items:start; }
-  .brush { position:relative; display:block; --h:340px; height:calc(var(--h) + 34px); text-decoration:none;
-           transform:rotate(var(--rot)) translateY(var(--dy)); transition:transform .3s ease; }
-  .brush:hover { transform:rotate(0deg) translateY(var(--dy)) scale(1.03); }
-  .brush-bg { position:absolute; left:50%; top:0; width:132px; height:var(--h); margin-left:-66px;
+  .brush { position:relative; display:block; height:420px; text-decoration:none; transition:transform .25s ease; }
+  .brush:hover { transform:translateY(-6px); }
+  .brush-bg { position:absolute; left:50%; top:0; width:132px; height:372px; margin-left:-66px;
               background:color-mix(in srgb, var(--accent) 68%, #fff);
               border-radius:46% 54% 43% 57% / 7% 9% 6% 8%; }
   .brush-name { position:absolute; top:46px; left:50%; transform:translateX(-50%);
@@ -429,8 +423,8 @@ export function renderMagazine(
   @media (max-width:900px) {
     .inner { padding:0 24px; }
     .brush-grid { grid-template-columns:repeat(2, 140px); gap:20px 30px; }
-    .brush { height:320px; transform:rotate(var(--rot)) translateY(0); }
-    .brush-bg { width:110px; margin-left:-55px; height:300px; }
+    .brush { height:350px; }
+    .brush-bg { width:110px; margin-left:-55px; height:310px; }
     .brush-name { font-size:34px; top:38px; }
     .grid { grid-template-columns:1fr; gap:36px; }
     .strip, .quotes { grid-template-columns:1fr; }
