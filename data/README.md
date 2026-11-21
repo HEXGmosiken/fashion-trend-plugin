@@ -8,9 +8,17 @@
 |---|---|
 | `evidence.sample.json` | 31 条合成证据，跑 `pnpm demo` 用 |
 | `claims.json` | 示例命题 |
+| `claims.template.json` | 可复制的双窗命题模板 |
 | `sources.json` | 示例来源 |
 
 域名都用 `*.example`，不对应任何真实网站。
+
+复制 `claims.template.json` 后，按研究设计填写问题、信号、分析单位、两个时间窗、每窗最小样本量及编码规则。日期边界均包含当天，主题季可以区分日期重叠的窗口。`signal` 对应证据的 `codings` 键。明确判定的样本写 `true` 或 `false`，无法判定时省略该键。每个分析单位保留一条规范证据。程序检查结构化的品牌、来源类型、日期和季节，`include`、`exclude` 里的文字条件由编码员逐条复核。
+
+```bash
+pnpm exec node src/cli/index.ts validate --input data/evidence.sample.json --claims data/claims.template.json
+pnpm analyze --input data/my-evidence.json --claims data/claims.template.json --sources data/my-sources.json
+```
 
 ## 2. 项目自有内容（可提交）
 

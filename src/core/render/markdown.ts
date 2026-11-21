@@ -23,17 +23,24 @@ export function renderMarkdown(m: DeckModel): string {
     if (p.kwA || p.kwB) L.push(`${p.kwA} / ${p.kwB}`, "");
     L.push("");
     for (const line of p.lines) L.push(line, "");
-    L.push("| | 2026 秋冬 | 2027 春夏 |");
+    if (p.status) continue;
+    const unit = p.sample?.unitLabel ?? "篇报道";
+    L.push(`| | ${(p.sample?.labelA ?? "2026 秋冬").replace(/\|/g, "｜")} | ${(p.sample?.labelB ?? "2027 春夏").replace(/\|/g, "｜")} |`);
     L.push("|---|---|---|");
     L.push(`| 出现率 | ${p.shareA}% | ${p.shareB}% |`);
-    L.push(`| 样本 | ${p.nA} 篇中 ${p.kA} 篇 | ${p.nB} 篇中 ${p.kB} 篇 |`);
+    L.push(`| 样本 | ${p.kA} / ${p.nA} ${unit} | ${p.kB} / ${p.nB} ${unit} |`);
     L.push("");
-    L.push(`${p.delta.text}　置信度 ${dotGlyphs(p.dots).join("")} ${p.confLabel}　证据 ${p.evidenceCount} 篇　来源 ${p.sourceCount} 家`, "");
+    L.push(`${p.delta.text}　置信度 ${dotGlyphs(p.dots).join("")} ${p.confLabel}　支撑证据 ${p.evidenceCount} 条　来源 ${p.sourceCount} 家`, "");
     L.push("<details><summary>证据</summary>", "");
     for (const e of p.support.slice(0, 10)) {
       L.push(`- [${e.title}](${e.url})　${e.source}　${e.date}`);
     }
     L.push("", `局限：${p.caveats.join("　")}`, "", "</details>", "");
+    if (p.counter?.length) {
+      L.push("<details><summary>反证</summary>", "");
+      for (const e of p.counter) L.push(`- [${e.title}](${e.url})　${e.source}　${e.date}`);
+      L.push("", "</details>", "");
+    }
   }
 
   L.push("---", "", "## 附录", "");

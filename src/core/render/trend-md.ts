@@ -39,10 +39,12 @@ export function renderTrendMarkdown(
       L.push(`### ${["一", "二", "三", "四", "五"][i] ?? i + 1}、${b.title}`, "");
       L.push(b.claim, "");
       if (b.data) L.push(`> 数据：${b.data}`, "");
+      if (b.missing.length) L.push(`> ${b.missing.map((name) => `「${name}」`).join("、")}缺少统计数据。`, "");
     });
     L.push("### 反证", "");
     L.push(s.counter.claim, "");
     if (s.counter.data) L.push(`> 数据：${s.counter.data}`, "");
+    if (s.counter.missing.length) L.push(`> ${s.counter.missing.map((name) => `「${name}」`).join("、")}缺少统计数据。`, "");
     L.push("", s.close, "");
     L.push("---", "");
   }
@@ -81,13 +83,14 @@ export function renderTrendMarkdown(
 
     if (t.claim) {
       const c = t.claim;
-      const d = c.shareB - c.shareA;
+      const d = c.deltaPp ?? c.shareB - c.shareA;
       const sign = d > 0 ? `高出 ${d} 点` : d < 0 ? `低 ${Math.abs(d)} 点` : "基本持平";
+      const unit = c.unitLabel ?? "篇";
       L.push("**数据**", "");
-      L.push(`| 时间窗 | 提及率 | 样本 |`);
+      L.push(`| 时间窗 | 占比 | 样本 |`);
       L.push(`|---|---|---|`);
-      L.push(`| 2026 秋冬 | ${c.shareA}% | ${c.nA} 篇中 ${c.kA} 篇 |`);
-      L.push(`| 2027 春夏 | ${c.shareB}% | ${c.nB} 篇中 ${c.kB} 篇 |`);
+      L.push(`| ${(c.labelA ?? "2026 秋冬").replace(/\|/g, "\\|")} | ${c.shareA}% | ${c.nA} ${unit}中 ${c.kA} ${unit} |`);
+      L.push(`| ${(c.labelB ?? "2027 春夏").replace(/\|/g, "\\|")} | ${c.shareB}% | ${c.nB} ${unit}中 ${c.kB} ${unit} |`);
       L.push("");
       L.push(`变化：${sign}，置信度${c.confidence === "high" ? "高" : c.confidence === "medium" ? "中" : "低"}。`, "");
     }

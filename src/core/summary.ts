@@ -2,7 +2,7 @@
  * 总述：论点由人写，数据由书算。
  * 这里只做两件事——把人工论点接到趋势上，把趋势的样本数填进数据行。
  */
-import type { TrendBook } from "./render/magazine.ts";
+import type { Trend, TrendBook } from "./render/magazine.ts";
 
 export interface RawSummary {
   season: string;
@@ -28,23 +28,28 @@ export interface SummaryModel {
   close: string;
 }
 
-function dataLine(book: TrendBook, refs: string[]): { data: string; missing: string[] } {
+function dataLine(trendsByName: Map<string, Trend>, refs: string[]): { data: string; missing: string[] } {
   const parts: string[] = [];
   const missing: string[] = [];
-  for (const name of refs) {
-    const t = book.trends.find((x) => x.name === name);
-    if (!t || typeof t.docs !== "number") {
+  for (const name of new Set(refs.map((ref) => ref.trim()))) {
+    const t = trendsByName.get(name);
+    if (typeof t?.docs !== "number" || !Number.isSafeInteger(t.docs) || t.docs < 0) {
       missing.push(name);
       continue;
     }
-    parts.push(`${name} ${t.docs} 篇 ${t.share ?? "?"}%`);
+    const share = t.share;
+    const percent = typeof share === "number" && Number.isFinite(share) && share >= 0 && share <= 100
+      ? ` ${share}%`
+      : "";
+    parts.push(`${name} ${t.docs} 篇${percent}`);
   }
   return { data: parts.join(" · "), missing };
 }
 
 export function buildSummary(book: TrendBook, raw: RawSummary): SummaryModel {
+  const trendsByName = new Map(book.trends.map((trend) => [trend.name, trend]));
   const toBlock = (p: { title: string; claim: string; refs: string[] }): SummaryBlock => {
-    const { data, missing } = dataLine(book, p.refs);
+    const { data, missing } = dataLine(trendsByName, p.refs);
     return { title: p.title, claim: p.claim, data, missing };
   };
 

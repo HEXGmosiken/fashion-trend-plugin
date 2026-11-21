@@ -20,9 +20,8 @@ export function canonicalUrl(raw: string): string {
   kept.sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0));
   u.search = "";
   for (const [k, v] of kept) u.searchParams.append(k, v);
-  let out = u.toString();
-  if (u.pathname !== "/") out = out.replace(/\/+$/, "");
-  return out;
+  u.pathname = u.pathname.replace(/\/+$/, "") || "/";
+  return u.toString();
 }
 
 /** 标题归一：小写、全半角统一、去掉标点与空白差异 */
@@ -30,13 +29,14 @@ export function normalizeTitle(title: string): string {
   return title
     .normalize("NFKC")
     .toLowerCase()
-    .replace(/[\u2018\u2019\u201c\u201d]/g, "")
+    .replace(/['\u2018\u2019]/g, "")
+    .replace(/\p{Script=Latin}/gu, (letter) => letter.normalize("NFD").replace(/\p{M}/gu, ""))
     .replace(/[^\p{L}\p{N}]+/gu, " ")
     .trim();
 }
 
 export function titleTokens(title: string): Set<string> {
-  const words = normalizeTitle(title).split(" ").filter((w) => w.length > 1);
+  const words = normalizeTitle(title).split(" ").filter((w) => w.length > 1 || /\p{N}/u.test(w));
   return new Set(words);
 }
 
@@ -51,22 +51,73 @@ export function daysBetween(a: string, b: string): number {
   return Math.round((Date.parse(b) - Date.parse(a)) / 86_400_000);
 }
 
+/** 以真实稿件对校验过的标题相似度下限，见 docs/去重阈值校准.md。 */
+export const DEDUP_TITLE_THRESHOLDS = {
+  "same-publisher": 0.85,
+  "cross-publisher": 0.92,
+} as const;
+
+type TitleMatch = keyof typeof DEDUP_TITLE_THRESHOLDS;
+
+interface TitleCandidate {
+  evidence: Evidence;
+  group: string;
+  tokens: Set<string>;
+  index: number;
+}
+
+function dedupeByTitle(
+  items: TitleCandidate[],
+  reason: TitleMatch,
+  duplicates: DuplicateHit[],
+): TitleCandidate[] {
+  const kept: TitleCandidate[] = [];
+  for (const item of items) {
+    let match: DuplicateHit | undefined;
+    for (const other of kept) {
+      if ((item.group === other.group) !== (reason === "same-publisher")) continue;
+      if (item.tokens.size === 0 || other.tokens.size === 0) continue;
+      // 不同媒体的独立报道可能使用完全相同的秀场标题。
+      if (reason === "cross-publisher" && item.evidence.originality === "original" &&
+          other.evidence.originality === "original") continue;
+      const { season } = item.evidence;
+      if (season !== "other" && other.evidence.season !== "other" && season !== other.evidence.season) {
+        continue;
+      }
+      const similarity = jaccard(item.tokens, other.tokens);
+      if (similarity >= DEDUP_TITLE_THRESHOLDS[reason]) {
+        match = { id: item.evidence.id, duplicateOf: other.evidence.id, reason, similarity };
+        break;
+      }
+    }
+    if (match) duplicates.push(match);
+    else kept.push(item);
+  }
+  return kept;
+}
+
 /**
  * 去重分三层，顺序不能反：
  * 1. 同一 canonical URL → 硬重复
  * 2. 同 publisher group + 标题相似 → 同站不同版本
- * 3. 跨 publisher group + 标题高度相似 → 转载
+ * 3. 跨 publisher group + 标题高度相似 + 一方标记为非原创 → 转载
  */
 export function dedupeEvidence(
   items: Evidence[],
   sourcesById: Map<string, Source>,
 ): { unique: Evidence[]; duplicates: DuplicateHit[] } {
-  const unique: Evidence[] = [];
+  // 避免先录入的投放稿或转载挤掉可用的独立样本。质量相同时保留原顺序。
+  const ranked = items.map((evidence, index) => {
+    const source = sourcesById.get(evidence.sourceId);
+    const promotional = evidence.isSponsored || source?.type === "brand";
+    const rank = Number(!promotional) * 2 + Number(evidence.originality === "original");
+    return { evidence, group: source?.publisherGroup ?? evidence.sourceId, rank, index };
+  }).sort((a, b) => b.rank - a.rank);
+  const candidates: TitleCandidate[] = [];
   const duplicates: DuplicateHit[] = [];
   const byUrl = new Map<string, Evidence>();
-  const tokens = new Map<string, Set<string>>();
 
-  for (const ev of items) {
+  for (const { evidence: ev, group, index } of ranked) {
     const url = canonicalUrl(ev.url);
     const hit = byUrl.get(url);
     if (hit) {
@@ -74,43 +125,18 @@ export function dedupeEvidence(
       continue;
     }
     byUrl.set(url, ev);
-    tokens.set(ev.id, titleTokens(ev.title));
-    unique.push(ev);
+    candidates.push({
+      evidence: ev,
+      group,
+      tokens: titleTokens(ev.title),
+      index,
+    });
   }
 
-  const kept: Evidence[] = [];
-  for (const ev of unique) {
-    const group = sourcesById.get(ev.sourceId)?.publisherGroup ?? ev.sourceId;
-    const tk = tokens.get(ev.id)!;
-    let matched: { id: string; reason: DuplicateHit["reason"]; sim: number } | null = null;
-
-    for (const other of kept) {
-      const otherGroup = sourcesById.get(other.sourceId)?.publisherGroup ?? other.sourceId;
-      const sim = jaccard(tk, tokens.get(other.id)!);
-      const sameGroup = group === otherGroup;
-      if (sameGroup && sim >= 0.85) {
-        matched = { id: other.id, reason: "same-publisher", sim };
-        break;
-      }
-      if (!sameGroup && sim >= 0.92) {
-        matched = { id: other.id, reason: "cross-publisher", sim };
-        break;
-      }
-    }
-
-    if (matched) {
-      duplicates.push({
-        id: ev.id,
-        duplicateOf: matched.id,
-        reason: matched.reason,
-        similarity: Number(matched.sim.toFixed(3)),
-      });
-      continue;
-    }
-    kept.push(ev);
-  }
-
-  return { unique: kept, duplicates };
+  const withinGroup = dedupeByTitle(candidates, "same-publisher", duplicates);
+  const acrossGroups = dedupeByTitle(withinGroup, "cross-publisher", duplicates);
+  const unique = acrossGroups.sort((a, b) => a.index - b.index).map(({ evidence }) => evidence);
+  return { unique, duplicates };
 }
 
 /** 判断证据日期是否落在某个时间窗内 */

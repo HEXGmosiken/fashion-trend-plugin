@@ -16,6 +16,7 @@ import { analyze, buildDeckModel } from "../index.ts";
 import { loadClaims, loadEvidenceFile, loadSources } from "../core/io.ts";
 import { buildReport } from "../core/report.ts";
 import { formatIssues, summarize } from "../core/audit.ts";
+import { UNIT_LABEL } from "../core/findings.ts";
 import { renderMarkdown } from "../core/render/markdown.ts";
 import { renderDeck } from "../core/render/deck.ts";
 import { renderMagazine, type TrendBook } from "../core/render/magazine.ts";
@@ -114,6 +115,34 @@ function writeRun(
   const book = fs.existsSync(trendsPath)
     ? (JSON.parse(fs.readFileSync(trendsPath, "utf8")) as TrendBook)
     : null;
+  if (book) {
+    const findings = new Map(report.findings.map((finding) => [finding.claimId, finding]));
+    const claims = new Map(report.claims.map((claim) => [claim.id, claim]));
+    for (const trend of book.trends) {
+      if (!trend.claim) continue;
+      const finding = findings.get(trend.claim.id);
+      const claim = claims.get(trend.claim.id);
+      if (!finding || finding.status || !claim) {
+        trend.claim = null;
+        continue;
+      }
+      const { a, b } = finding.comparison;
+      trend.claim = {
+        id: finding.claimId,
+        labelA: claim.windowA.label,
+        labelB: claim.windowB.label,
+        unitLabel: UNIT_LABEL[claim.unit],
+        shareA: Number((a.share * 100).toFixed(1)),
+        shareB: Number((b.share * 100).toFixed(1)),
+        deltaPp: finding.comparison.deltaPp,
+        nA: a.n,
+        nB: b.n,
+        kA: a.k,
+        kB: b.k,
+        confidence: finding.confidence,
+      };
+    }
+  }
   const html = book ? renderMagazine(book, report, { assetPrefix: assetPrefixFor(outDir) }) : renderDeck(model);
 
   const files: [string, string][] = [
@@ -166,7 +195,7 @@ function main() {
 
   if (command === "validate") {
     const sources = loadSources(paths.sourcesPath);
-    const ev = loadEvidenceFile(paths.evidencePath);
+    const ev = loadEvidenceFile(paths.evidencePath, sources);
     const claims = loadClaims(paths.claimsPath);
     log("✓ 三份输入均通过校验");
     log(`  来源 ${sources.length} 个｜证据 ${ev.evidence.length} 条｜命题 ${claims.length} 条`);
@@ -250,6 +279,10 @@ function main() {
     log(`  证据 ${s.evidence} 条 → 去重后 ${s.unique}（剔除 ${s.duplicates}）`);
     log(`  来源 ${s.sources} 个　结论 ${report.findings.length} 条　审计 ${s.errors} 错误 ${s.warnings} 警告`);
     for (const f of report.findings) {
+      if (f.status) {
+        log(`    · [${f.confidence}] ${f.claimId} ${f.statement}`);
+        continue;
+      }
       const sign = f.comparison.deltaPp > 0 ? "+" : "";
       log(`    · [${f.confidence}] ${f.claimId} ${sign}${f.comparison.deltaPp}pp  ${f.question}`);
     }

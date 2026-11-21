@@ -1,6 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { analyze, render } from "../src/index.ts";
+import { loadEvidenceFile } from "../src/core/io.ts";
+import { buildReport } from "../src/core/report.ts";
 
 const opts = {
   evidencePath: "data/evidence.sample.json",
@@ -29,6 +31,30 @@ test("C2 判定为下降", () => {
   const report = analyze(opts);
   const c2 = report.findings.find((f) => f.claimId === "C2")!;
   assert.ok(c2.comparison.deltaPp < 0);
+});
+
+test("同源折价按命题计算，仍计入去重前适用的重复证据", () => {
+  const baseline = analyze(opts);
+  const data = loadEvidenceFile(opts.evidencePath);
+  const original = data.evidence.find((e) => e.window === "B" && !e.isSponsored)!;
+  const duplicates = Array.from({ length: 20 }, (_, i) => ({
+    ...original,
+    id: `COPY-${i}`,
+    url: `${original.url}#copy-${i}`,
+    codings: { sheer: original.codings.sheer },
+  }));
+  const report = buildReport({
+    ...data,
+    evidence: [...data.evidence, ...duplicates],
+    claims: baseline.claims,
+    sources: baseline.sources,
+    inputs: baseline.meta.inputs,
+    today: opts.today,
+  });
+
+  assert.equal(report.findings[0].confidence, "medium");
+  assert.deepEqual(report.findings[0].comparison, baseline.findings[0].comparison);
+  assert.deepEqual(report.findings[1], baseline.findings[1]);
 });
 
 test("审计没有错误级问题", () => {

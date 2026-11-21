@@ -1,26 +1,24 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { analyze } from "../src/index.ts";
+import { extractTrends } from "../src/core/auto.ts";
 import { renderMagazine, type TrendBook } from "../src/core/render/magazine.ts";
+import { articles } from "./fixtures/articles.ts";
 
-const opts = {
-  evidencePath: "data/evidence.real.json",
-  claimsPath: "data/claims.real.json",
-  sourcesPath: "data/sources.real.json",
-  today: "2026-11-01",
-};
+const { book, report } = extractTrends(articles);
+const editorial = JSON.parse(fs.readFileSync("data/trends.source.json", "utf8")) as Pick<TrendBook, "trends">;
 
-const book = JSON.parse(fs.readFileSync("data/trends.json", "utf8")) as TrendBook;
-
-test("趋势内容层：六板块、十二条", () => {
+test("趋势内容层：编辑稿覆盖六板块、十二条", () => {
   assert.equal(book.boards.length, 6);
-  assert.equal(book.trends.length, 12);
-  assert.equal(new Set(book.trends.map((t) => t.board)).size, 6);
+  assert.equal(editorial.trends.length, 12);
+  assert.equal(new Set(editorial.trends.map((t) => t.board)).size, 6);
+  assert.ok(editorial.trends.every((t) => t.form.length === 3));
 });
 
-test("每条趋势都有引用、图片和关键词", () => {
-  for (const t of book.trends) {
+const generatedBook = "data/trends.json";
+test("可选的真实趋势数据含引用、图片和关键词", { skip: !fs.existsSync(generatedBook) && "仓库不分发真实生成物" }, () => {
+  const generated = JSON.parse(fs.readFileSync(generatedBook, "utf8")) as TrendBook;
+  for (const t of generated.trends) {
     assert.ok(t.quotes.length >= 2, `${t.id} 引用不足`);
     assert.ok(t.images.length >= 2, `${t.id} 图片不足`);
     assert.ok(t.keywords.length >= 5, `${t.id} 关键词不足`);
@@ -30,16 +28,14 @@ test("每条趋势都有引用、图片和关键词", () => {
 });
 
 test("图文版渲染：含图片、词云和趋势名", () => {
-  const report = analyze(opts);
   const html = renderMagazine(book, report);
-  assert.match(html, /轻薄透视/);
+  assert.match(html, /薄纱/);
   assert.match(html, /assets\/img\//);
   assert.match(html, /class="cloud"/);
   assert.ok(html.length > 20000);
 });
 
 test("图片路径按输出目录补前缀，且不重复叠加", () => {
-  const report = analyze(opts);
   const root = renderMagazine(book, report);
   assert.match(root, /src="assets\/img\//);
 
@@ -49,7 +45,6 @@ test("图片路径按输出目录补前缀，且不重复叠加", () => {
 });
 
 test("图文版不出现工程词", () => {
-  const report = analyze(opts);
   const html = renderMagazine(book, report);
   for (const bad of ["95% CI", "publisher group", "pp<"]) {
     assert.equal(html.includes(bad), false, `不该出现 ${bad}`);
