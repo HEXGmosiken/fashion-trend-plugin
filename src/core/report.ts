@@ -2,6 +2,7 @@
 import type { Claim, Evidence, Source } from "./schema.ts";
 import { dedupeEvidence } from "./normalize.ts";
 import { buildFindings } from "./findings.ts";
+import { sampleExclusions } from "./eligibility.ts";
 import { runAudit, summarize } from "./audit.ts";
 import type { Report, ReportMeta } from "./types.ts";
 
@@ -22,16 +23,15 @@ function reprintShareByClaim(
   claims: Claim[],
   evidence: Evidence[],
   duplicateIds: Set<string>,
+  sourcesById: ReadonlyMap<string, Source>,
 ): Map<string, number> {
   const out = new Map<string, number>();
   for (const c of claims) {
-    const pool = evidence.filter((e) => e.window === "A" || e.window === "B");
-    if (pool.length === 0) {
-      out.set(c.id, 0);
-      continue;
-    }
+    const pool = evidence.filter((e) =>
+      typeof e.codings[c.signal] === "boolean" && sampleExclusions(e, c, sourcesById).length === 0,
+    );
     const tainted = pool.filter((e) => e.originality !== "original" || duplicateIds.has(e.id));
-    out.set(c.id, tainted.length / pool.length);
+    out.set(c.id, pool.length ? tainted.length / pool.length : 0);
   }
   return out;
 }
@@ -44,11 +44,13 @@ export function buildReport(args: BuildArgs): Report {
   const findings = buildFindings(
     args.claims,
     unique,
-    reprintShareByClaim(args.claims, unique, duplicateIds),
+    reprintShareByClaim(args.claims, args.evidence, duplicateIds, sourcesById),
+    sourcesById,
   );
 
   const audit = runAudit({
     evidence: unique,
+    rawEvidence: args.evidence,
     claims: args.claims,
     findings,
     sources: args.sources,

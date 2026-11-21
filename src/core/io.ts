@@ -19,11 +19,19 @@ export class InputError extends Error {
   }
 }
 
-function parseFile<T>(path: string, schema: ZodType): T {
-  if (!fs.existsSync(path)) throw new InputError(`找不到文件：${path}`);
+function parseFile<T>(path: string, schema: ZodType<T>): T {
+  let content: string;
+  try {
+    content = fs.readFileSync(path, "utf8");
+  } catch (e) {
+    const error = e as NodeJS.ErrnoException;
+    throw new InputError(error.code === "ENOENT"
+      ? `找不到文件：${path}`
+      : `无法读取 ${path}：${error.message}`);
+  }
   let raw: unknown;
   try {
-    raw = JSON.parse(fs.readFileSync(path, "utf8"));
+    raw = JSON.parse(content.replace(/^\uFEFF/, ""));
   } catch (e) {
     throw new InputError(`${path} 不是合法 JSON：${(e as Error).message}`);
   }
@@ -33,19 +41,34 @@ function parseFile<T>(path: string, schema: ZodType): T {
     const more = res.error.issues.length > 12 ? `\n  ……另有 ${res.error.issues.length - 12} 处` : "";
     throw new InputError(`${path} 未通过校验：\n${lines.join("\n")}${more}`);
   }
-  return res.data as T;
+  return res.data;
 }
 
 export function loadSources(path: string): Source[] {
-  return parseFile<{ sources: Source[] }>(path, SourcesFileSchema).sources;
+  return parseFile(path, SourcesFileSchema).sources;
 }
 
-export function loadEvidenceFile(path: string): { dataset: string; synthetic: boolean; notes: string; evidence: Evidence[] } {
-  return parseFile<{ dataset: string; synthetic: boolean; notes: string; evidence: Evidence[] }>(path, EvidenceFileSchema);
+export function loadEvidenceFile(path: string, sources?: readonly Source[]): {
+  dataset: string; synthetic: boolean; notes: string; evidence: Evidence[];
+} {
+  if (!sources) return parseFile(path, EvidenceFileSchema);
+
+  const sourceIds = new Set(sources.map((source) => source.id));
+  return parseFile(path, EvidenceFileSchema.superRefine(({ evidence }, ctx) => {
+    for (const [index, entry] of evidence.entries()) {
+      if (!sourceIds.has(entry.sourceId)) {
+        ctx.addIssue({
+          code: "custom",
+          path: ["evidence", index, "sourceId"],
+          message: `来源「${entry.sourceId}」未在来源注册表登记`,
+        });
+      }
+    }
+  }));
 }
 
 export function loadClaims(path: string): Claim[] {
-  return parseFile<{ claims: Claim[] }>(path, ClaimsFileSchema).claims;
+  return parseFile(path, ClaimsFileSchema).claims;
 }
 
 /** 没有配置文件也能出报告，用这套默认版式 */
@@ -60,5 +83,5 @@ export const DEFAULT_DECK: DeckConfig = {
 
 export function loadDeckConfig(path: string): DeckConfig {
   if (!fs.existsSync(path)) return DEFAULT_DECK;
-  return parseFile<DeckConfig>(path, DeckConfigSchema);
+  return parseFile(path, DeckConfigSchema);
 }

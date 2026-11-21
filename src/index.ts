@@ -27,7 +27,7 @@ export interface AnalyzeOptions {
 
 export function analyze(opts: AnalyzeOptions): Report {
   const sources = loadSources(opts.sourcesPath);
-  const { dataset, synthetic, notes, evidence } = loadEvidenceFile(opts.evidencePath);
+  const { dataset, synthetic, notes, evidence } = loadEvidenceFile(opts.evidencePath, sources);
   const claims = loadClaims(opts.claimsPath);
 
   return buildReport({

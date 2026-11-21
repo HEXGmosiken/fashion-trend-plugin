@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { layoutCloud } from "../src/core/shapecloud.ts";
 import { extractTrends, type Article } from "../src/core/auto.ts";
+import { articles } from "./fixtures/articles.ts";
 
 const words = [
   { t: "薄纱", n: 20 }, { t: "蕾丝", n: 18 }, { t: "层次", n: 12 },
@@ -26,14 +27,19 @@ test("形状词云：最大词的字号明显大于最小词", () => {
   assert.ok(Math.max(...sizes) >= Math.min(...sizes) * 1.8);
 });
 
-const articles: Article[] = JSON.parse(
-  fs.readFileSync("data/articles.real.json", "utf8"),
-).articles;
-
-test("自动抽取：50 篇能出一条完整报告", () => {
+test("自动抽取：六板块的示例文章生成报告", () => {
   const { book, stats } = extractTrends(articles);
-  assert.equal(stats.articles, 50);
+  assert.equal(stats.articles, articles.length);
   assert.ok(book.trends.length >= 10, `趋势太少：${book.trends.length}`);
+  assert.equal(new Set(book.trends.map((t) => t.board)).size, 6);
+});
+
+const realCorpus = "data/articles.real.json";
+test("自动抽取：可选的 50 篇项目原始语料", { skip: !fs.existsSync(realCorpus) && "仓库不分发原始语料" }, () => {
+  const { articles: original } = JSON.parse(fs.readFileSync(realCorpus, "utf8")) as { articles: Article[] };
+  const { book, stats } = extractTrends(original);
+  assert.equal(stats.articles, 50);
+  assert.ok(book.trends.length >= 10);
   assert.equal(new Set(book.trends.map((t) => t.board)).size, 6);
 });
 

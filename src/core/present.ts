@@ -8,10 +8,13 @@
  */
 import type { Claim, DeckConfig, Evidence, Palette, Source } from "./schema.ts";
 import type { Confidence, Finding, Report } from "./types.ts";
+import { UNIT_LABEL } from "./findings.ts";
 
 export type { DeckConfig, Palette };
 
 export const DEFAULT_PALETTE: Palette = { paper: "#F5F2EC", accent: "#8A6A3B", ink: "#221F1A" };
+
+const DEFAULT_SAMPLE = { labelA: "2026 秋冬", labelB: "2027 春夏", unitLabel: "篇报道" };
 
 const FALLBACK: Palette[] = [
   { paper: "#EDF1F3", accent: "#4F7484", ink: "#18262C" },
@@ -41,8 +44,8 @@ export function confidenceLabel(c: Confidence): string {
 
 export function confidenceHint(c: Confidence): string {
   if (c === "high") return "样本充足，两季区间不重叠";
-  if (c === "medium") return "区间有重叠，方向可参考，幅度不稳";
-  return "差异落在误差范围内，不能当作趋势";
+  if (c === "medium") return "观测方向可参考，变化幅度需结合区间和来源理解";
+  return "现有证据对命题的支持有限";
 }
 
 /** 结论句：不带括号、不带英文缩写 */
@@ -55,21 +58,27 @@ export function statementLines(
   kA: number,
   kB: number,
   conf: Confidence,
+  sample = DEFAULT_SAMPLE,
 ): string[] {
   const d = deltaText(a, b);
   let first: string;
-  if (d.dir === "up") first = `${title}在两季报道里的出现率从 ${a}% 升到 ${b}%，高出 ${Math.abs(b - a)} 点。`;
-  else if (d.dir === "down") first = `${title}在两季报道里的出现率从 ${a}% 降到 ${b}%，低了 ${Math.abs(b - a)} 点。`;
-  else first = `${title}在两季报道里的出现率分别是 ${a}% 和 ${b}%，基本持平。`;
+  if (d.dir === "up") first = `${title}在两组样本中的出现率从 ${a}% 升到 ${b}%，高出 ${Math.abs(b - a)} 点。`;
+  else if (d.dir === "down") first = `${title}在两组样本中的出现率从 ${a}% 降到 ${b}%，低了 ${Math.abs(b - a)} 点。`;
+  else first = `${title}在两组样本中的出现率分别是 ${a}% 和 ${b}%，基本持平。`;
 
   const lines = [
     first,
-    `2027 春夏的 ${nB} 篇报道里有 ${kB} 篇提到它，2026 秋冬是 ${nA} 篇里 ${kA} 篇。`,
+    `${sample.labelB}的 ${nB} ${sample.unitLabel}中有 ${kB} 个样本符合编码规则，${sample.labelA}为 ${kA}/${nA}。`,
   ];
-  if (conf === "high") lines.push("方向明确，幅度也可以直接引用。");
-  else if (conf === "medium") lines.push("方向可以看，具体幅度不要当成精确值。");
-  else lines.push("这个差距在误差范围内，只能当作待观察。");
+  lines.push(`${confidenceHint(conf)}。`);
   return lines;
+}
+
+interface EvidenceLink {
+  title: string;
+  source: string;
+  date: string;
+  url: string;
 }
 
 export interface DeckPage {
@@ -79,6 +88,8 @@ export interface DeckPage {
   kwA: string;
   kwB: string;
   lines: string[];
+  status?: Finding["status"];
+  sample?: typeof DEFAULT_SAMPLE;
   shareA: number;
   shareB: number;
   nA: number;
@@ -93,7 +104,8 @@ export interface DeckPage {
   evidenceCount: number;
   sourceCount: number;
   caveats: string[];
-  support: { title: string; source: string; date: string; url: string }[];
+  support: EvidenceLink[];
+  counter?: EvidenceLink[];
   counterCount: number;
   palette: Palette;
 }
@@ -125,14 +137,14 @@ export function buildDeck(r: Report, cfg: DeckConfig): DeckModel {
     const claim = r.claims.find((c) => c.id === f.claimId)!;
     const c = cfg.claims[f.claimId];
     const palette = c?.palette ?? FALLBACK[i % FALLBACK.length] ?? DEFAULT_PALETTE;
-    const title = c?.title ?? claim.signalLabel ?? claim.signal;
+    const title = c?.title ?? (claim.signalLabel || claim.signal);
 
     const shareA = pctInt(f.comparison.a.share);
     const shareB = pctInt(f.comparison.b.share);
-    const delta = deltaText(shareA, shareB);
+    const delta = f.status ? { text: "暂缓结论", dir: "flat" as const } : deltaText(shareA, shareB);
+    const sample = { labelA: claim.windowA.label, labelB: claim.windowB.label, unitLabel: UNIT_LABEL[claim.unit] };
 
-    const support = f.support
-      .slice(0, 40)
+    const evidenceLinks = (ids: string[]) => ids
       .map((id) => evById.get(id))
       .filter((e): e is Evidence => !!e)
       .map((e) => ({
@@ -141,14 +153,11 @@ export function buildDeck(r: Report, cfg: DeckConfig): DeckModel {
         date: e.publishedAt,
         url: e.url,
       }));
+    const support = evidenceLinks(f.support.slice(0, 40));
 
     const sourceCount = new Set(
       f.support.map((id) => evById.get(id)?.sourceId).filter(Boolean),
     ).size;
-
-    const caveats: string[] = [`样本 ${f.comparison.a.n} 篇对 ${f.comparison.b.n} 篇`];
-    if (f.comparison.ciOverlap) caveats.push("区间重叠，幅度不作准");
-    if (f.confidence !== "high") caveats.push(confidenceHint(f.confidence));
 
     return {
       no: String(i + 1).padStart(2, "0"),
@@ -156,7 +165,9 @@ export function buildDeck(r: Report, cfg: DeckConfig): DeckModel {
       title,
       kwA: c?.kwA ?? "",
       kwB: c?.kwB ?? "",
-      lines: statementLines(title, shareA, shareB, f.comparison.a.n, f.comparison.b.n, f.comparison.a.k, f.comparison.b.k, f.confidence),
+      lines: f.status ? [f.statement] : statementLines(title, shareA, shareB, f.comparison.a.n, f.comparison.b.n, f.comparison.a.k, f.comparison.b.k, f.confidence, sample),
+      status: f.status,
+      sample,
       shareA,
       shareB,
       nA: f.comparison.a.n,
@@ -170,8 +181,9 @@ export function buildDeck(r: Report, cfg: DeckConfig): DeckModel {
       confHint: confidenceHint(f.confidence),
       evidenceCount: f.support.length,
       sourceCount,
-      caveats,
+      caveats: f.caveats,
       support,
+      counter: evidenceLinks(f.counter),
       counterCount: f.counter.length,
       palette,
     } satisfies DeckPage;

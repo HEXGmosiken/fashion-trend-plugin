@@ -1,0 +1,304 @@
+[
+  {
+    "id": "U1",
+    "label": "same-url",
+    "match": "same-url",
+    "a": {
+      "title": "Vogue’s Five-Minute Fashion Month Debrief: Milan SS25 Edition",
+      "url": "https://www.vogue.co.uk/article/milan-fashion-week-spring-summer-2025-debrief",
+      "group": "vogue-network",
+      "season": "other"
+    },
+    "b": {
+      "title": "Vogue’s Five-Minute Fashion Month Debrief: Milan SS25 Edition",
+      "url": "https://www.vogue.co.uk/article/milan-fashion-week-spring-summer-2025-debrief/?utm_source=calibration#test",
+      "group": "vogue-network",
+      "season": "other"
+    },
+    "why": "在真实文章链接上加跟踪参数、尾斜杠和锚点，确认仍为同一页面。"
+  },
+  {
+    "id": "M1",
+    "label": "same-publisher",
+    "match": "same-publisher",
+    "a": {
+      "title": "Vogue’s Five-Minute Fashion Month Debrief: Milan SS25 Edition",
+      "url": "https://www.vogue.co.uk/article/milan-fashion-week-spring-summer-2025-debrief",
+      "group": "vogue-network",
+      "season": "other"
+    },
+    "b": {
+      "title": "Vogue's five-minute Fashion Month debrief: Milan SS25 edition",
+      "url": "https://www.voguescandinavia.com/articles/vogues-five-minute-fashion-month-debrief-milan-ss25-edition",
+      "group": "vogue-network",
+      "season": "other",
+      "originality": "reprint"
+    },
+    "why": "Vogue Scandinavia 标注首发于 British Vogue，两标题使用不同的撇号。"
+  },
+  {
+    "id": "M2",
+    "label": "same-publisher",
+    "match": "same-publisher",
+    "a": {
+      "title": "Chanel builds double-C logo into catwalk set for haute couture",
+      "url": "https://www.brecorder.com/news/40345091/",
+      "group": "business-recorder",
+      "season": "other",
+      "originality": "reprint"
+    },
+    "b": {
+      "title": "Chanel builds double-C logo into catwalk set for haute couture",
+      "url": "https://www.brecorder.com/news/amp/40345091",
+      "group": "business-recorder",
+      "season": "other",
+      "originality": "reprint"
+    },
+    "why": "Business Recorder 标准页及 AMP 页均署名 Reuters，正文与标题相同。"
+  },
+  {
+    "id": "M3",
+    "label": "same-publisher",
+    "match": null,
+    "a": {
+      "title": "6 Things You Might Have Missed From Copenhagen Fashion Week’s Biggest Season To Date",
+      "url": "https://www.vogue.co.uk/article/copenhagen-fashion-week-ss25",
+      "group": "vogue-network",
+      "season": "other"
+    },
+    "b": {
+      "title": "Things you may have missed from Copenhagen Fashion Week SS25",
+      "url": "https://www.voguescandinavia.com/articles/6-things-you-might-have-missed-from-copenhagen-fashion-weeks-biggest-season-to-date",
+      "group": "vogue-network",
+      "season": "other",
+      "originality": "reprint"
+    },
+    "why": "Vogue Scandinavia 标注首发于 British Vogue，标题改写。"
+  },
+  {
+    "id": "M4",
+    "label": "same-publisher",
+    "match": null,
+    "a": {
+      "title": "The Key Spring/Summer 2025 Trends To Know Now",
+      "url": "https://www.vogue.co.uk/article/spring-summer-2025-fashion-trends",
+      "group": "vogue-network",
+      "season": "other"
+    },
+    "b": {
+      "title": "A Complete Guide to the Spring/Summer 2025 Runway Trends",
+      "url": "https://vogue.ph/fashion/runway/spring-summer-2025-fashion-trends/",
+      "group": "vogue-network",
+      "season": "other",
+      "originality": "reprint"
+    },
+    "why": "Vogue Philippines 回链 British Vogue，标题改写。"
+  },
+  {
+    "id": "M5",
+    "label": "same-publisher",
+    "match": null,
+    "a": {
+      "title": "Jil Sander Spring 2025 Ready-to-Wear Collection",
+      "url": "https://www.vogue.com/fashion-shows/spring-2025-ready-to-wear/jil-sander",
+      "group": "vogue-network",
+      "season": "other"
+    },
+    "b": {
+      "title": "Vogue’s best looks from the Jil Sander spring/summer 2025 show",
+      "url": "https://vogue.sg/jil-sander-spring-summer-2025-show/",
+      "group": "vogue-network",
+      "season": "other",
+      "originality": "reprint"
+    },
+    "why": "Vogue Singapore 回链 Vogue Runway，标题改写。"
+  },
+  {
+    "id": "M6",
+    "label": "same-publisher",
+    "match": null,
+    "a": {
+      "title": "Hermès Spring 2027 Ready-to-Wear Collection",
+      "url": "https://www.vogue.com/fashion-shows/spring-2027-ready-to-wear/hermes",
+      "group": "vogue-network",
+      "season": "SS27"
+    },
+    "b": {
+      "title": "Vogue’s best looks from the Hermès spring/summer 2027 show",
+      "url": "https://vogue.sg/hermes-spring-summer-2027-show/",
+      "group": "vogue-network",
+      "season": "SS27",
+      "originality": "reprint"
+    },
+    "why": "Vogue Singapore 回链 Vogue Runway，标题改写。"
+  },
+  {
+    "id": "N1",
+    "label": null,
+    "match": null,
+    "a": {
+      "title": "Hermès Spring 2027 Ready-to-Wear Collection",
+      "url": "https://www.vogue.com/fashion-shows/spring-2027-ready-to-wear/hermes",
+      "group": "vogue-network",
+      "season": "SS27"
+    },
+    "b": {
+      "title": "Hermès Fall 2026 Ready-to-Wear Collection",
+      "url": "https://www.vogue.com/fashion-shows/fall-2026-ready-to-wear/hermes",
+      "group": "vogue-network",
+      "season": "FW26"
+    },
+    "why": "Vogue Runway 同品牌不同季的两篇稿，标题模板相同。"
+  },
+  {
+    "id": "N2",
+    "label": null,
+    "match": null,
+    "a": {
+      "title": "6 Things You Might Have Missed From Copenhagen Fashion Week’s Biggest Season To Date",
+      "url": "https://www.vogue.co.uk/article/copenhagen-fashion-week-ss25",
+      "group": "vogue-network",
+      "season": "other"
+    },
+    "b": {
+      "title": "Vogue’s Five-Minute Fashion Month Debrief: Milan SS25 Edition",
+      "url": "https://www.vogue.co.uk/article/milan-fashion-week-spring-summer-2025-debrief",
+      "group": "vogue-network",
+      "season": "other"
+    },
+    "why": "British Vogue 独立撰写的两场时装周报道。"
+  },
+  {
+    "id": "C1",
+    "label": "cross-publisher",
+    "match": "cross-publisher",
+    "a": {
+      "title": "Hermes shows airy knits and slit skirts in spring/summer 2027 collection",
+      "url": "https://www.marketscreener.com/news/hermes-shows-airy-knits-and-slit-skirts-in-spring-summer-2027-collection-ce785ddbdd80f626",
+      "group": "marketscreener",
+      "season": "SS27",
+      "originality": "reprint"
+    },
+    "b": {
+      "title": "Hermès shows airy knits and slit skirts in spring/summer 2027 collection",
+      "url": "https://bdnews24.com/Fashion/01sbs9peek",
+      "group": "bdnews24",
+      "season": "SS27",
+      "originality": "reprint"
+    },
+    "why": "均署名 Reuters，同一通讯稿，一家标题保留 Hermès 重音。"
+  },
+  {
+    "id": "C2",
+    "label": "cross-publisher",
+    "match": "cross-publisher",
+    "a": {
+      "title": "Chanel builds double-C logo into catwalk set for haute couture",
+      "url": "https://www.marketscreener.com/news/latest/Chanel-builds-double-C-logo-into-catwalk-set-for-haute-couture-48889231/",
+      "group": "marketscreener",
+      "season": "other",
+      "originality": "reprint"
+    },
+    "b": {
+      "title": "Chanel builds double-C logo into catwalk set for haute couture",
+      "url": "https://www.brecorder.com/news/40345091/",
+      "group": "business-recorder",
+      "season": "other",
+      "originality": "reprint"
+    },
+    "why": "MarketScreener 与 Business Recorder 均标注 Reuters，同一通讯稿。"
+  },
+  {
+    "id": "C3",
+    "label": "cross-publisher",
+    "match": "cross-publisher",
+    "a": {
+      "title": "2025中国国际时装周（秋季）在北京拉开帷幕",
+      "url": "https://www2.xinhuanet.com/photo/20250905/f1ef159ab7ee46bf8aafc1fce8679a6d/c.html",
+      "group": "xinhua",
+      "season": "other"
+    },
+    "b": {
+      "title": "2025中国国际时装周（秋季）在北京拉开帷幕",
+      "url": "https://www.rmzxw.com.cn/c/2025-09-05/3780487.shtml",
+      "group": "rmzxw",
+      "season": "other",
+      "originality": "reprint"
+    },
+    "why": "人民政协网标注来源为新华社，标题和记者署名相同。"
+  },
+  {
+    "id": "N3",
+    "label": null,
+    "match": null,
+    "a": {
+      "title": "Hermès Spring 2027 Ready-to-Wear Collection",
+      "url": "https://www.vogue.com/fashion-shows/spring-2027-ready-to-wear/hermes",
+      "group": "vogue-network",
+      "season": "SS27"
+    },
+    "b": {
+      "title": "Hermès Spring 2027 Ready-to-Wear Collection",
+      "url": "https://wwd.com/fashion-news/shows-reviews/gallery/hermes-spring-2027-ready-to-wear-collection-1239308039/",
+      "group": "wwd",
+      "season": "SS27"
+    },
+    "why": "Vogue 报道与 WWD 图集分别出版，同一场秀使用完全相同的标题。"
+  },
+  {
+    "id": "N4",
+    "label": null,
+    "match": null,
+    "a": {
+      "title": "Hermes shows airy knits and slit skirts in spring/summer 2027 collection",
+      "url": "https://www.marketscreener.com/news/hermes-shows-airy-knits-and-slit-skirts-in-spring-summer-2027-collection-ce785ddbdd80f626",
+      "group": "marketscreener",
+      "season": "SS27",
+      "originality": "reprint"
+    },
+    "b": {
+      "title": "Hermès Spring 2027 Ready-to-Wear Collection",
+      "url": "https://www.vogue.com/fashion-shows/spring-2027-ready-to-wear/hermes",
+      "group": "vogue-network",
+      "season": "SS27"
+    },
+    "why": "同日同场秀，Reuters 是通讯稿，Vogue 是独立报道。"
+  },
+  {
+    "id": "N5",
+    "label": null,
+    "match": null,
+    "a": {
+      "title": "Chanel builds double-C logo into catwalk set for haute couture",
+      "url": "https://www.marketscreener.com/news/latest/Chanel-builds-double-C-logo-into-catwalk-set-for-haute-couture-48889231/",
+      "group": "marketscreener",
+      "season": "other",
+      "originality": "reprint"
+    },
+    "b": {
+      "title": "Chanel stuns with color, and Kylie Jenner, in Paris couture show",
+      "url": "https://apnews.com/article/5a9c96502c6172c4aa086add6e903d70",
+      "group": "associated-press",
+      "season": "other"
+    },
+    "why": "报道同一场秀，Reuters 和 AP 分别采写。"
+  },
+  {
+    "id": "N6",
+    "label": null,
+    "match": null,
+    "a": {
+      "title": "2025中国国际时装周（秋季）在北京拉开帷幕",
+      "url": "https://www2.xinhuanet.com/photo/20250905/f1ef159ab7ee46bf8aafc1fce8679a6d/c.html",
+      "group": "xinhua",
+      "season": "other"
+    },
+    "b": {
+      "title": "2025中国国际时装周（秋季）落幕 惠安女服饰压轴亮相",
+      "url": "https://app.xinhuanet.com/news/article.html?articleId=497709e98be400980b1a840c5b282db3",
+      "group": "xinhua",
+      "season": "other"
+    },
+    "why": "新华网开幕图文与新华网客户端闭幕报道对应不同活动。"
+  }
+]

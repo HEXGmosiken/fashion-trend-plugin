@@ -19,6 +19,10 @@ export interface TrendImage {
 }
 export interface TrendClaim {
   id: string;
+  labelA?: string;
+  labelB?: string;
+  unitLabel?: string;
+  deltaPp?: number;
   shareA: number;
   shareB: number;
   nA: number;
@@ -103,7 +107,7 @@ function cloud(kws: { t: string; n: number }[], board: string): string {
 
 function momentum(c: TrendClaim | null): string {
   if (!c) return "";
-  const d = c.shareB - c.shareA;
+  const d = c.deltaPp ?? c.shareB - c.shareA;
   const dir = d > 0 ? "up" : d < 0 ? "down" : "flat";
   const label = d === 0 ? "基本持平" : `${Math.abs(d)} 点`;
   return `
@@ -112,12 +116,12 @@ function momentum(c: TrendClaim | null): string {
         <span class="arrow">${d > 0 ? "↗" : d < 0 ? "↘" : "→"}</span>
         <span class="mom-num">${label}</span>
       </div>
-      <p class="mom-cap">两季报道提及率</p>
+      <p class="mom-cap">两窗样本占比</p>
       <div class="mom-bars">
-        <div><span>2026 秋冬</span><i style="width:${c.shareA}%"></i><b>${c.shareA}%</b></div>
-        <div><span>2027 春夏</span><i style="width:${c.shareB}%"></i><b>${c.shareB}%</b></div>
+        <div><span>${esc(c.labelA ?? "2026 秋冬")}</span><i style="width:${c.shareA}%"></i><b>${c.shareA}%</b></div>
+        <div><span>${esc(c.labelB ?? "2027 春夏")}</span><i style="width:${c.shareB}%"></i><b>${c.shareB}%</b></div>
       </div>
-      <p class="mom-note">样本 ${c.nA} 篇对 ${c.nB} 篇</p>
+      <p class="mom-note">样本 ${c.nA} ${esc(c.unitLabel ?? "篇")}对 ${c.nB} ${esc(c.unitLabel ?? "篇")}</p>
     </div>`;
 }
 
@@ -252,6 +256,9 @@ function appendix(r: Report, book: TrendBook): string {
 }
 
 function summarySection(s: SummaryModel): string {
+  const missingRefs = (missing: string[]) => missing.length
+    ? `<p class="small">${esc(missing.map((name) => `「${name}」`).join("、"))}缺少统计数据。</p>`
+    : "";
   const blocks = s.blocks
     .map(
       (b) => `
@@ -259,6 +266,7 @@ function summarySection(s: SummaryModel): string {
         <h3>${esc(b.title)}</h3>
         <p>${esc(b.claim)}</p>
         ${b.data ? `<p class="data-line">${esc(b.data)}</p>` : ""}
+        ${missingRefs(b.missing)}
       </div>`,
     )
     .join("");
@@ -273,6 +281,7 @@ function summarySection(s: SummaryModel): string {
         <h3>${esc(s.counter.title)}</h3>
         <p>${esc(s.counter.claim)}</p>
         ${s.counter.data ? `<p class="data-line">${esc(s.counter.data)}</p>` : ""}
+        ${missingRefs(s.counter.missing)}
       </div>
       <p class="sum-close">${esc(s.close)}</p>
     </div>

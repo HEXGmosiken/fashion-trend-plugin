@@ -13,24 +13,23 @@ function esc(s: string): string {
 function pageHtml(p: DeckPage, seasonCode: string): string {
   const dots = dotGlyphs(p.dots).join("");
   const bars = [
-    { label: "2026 秋冬", value: p.shareA, n: p.nA, k: p.kA, kind: "a" },
-    { label: "2027 春夏", value: p.shareB, n: p.nB, k: p.kB, kind: "b" },
+    { label: p.sample?.labelA ?? "2026 秋冬", value: p.shareA, kind: "a" },
+    { label: p.sample?.labelB ?? "2027 春夏", value: p.shareB, kind: "b" },
   ]
     .map(
       (b) => `
         <div class="bar-row">
-          <span class="bar-label">${b.label}</span>
+          <span class="bar-label">${esc(b.label)}</span>
           <span class="bar-track"><i class="${b.kind}" style="width:${b.value}%"></i></span>
           <span class="bar-val">${b.value}%</span>
         </div>`,
     )
     .join("");
 
-  const evidenceItems = p.support
-    .slice(0, 12)
+  const evidenceItems = (items: DeckPage["support"]) => items
     .map(
       (e) =>
-        `<li><a href="${esc(e.url)}" target="_blank" rel="noreferrer">${esc(e.title)}</a><span>${esc(e.source)}　${e.date}</span></li>`,
+        `<li><a href="${esc(e.url)}" target="_blank" rel="noreferrer">${esc(e.title)}</a><span>${esc(e.source)}　${esc(e.date)}</span></li>`,
     )
     .join("");
 
@@ -47,25 +46,26 @@ function pageHtml(p: DeckPage, seasonCode: string): string {
         <div class="copy">
           ${p.lines.map((l, i) => `<p class="${i === p.lines.length - 1 ? "dim" : ""}">${esc(l)}</p>`).join("")}
         </div>
-        <div class="panel">
+        ${p.status ? "" : `<div class="panel">
           <div class="figure">
             <span class="fig-num">${p.shareB}</span><span class="fig-unit">%</span>
           </div>
-          <p class="fig-cap">2027 春夏　${p.nB} 篇中 ${p.kB} 篇</p>
+          <p class="fig-cap">${esc(p.sample?.labelB ?? "2027 春夏")}　${p.kB} / ${p.nB} ${esc(p.sample?.unitLabel ?? "篇报道")}</p>
           <div class="bars">${bars}</div>
           <div class="delta ${p.delta.dir}">${esc(p.delta.text)}</div>
-        </div>
+        </div>`}
       </div>
-      <footer class="foot">
+      ${p.status ? "" : `<footer class="foot">
         <span class="conf" title="${esc(p.confHint)}">
           <b class="dots">${dots}</b> 置信度 ${p.confLabel}
         </span>
         <details class="ev">
-          <summary>证据 ${p.evidenceCount} 篇　来源 ${p.sourceCount} 家</summary>
-          <ul>${evidenceItems}</ul>
-          <p class="ev-foot">${p.counterCount > 0 ? `另列反证 ${p.counterCount} 条` : "未发现结构性反证"}　${p.caveats.join("　")}</p>
+          <summary>支撑证据 ${p.evidenceCount} 条　来源 ${p.sourceCount} 家　反证 ${p.counterCount} 条</summary>
+          <ul>${evidenceItems(p.support.slice(0, 12))}</ul>
+          ${p.counter?.length ? `<p>反证</p><ul>${evidenceItems(p.counter)}</ul>` : ""}
+          <p class="ev-foot">${esc(p.caveats.join("　"))}</p>
         </details>
-      </footer>
+      </footer>`}
     </div>
   </section>`;
 }

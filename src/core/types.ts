@@ -27,6 +27,8 @@ export interface Finding {
   claimId: string;
   question: string;
   statement: string;
+  /** 分析暂停原因。此时只保留可审计的样本统计。 */
+  status?: "insufficient-sample" | "unfrozen-rule";
   direction: "up" | "down" | "change";
   confidence: Confidence;
   comparison: Comparison;
@@ -41,6 +43,7 @@ export interface AuditIssue {
   level: "error" | "warn" | "info";
   code: string;
   message: string;
+  suggestion?: string;
   refs: string[];
 }
 

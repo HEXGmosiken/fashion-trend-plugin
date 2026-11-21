@@ -1,0 +1,34 @@
+{
+  "$comment": "可复制的命题模板。以下为完整示例，请在分析前按实际研究设计改写并冻结。",
+  "claims": [
+    {
+      "id": "C-SHEER",
+      "question": "符合样本口径的报道中，透视叠层在 SS27 的提及率是否高于 FW26？",
+      "signal": "sheer_layer",
+      "signalLabel": "透视叠层",
+      "unit": "article",
+      "windowA": {
+        "label": "FW26 秋冬报道",
+        "season": "FW26",
+        "start": "2026-02-01",
+        "end": "2026-04-30"
+      },
+      "windowB": {
+        "label": "SS27 春夏报道",
+        "season": "SS27",
+        "start": "2026-09-01",
+        "end": "2026-11-30"
+      },
+      "direction": "up",
+      "minN": 15,
+      "sampleScope": {
+        "brands": [],
+        "sourceTypes": ["media", "trade"],
+        "include": ["以对应季为主题的女装秀场评论和趋势盘点，每篇文章编码一次"],
+        "exclude": ["图集、品牌投放、购物清单和仅有消费数据的报道"]
+      },
+      "codingRule": "在正文中至少两处实质描述透明织物作为外层，或一处明确将透视叠层称为趋势，记为 true。读完全文未达到该标准记为 false。图注、袖口镶边或比喻不计，拿不到全文则留空，不进分母。",
+      "counterNote": "春夏气候、同集团刊物的编辑主题和样本覆盖均可能影响提及率。"
+    }
+  ]
+}
