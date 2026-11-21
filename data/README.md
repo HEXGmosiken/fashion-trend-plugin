@@ -50,3 +50,48 @@ pnpm ingest
 ```
 
 没有全文语料时，`pnpm demo` 仍然可以跑通全链路。
+
+---
+
+## 4. 术语表 v2 字段（2026-11 起）
+
+`corpus/terms.json` 的每条术语，基础字段是
+`zh / en / aliases / def / board`，v2 起新增三个字段：
+
+| 字段 | 含义 | 例 |
+|---|---|---|
+| `parent` | 上位类，用于聚合分析 | 插肩 → 袖型 |
+| `criterion` | 判据：看到什么才这么标 | 肩部无横缝、拼接线从领口斜到下腋 |
+| `confusable` | 易混词与区别 | 落肩：肩线整体横向下移，仍有横缝 |
+
+写法约定见 `docs/术语表v2提案.md` 第八节。检查脚本：
+
+```bash
+node _tools/audit_terms.mjs        # 重复、缺字段、定义长度
+node _tools/check_criteria.mjs     # 判据质量：空泛词、循环定义、易混词缺失
+```
+
+## 5. 语料入库（不爬虫）
+
+正文由人工保存，脚本只做整理入库，不访问网络。
+
+```
+data/external/inbox/
+  manifest.csv       file,source,url,date
+  0001.html          浏览器另存的页面，或
+  0002.txt           复制下来的纯文本
+```
+
+```bash
+python _tools/ingest_local.py                    # 读 inbox，写 articles.json
+python _tools/ingest_local.py --min-chars 600    # 提高正文长度门槛
+python _tools/ingest_local.py --check data/external/articles.json
+```
+
+输出 `data/external/articles.json`，字段与 `_tools/fetch_external.py` 一致：
+`source / url / title / date / chars / text / ok`。
+
+去重规则：同一 URL 只取第一条；正文前 400 字归一后做指纹，重复的丢弃。
+
+**入库边界**：`articles.json` 含全文，属版权受限内容，**不进仓库**；
+仓库里只放 `sources.real.json`（元数据）与 `claims.real.json`（命题）。
