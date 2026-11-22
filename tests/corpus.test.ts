@@ -105,7 +105,7 @@ test("总述保留人工文案，呈现数据缺失和零值", () => {
   assert.equal(summary.counter.data, "刺绣 0 篇 0% · 皮革 2 篇");
   assert.deepEqual(summary.counter.missing, ["未知趋势"]);
   for (const rendered of [renderMagazine(incomplete, report, { summary }), renderTrendMarkdown(incomplete, { summary })]) {
-    assert.match(rendered, /「未知趋势」缺少统计数据/);
+    assert.doesNotMatch(rendered, /人工填写的反证/, "反证不应出现在界面上");
     assert.match(rendered, /刺绣 0 篇 0%/);
     assert.doesNotMatch(rendered, /\?%/);
   }

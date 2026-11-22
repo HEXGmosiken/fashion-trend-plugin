@@ -1,6 +1,5 @@
 /** 趋势报告版式：一屏一条趋势，图文并茂。 */
 import type { Report } from "../types.ts";
-import { layoutCloud, type MaskName } from "../shapecloud.ts";
 import type { SummaryModel } from "../summary.ts";
 
 export interface TrendQuote {
@@ -82,29 +81,6 @@ function esc(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-const CLOUD_MASK: Record<string, MaskName> = {
-  silhouette: "heart",
-  construction: "heart",
-  material: "heart",
-  color: "heart",
-  aesthetic: "heart",
-  occasion: "heart",
-};
-
-function cloud(kws: { t: string; n: number }[], board: string): string {
-  const W = 460;
-  const H = 340;
-  const layout = layoutCloud(kws, { width: W, height: H, mask: CLOUD_MASK[board] ?? "heart" });
-  return layout.words
-    .map((w) => {
-      const left = ((w.x / W) * 100).toFixed(2);
-      const top = ((w.y / H) * 100).toFixed(2);
-      const fs = ((w.size / W) * 100).toFixed(2);
-      return `<span style="left:${left}%;top:${top}%;font-size:${fs}cqw;font-weight:${w.weight}">${esc(w.t)}</span>`;
-    })
-    .join("");
-}
-
 function momentum(c: TrendClaim | null): string {
   if (!c) return "";
   const d = c.deltaPp ?? c.shareB - c.shareA;
@@ -155,10 +131,10 @@ function trendPage(
 
   return `
   <section class="trend" id="${t.id}" style="--accent:${theme.accent};--ink:${theme.ink};--paper:${theme.paper}">
-    <div class="hero">
-      ${t.images[0] ? `<img src="${esc(assetSrc(t.images[0].src, prefix))}" alt="${esc(t.name)}" loading="eager" fetchpriority="high" onerror="this.style.visibility='hidden'" />` : ""}
+    ${t.images[0] ? `<div class="hero">
+      <img src="${esc(assetSrc(t.images[0].src, prefix))}" alt="${esc(t.name)}" loading="eager" fetchpriority="high" onerror="this.style.visibility='hidden'" />
       <div class="hero-tag"><span>${esc(board?.name ?? "")}</span><span>${String(i + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}</span></div>
-    </div>
+    </div>` : ""}
 
     <div class="inner">
       <header class="thead">
@@ -178,18 +154,16 @@ function trendPage(
           ${t.expression ? `<p class="expr">${esc(t.expression)}</p>` : ""}
         </div>
         <aside class="viz">
-          <p class="viz-cap">语料高频词</p>
-          <div class="cloud">${cloud(t.keywords, t.board)}</div>
           ${momentum(t.claim)}
         </aside>
       </div>
 
-      <div class="strip">
+      ${t.images.length > 1 ? `<div class="strip">
         ${t.images
           .slice(1, 4)
           .map((im) => `<figure class="shot"><img src="${esc(assetSrc(im.src, prefix))}" alt="" loading="lazy" onerror="this.style.visibility='hidden'" /><figcaption>${esc(im.source ?? "")}</figcaption></figure>`)
           .join("")}
-      </div>
+      </div>` : ""}
 
       <div class="quotes">${quotes}</div>
 
@@ -272,12 +246,6 @@ function summarySection(s: SummaryModel): string {
       <p class="eyebrow">总述　${esc(s.season)}</p>
       <h2 class="thesis">${esc(s.thesis)}</h2>
       <div class="sum-grid">${blocks}</div>
-      <div class="sum-counter">
-        <h3>${esc(s.counter.title)}</h3>
-        <p>${esc(s.counter.claim)}</p>
-        ${s.counter.data ? `<p class="data-line">${esc(s.counter.data)}</p>` : ""}
-        ${missingRefs(s.counter.missing)}
-      </div>
       <p class="sum-close">${esc(s.close)}</p>
     </div>
   </section>`;
@@ -324,9 +292,6 @@ export function renderMagazine(
   .sum-block h3 { font-size:17px; margin:0 0 12px; font-weight:600; }
   .sum-block p { font-size:14px; line-height:1.95; margin:0; color:#3a352e; }
   .data-line { margin-top:10px !important; font-size:12.5px !important; color:#7d766a !important; letter-spacing:.04em; }
-  .sum-counter { margin-top:52px; padding-top:26px; border-top:1px dashed var(--line); }
-  .sum-counter h3 { font-size:12px; letter-spacing:.2em; color:var(--muted); margin:0 0 10px; font-weight:500; }
-  .sum-counter p { font-size:14px; line-height:1.95; margin:0; color:#3a352e; }
   .sum-close { margin:40px 0 0; font-size:19px; line-height:1.8; color:var(--ink); }
 
   /* 目录 */
@@ -368,8 +333,6 @@ export function renderMagazine(
   .expr { margin:26px 0 0; font-size:14px; line-height:1.95; color:var(--muted); border-left:2px solid var(--accent); padding-left:16px; }
 
   .viz { display:grid; gap:26px; align-content:start; }  .viz-cap { font-size:10px; letter-spacing:.2em; color:var(--muted); margin:0; }
-  .cloud { position:relative; width:100%; aspect-ratio:460/340; container-type:inline-size; }
-  .cloud span { position:absolute; transform:translate(-50%, -50%); white-space:nowrap; line-height:1;
                 color:color-mix(in srgb, var(--accent) 72%, var(--ink)); letter-spacing:.01em; }
 
   .momentum { border:1px solid var(--line); padding:22px 24px; background:#fff; }
@@ -457,11 +420,16 @@ export function renderMagazine(
   ${opts.summary ? summarySection(opts.summary) : ""}
 
   ${indexPage(book)}
-  ${book.trends
-    .map((t, i) =>
-      trendPage(t, i, book.boards, book.trends.length, prefix, book.trends[i - 1]?.id, book.trends[i + 1]?.id),
-    )
-    .join("")}
+  ${(() => {
+    const used = new Set<string>();
+    return book.trends
+      .map((t, i) => {
+        const images = t.images.filter((im) => !used.has(im.src));
+        for (const im of images) used.add(im.src);
+        return trendPage({ ...t, images }, i, book.boards, book.trends.length, prefix, book.trends[i - 1]?.id, book.trends[i + 1]?.id);
+      })
+      .join("");
+  })()}
   ${appendix(r, book)}
 
   <button class="toggle" id="toggle">关闭缓动</button>

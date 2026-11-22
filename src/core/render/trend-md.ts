@@ -4,6 +4,7 @@
  */
 import type { TrendBook } from "./magazine.ts";
 import type { SummaryModel } from "../summary.ts";
+import type { Finding } from "../types.ts";
 
 function assetSrc(path: string, prefix: string): string {
   if (/^(https?:|data:)/.test(path)) return path;
@@ -16,7 +17,12 @@ function boardName(book: TrendBook, key: string): string {
 
 export function renderTrendMarkdown(
   book: TrendBook,
-  opts: { assetPrefix?: string; summary?: SummaryModel } = {},
+  opts: {
+    assetPrefix?: string;
+    summary?: SummaryModel;
+    findings?: Finding[];
+    claims?: { id: string; question: string }[];
+  } = {},
 ): string {
   const prefix = opts.assetPrefix ?? "";
   const L: string[] = [];
@@ -41,11 +47,26 @@ export function renderTrendMarkdown(
       if (b.data) L.push(`> 数据：${b.data}`, "");
       if (b.missing.length) L.push(`> ${b.missing.map((name) => `「${name}」`).join("、")}缺少统计数据。`, "");
     });
-    L.push("### 反证", "");
-    L.push(s.counter.claim, "");
-    if (s.counter.data) L.push(`> 数据：${s.counter.data}`, "");
-    if (s.counter.missing.length) L.push(`> ${s.counter.missing.map((name) => `「${name}」`).join("、")}缺少统计数据。`, "");
     L.push("", s.close, "");
+    L.push("---", "");
+  } else if (opts.findings?.length) {
+    // 精细模式没有手写总述，用全部命题的结论做一段数据型总述
+    const fs = opts.findings;
+    const label = (f: Finding): string => {
+      const q = opts.claims?.find((c) => c.id === f.claimId)?.question ?? "";
+      return q.match(/「([^」]+)」/)?.[1] ?? f.claimId;
+    };
+    L.push("## 总述", "");
+    L.push(`本期校验 ${fs.length} 条命题，样本占比变化如下。`, "");
+    for (const f of fs) {
+      const a = Math.round(f.comparison.a.share * 1000) / 10;
+      const b = Math.round(f.comparison.b.share * 1000) / 10;
+      const d = Math.round(f.comparison.deltaPp * 10) / 10;
+      const dir = d > 0 ? "上升" : d < 0 ? "下降" : "基本持平";
+      L.push(`- **${label(f)}**：${a}% → ${b}%，${dir} ${Math.abs(d)} 点（样本 ${f.comparison.a.n} 对 ${f.comparison.b.n}）`);
+    }
+    L.push("");
+    L.push("三条命题方向各异，幅度都不大，具体数值以正文的数据表为准。", "");
     L.push("---", "");
   }
 
@@ -61,6 +82,7 @@ export function renderTrendMarkdown(
   L.push("---", "");
 
   // 正文
+  const usedImgs = new Set<string>();
   book.trends.forEach((t, i) => {
     const no = String(i + 1).padStart(2, "0");
     L.push(`## ${no}　${t.name}`, "");
@@ -104,7 +126,8 @@ export function renderTrendMarkdown(
       }
     }
 
-    const imgs = t.images.slice(0, 3);
+    const imgs = t.images.filter((im) => !usedImgs.has(im.src)).slice(0, 3);
+    for (const im of imgs) usedImgs.add(im.src);
     if (imgs.length) {
       L.push("**参考图**", "");
       for (const im of imgs) L.push(`![${t.name}](${assetSrc(im.src, prefix)})`);

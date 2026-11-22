@@ -152,7 +152,15 @@ function writeRun(
     ["evidence.csv", renderEvidenceCsv(report)],
     ["findings.csv", renderFindingsCsv(report)],
   ];
-  if (book) files.push(["trends.md", renderTrendMarkdown(book, { assetPrefix: assetPrefixFor(outDir) })]);
+  if (book)
+    files.push([
+      "trends.md",
+      renderTrendMarkdown(book, {
+        assetPrefix: assetPrefixFor(outDir),
+        findings: report.findings,
+        claims: report.claims,
+      }),
+    ]);
 
   for (const [name, body] of files) fs.writeFileSync(path.join(outDir, name), body, "utf8");
   return { files: files.map(([n]) => path.join(outDir, n)), book };

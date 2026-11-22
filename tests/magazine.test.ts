@@ -27,11 +27,11 @@ test("可选的真实趋势数据含引用、图片和关键词", { skip: !fs.ex
   }
 });
 
-test("图文版渲染：含图片、词云和趋势名", () => {
+test("图文版渲染：含图片和趋势名，不含词云", () => {
   const html = renderMagazine(book, report);
   assert.match(html, /薄纱/);
   assert.match(html, /assets\/img\//);
-  assert.match(html, /class="cloud"/);
+  assert.doesNotMatch(html, /class="cloud"/);
   assert.ok(html.length > 20000);
 });
 
