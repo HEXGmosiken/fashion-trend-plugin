@@ -10,10 +10,11 @@
  "stats": {
   "before": 204,
   "added": 96,
-  "total": 300
+  "total": 321
  },
  "terms": [
   {
+   "id": "trench_coat",
    "zh": "风衣",
    "en": "trench coat",
    "aliases": [],
@@ -25,6 +26,7 @@
    "source": "editorial"
   },
   {
+   "id": "coat",
    "zh": "大衣",
    "en": "coat",
    "aliases": [
@@ -38,6 +40,7 @@
    "source": "editorial"
   },
   {
+   "id": "car_coat",
    "zh": "短大衣",
    "en": "car coat",
    "aliases": [],
@@ -49,6 +52,7 @@
    "source": "editorial"
   },
   {
+   "id": "long_coat",
    "zh": "长外套",
    "en": "long coat",
    "aliases": [],
@@ -60,6 +64,7 @@
    "source": "editorial"
   },
   {
+   "id": "puffer",
    "zh": "羽绒服",
    "en": "puffer",
    "aliases": [
@@ -73,6 +78,7 @@
    "source": "editorial"
   },
   {
+   "id": "leather_jacket",
    "zh": "皮夹克",
    "en": "leather jacket",
    "aliases": [
@@ -86,6 +92,7 @@
    "source": "editorial"
   },
   {
+   "id": "bomber_jacket",
    "zh": "飞行夹克",
    "en": "bomber jacket",
    "aliases": [
@@ -99,6 +106,7 @@
    "source": "editorial"
   },
   {
+   "id": "denim_jacket",
    "zh": "牛仔夹克",
    "en": "denim jacket",
    "aliases": [
@@ -108,10 +116,11 @@
    "board": "silhouette",
    "parent": "外套",
    "criterion": "丹宁面料＋胸袋＋金属扣",
-   "confusable": "工装夹克：工装夹克多口袋、非丹宁",
+   "confusable": "与西装外套相比：牛仔夹克用梭织丹宁、无驳头、无结构衬",
    "source": "editorial"
   },
   {
+   "id": "blazer",
    "zh": "西装外套",
    "en": "blazer",
    "aliases": [
@@ -125,6 +134,7 @@
    "source": "editorial"
   },
   {
+   "id": "collarless_jacket",
    "zh": "无领外套",
    "en": "collarless jacket",
    "aliases": [],
@@ -136,6 +146,7 @@
    "source": "editorial"
   },
   {
+   "id": "maxi_skirt",
    "zh": "长裙",
    "en": "maxi skirt",
    "aliases": [
@@ -149,6 +160,7 @@
    "source": "editorial"
   },
   {
+   "id": "midi_skirt",
    "zh": "中长裙",
    "en": "midi skirt",
    "aliases": [
@@ -162,6 +174,7 @@
    "source": "editorial"
   },
   {
+   "id": "mini_skirt",
    "zh": "迷你裙",
    "en": "mini skirt",
    "aliases": [
@@ -175,6 +188,7 @@
    "source": "editorial"
   },
   {
+   "id": "pencil_skirt",
    "zh": "铅笔裙",
    "en": "pencil skirt",
    "aliases": [],
@@ -186,6 +200,7 @@
    "source": "editorial"
   },
   {
+   "id": "full_skirt",
    "zh": "伞裙",
    "en": "full skirt",
    "aliases": [
@@ -199,6 +214,7 @@
    "source": "editorial"
   },
   {
+   "id": "pleated_skirt",
    "zh": "百褶裙",
    "en": "pleated skirt",
    "aliases": [],
@@ -210,6 +226,7 @@
    "source": "editorial"
   },
   {
+   "id": "dress",
    "zh": "连衣裙",
    "en": "dress",
    "aliases": [
@@ -223,6 +240,7 @@
    "source": "editorial"
   },
   {
+   "id": "slip_dress",
    "zh": "吊带裙",
    "en": "slip dress",
    "aliases": [],
@@ -230,10 +248,11 @@
    "board": "silhouette",
    "parent": "连身",
    "criterion": "只有细肩带，无袖无领",
-   "confusable": "露肩裙：露肩裙有横向布带",
+   "confusable": "露肩款：靠横向布带固定；吊带裙靠细肩带",
    "source": "editorial"
   },
   {
+   "id": "shirt_dress",
    "zh": "衬衫裙",
    "en": "shirt dress",
    "aliases": [],
@@ -245,6 +264,7 @@
    "source": "editorial"
   },
   {
+   "id": "knit_dress",
    "zh": "针织裙",
    "en": "knit dress",
    "aliases": [],
@@ -256,6 +276,7 @@
    "source": "editorial"
   },
   {
+   "id": "wide_leg_trousers",
    "zh": "阔腿裤",
    "en": "wide-leg trousers",
    "aliases": [
@@ -269,6 +290,7 @@
    "source": "editorial"
   },
   {
+   "id": "straight_leg_trousers",
    "zh": "直筒裤",
    "en": "straight-leg trousers",
    "aliases": [
@@ -282,6 +304,7 @@
    "source": "editorial"
   },
   {
+   "id": "skinny_trousers",
    "zh": "紧身裤",
    "en": "skinny trousers",
    "aliases": [
@@ -295,6 +318,7 @@
    "source": "editorial"
   },
   {
+   "id": "biker_shorts",
    "zh": "骑行裤",
    "en": "biker shorts",
    "aliases": [
@@ -308,6 +332,7 @@
    "source": "editorial"
   },
   {
+   "id": "shorts",
    "zh": "短裤",
    "en": "shorts",
    "aliases": [],
@@ -319,6 +344,7 @@
    "source": "editorial"
   },
   {
+   "id": "cargo_trousers",
    "zh": "工装裤",
    "en": "cargo trousers",
    "aliases": [
@@ -332,6 +358,7 @@
    "source": "editorial"
   },
   {
+   "id": "low_rise",
    "zh": "低腰",
    "en": "low-rise",
    "aliases": [
@@ -345,6 +372,7 @@
    "source": "editorial"
   },
   {
+   "id": "high_waist",
    "zh": "高腰",
    "en": "high-waist",
    "aliases": [
@@ -358,6 +386,7 @@
    "source": "editorial"
   },
   {
+   "id": "cinched_waist",
    "zh": "收腰",
    "en": "cinched waist",
    "aliases": [
@@ -367,10 +396,11 @@
    "board": "silhouette",
    "parent": "廓形",
    "criterion": "腰部明显内收，与胸臀形成曲线",
-   "confusable": "直筒：直筒不收腰",
+   "confusable": "直筒廓形：腰部不收、上下同宽",
    "source": "editorial"
   },
   {
+   "id": "dropped_shoulder",
    "zh": "落肩",
    "en": "dropped shoulder",
    "aliases": [],
@@ -382,6 +412,7 @@
    "source": "editorial"
   },
   {
+   "id": "padded_shoulder",
    "zh": "垫肩",
    "en": "padded shoulder",
    "aliases": [
@@ -395,6 +426,7 @@
    "source": "editorial"
   },
   {
+   "id": "silhouette",
    "zh": "廓形",
    "en": "silhouette",
    "aliases": [
@@ -408,6 +440,7 @@
    "source": "editorial"
   },
   {
+   "id": "volume",
    "zh": "量感",
    "en": "volume",
    "aliases": [],
@@ -419,6 +452,7 @@
    "source": "editorial"
   },
   {
+   "id": "cropped",
    "zh": "短款",
    "en": "cropped",
    "aliases": [],
@@ -430,6 +464,7 @@
    "source": "editorial"
   },
   {
+   "id": "longline",
    "zh": "长线条",
    "en": "longline",
    "aliases": [],
@@ -441,6 +476,7 @@
    "source": "editorial"
   },
   {
+   "id": "neckline",
    "zh": "领口",
    "en": "neckline",
    "aliases": [],
@@ -448,10 +484,11 @@
    "board": "silhouette",
    "parent": "部件",
    "criterion": "看锁骨附近的开口轮廓：V 形收尖、圆形为弧、方领有直角、一字领横向平直",
-   "confusable": "领型：领口是开口形状，领型是带领片的结构",
+   "confusable": "立领：立领是带领片的结构，领口只是开口形状",
    "source": "editorial"
   },
   {
+   "id": "sleeve",
    "zh": "袖型",
    "en": "sleeve",
    "aliases": [
@@ -465,6 +502,7 @@
    "source": "editorial"
   },
   {
+   "id": "hem",
    "zh": "下摆",
    "en": "hem",
    "aliases": [],
@@ -476,6 +514,7 @@
    "source": "editorial"
   },
   {
+   "id": "asymmetry",
    "zh": "不对称",
    "en": "asymmetry",
    "aliases": [
@@ -489,6 +528,7 @@
    "source": "editorial"
   },
   {
+   "id": "suit",
    "zh": "套装",
    "en": "suit",
    "aliases": [
@@ -502,6 +542,7 @@
    "source": "editorial"
   },
   {
+   "id": "tailoring",
    "zh": "剪裁",
    "en": "tailoring",
    "aliases": [
@@ -515,6 +556,7 @@
    "source": "editorial"
   },
   {
+   "id": "cut",
    "zh": "版型",
    "en": "cut",
    "aliases": [
@@ -528,6 +570,7 @@
    "source": "editorial"
   },
   {
+   "id": "structure",
    "zh": "结构",
    "en": "structure",
    "aliases": [
@@ -541,6 +584,7 @@
    "source": "editorial"
   },
   {
+   "id": "dart",
    "zh": "省道",
    "en": "dart",
    "aliases": [],
@@ -552,6 +596,7 @@
    "source": "editorial"
   },
   {
+   "id": "pleat",
    "zh": "褶裥",
    "en": "pleat",
    "aliases": [
@@ -565,6 +610,7 @@
    "source": "editorial"
   },
   {
+   "id": "gathering",
    "zh": "褶皱",
    "en": "gathering",
    "aliases": [
@@ -578,6 +624,7 @@
    "source": "editorial"
   },
   {
+   "id": "wrap",
    "zh": "围裹",
    "en": "wrap",
    "aliases": [
@@ -591,6 +638,7 @@
    "source": "editorial"
   },
   {
+   "id": "bias_cut",
    "zh": "斜裁",
    "en": "bias cut",
    "aliases": [
@@ -604,6 +652,7 @@
    "source": "editorial"
   },
   {
+   "id": "patchwork",
    "zh": "拼接",
    "en": "patchwork",
    "aliases": [
@@ -617,6 +666,7 @@
    "source": "editorial"
   },
   {
+   "id": "deconstruction",
    "zh": "解构",
    "en": "deconstruction",
    "aliases": [
@@ -630,6 +680,7 @@
    "source": "editorial"
   },
   {
+   "id": "raw_edge",
    "zh": "毛边",
    "en": "raw edge",
    "aliases": [],
@@ -641,6 +692,7 @@
    "source": "editorial"
   },
   {
+   "id": "quilting",
    "zh": "绗缝",
    "en": "quilting",
    "aliases": [
@@ -650,10 +702,11 @@
    "board": "construction",
    "parent": "缝制",
    "criterion": "两层布夹填充物，用线缝出格子或平行线，表面鼓起",
-   "confusable": "压线：压线只是装饰线迹，绗缝有夹层与填充",
+   "confusable": "明线：明线只有线迹；绗缝有夹层与填充",
    "source": "editorial"
   },
   {
+   "id": "weave",
    "zh": "编织",
    "en": "weave",
    "aliases": [
@@ -667,6 +720,7 @@
    "source": "editorial"
   },
   {
+   "id": "crochet",
    "zh": "钩针",
    "en": "crochet",
    "aliases": [],
@@ -674,10 +728,11 @@
    "board": "construction",
    "parent": "工艺",
    "criterion": "用钩针单钩成链，成品有明显镂空孔洞与不规则边缘",
-   "confusable": "钩编：钩针是工具与动作，钩编是成品织物",
+   "confusable": "机织蕾丝：纹样规整；钩针有明显手工环扣",
    "source": "AAT:300264038"
   },
   {
+   "id": "cut_out",
    "zh": "镂空",
    "en": "cut-out",
    "aliases": [
@@ -691,6 +746,7 @@
    "source": "editorial"
   },
   {
+   "id": "drawstring",
    "zh": "抽绳",
    "en": "drawstring",
    "aliases": [],
@@ -702,6 +758,7 @@
    "source": "editorial"
   },
   {
+   "id": "lacing",
    "zh": "系带",
    "en": "lacing",
    "aliases": [
@@ -715,6 +772,7 @@
    "source": "editorial"
   },
   {
+   "id": "knot_button",
    "zh": "盘扣",
    "en": "knot button",
    "aliases": [
@@ -728,6 +786,7 @@
    "source": "editorial"
   },
   {
+   "id": "mandarin_collar",
    "zh": "立领",
    "en": "mandarin collar",
    "aliases": [
@@ -741,6 +800,7 @@
    "source": "editorial"
   },
   {
+   "id": "lapel",
    "zh": "翻领",
    "en": "lapel",
    "aliases": [],
@@ -748,10 +808,11 @@
    "board": "construction",
    "parent": "领型",
    "criterion": "领片向外翻折，能看到里外两层",
-   "confusable": "驳头：驳头是西装前襟翻折的部分，翻领泛指所有翻折领",
+   "confusable": "立领：立领竖起不翻折；翻领向外翻",
    "source": "editorial"
   },
   {
+   "id": "lining",
    "zh": "内衬",
    "en": "lining",
    "aliases": [],
@@ -763,6 +824,7 @@
    "source": "editorial"
   },
   {
+   "id": "embroidery",
    "zh": "刺绣",
    "en": "embroidery",
    "aliases": [
@@ -776,6 +838,7 @@
    "source": "editorial"
   },
   {
+   "id": "beading",
    "zh": "珠绣",
    "en": "beading",
    "aliases": [
@@ -789,6 +852,7 @@
    "source": "editorial"
   },
   {
+   "id": "sequin",
    "zh": "亮片",
    "en": "sequin",
    "aliases": [
@@ -802,6 +866,7 @@
    "source": "editorial"
   },
   {
+   "id": "fringe",
    "zh": "流苏",
    "en": "fringe",
    "aliases": [],
@@ -813,6 +878,7 @@
    "source": "editorial"
   },
   {
+   "id": "ruffle",
    "zh": "荷叶边",
    "en": "ruffle",
    "aliases": [
@@ -826,6 +892,7 @@
    "source": "editorial"
   },
   {
+   "id": "slit",
    "zh": "开衩",
    "en": "slit",
    "aliases": [],
@@ -837,6 +904,7 @@
    "source": "editorial"
   },
   {
+   "id": "layering",
    "zh": "层叠",
    "en": "layering",
    "aliases": [
@@ -850,6 +918,7 @@
    "source": "editorial"
   },
   {
+   "id": "waist_belt",
    "zh": "腰封",
    "en": "waist belt",
    "aliases": [
@@ -863,6 +932,7 @@
    "source": "editorial"
   },
   {
+   "id": "double_face",
    "zh": "双面呢",
    "en": "double-face",
    "aliases": [],
@@ -874,6 +944,7 @@
    "source": "editorial"
   },
   {
+   "id": "draping",
    "zh": "立体裁剪",
    "en": "draping",
    "aliases": [
@@ -887,6 +958,7 @@
    "source": "editorial"
   },
   {
+   "id": "sheer",
    "zh": "薄纱",
    "en": "sheer",
    "aliases": [
@@ -900,6 +972,7 @@
    "source": "editorial"
   },
   {
+   "id": "organza",
    "zh": "欧根纱",
    "en": "organza",
    "aliases": [],
@@ -911,6 +984,7 @@
    "source": "editorial"
   },
   {
+   "id": "tulle",
    "zh": "网纱",
    "en": "tulle",
    "aliases": [
@@ -924,6 +998,7 @@
    "source": "editorial"
   },
   {
+   "id": "lace",
    "zh": "蕾丝",
    "en": "lace",
    "aliases": [],
@@ -935,6 +1010,7 @@
    "source": "editorial"
   },
   {
+   "id": "chiffon",
    "zh": "雪纺",
    "en": "chiffon",
    "aliases": [],
@@ -946,6 +1022,7 @@
    "source": "editorial"
   },
   {
+   "id": "silk",
    "zh": "真丝",
    "en": "silk",
    "aliases": [],
@@ -957,6 +1034,7 @@
    "source": "editorial"
   },
   {
+   "id": "satin",
    "zh": "缎面",
    "en": "satin",
    "aliases": [],
@@ -968,6 +1046,7 @@
    "source": "AAT:300132902"
   },
   {
+   "id": "velvet",
    "zh": "丝绒",
    "en": "velvet",
    "aliases": [],
@@ -979,6 +1058,7 @@
    "source": "editorial"
   },
   {
+   "id": "corduroy",
    "zh": "灯芯绒",
    "en": "corduroy",
    "aliases": [],
@@ -990,6 +1070,7 @@
    "source": "editorial"
   },
   {
+   "id": "suede",
    "zh": "麂皮",
    "en": "suede",
    "aliases": [],
@@ -1001,6 +1082,7 @@
    "source": "editorial"
   },
   {
+   "id": "leather",
    "zh": "皮革",
    "en": "leather",
    "aliases": [],
@@ -1012,6 +1094,7 @@
    "source": "editorial"
   },
   {
+   "id": "patent_leather",
    "zh": "漆皮",
    "en": "patent leather",
    "aliases": [
@@ -1025,6 +1108,7 @@
    "source": "editorial"
   },
   {
+   "id": "nappa",
    "zh": "纳帕皮",
    "en": "nappa",
    "aliases": [],
@@ -1036,6 +1120,7 @@
    "source": "editorial"
   },
   {
+   "id": "shearling",
    "zh": "羊羔毛",
    "en": "shearling",
    "aliases": [],
@@ -1047,6 +1132,7 @@
    "source": "editorial"
   },
   {
+   "id": "fur",
    "zh": "皮草",
    "en": "fur",
    "aliases": [],
@@ -1058,6 +1144,7 @@
    "source": "editorial"
   },
   {
+   "id": "faux_fur",
    "zh": "仿皮草",
    "en": "faux fur",
    "aliases": [],
@@ -1069,6 +1156,7 @@
    "source": "editorial"
   },
   {
+   "id": "tweed",
    "zh": "粗花呢",
    "en": "tweed",
    "aliases": [
@@ -1082,6 +1170,7 @@
    "source": "editorial"
   },
   {
+   "id": "wool",
    "zh": "羊毛",
    "en": "wool",
    "aliases": [],
@@ -1093,6 +1182,7 @@
    "source": "editorial"
   },
   {
+   "id": "cashmere",
    "zh": "羊绒",
    "en": "cashmere",
    "aliases": [],
@@ -1104,6 +1194,7 @@
    "source": "editorial"
   },
   {
+   "id": "mohair",
    "zh": "马海毛",
    "en": "mohair",
    "aliases": [],
@@ -1115,6 +1206,7 @@
    "source": "editorial"
   },
   {
+   "id": "knit",
    "zh": "针织",
    "en": "knit",
    "aliases": [
@@ -1128,6 +1220,7 @@
    "source": "editorial"
   },
   {
+   "id": "rib",
    "zh": "罗纹",
    "en": "rib",
    "aliases": [
@@ -1141,6 +1234,7 @@
    "source": "editorial"
   },
   {
+   "id": "jacquard",
    "zh": "提花",
    "en": "jacquard",
    "aliases": [],
@@ -1152,6 +1246,7 @@
    "source": "editorial"
   },
   {
+   "id": "denim",
    "zh": "牛仔",
    "en": "denim",
    "aliases": [
@@ -1165,6 +1260,7 @@
    "source": "AAT:300014068"
   },
   {
+   "id": "canvas",
    "zh": "帆布",
    "en": "canvas",
    "aliases": [],
@@ -1176,6 +1272,7 @@
    "source": "editorial"
   },
   {
+   "id": "taffeta",
    "zh": "塔夫绸",
    "en": "taffeta",
    "aliases": [],
@@ -1187,6 +1284,7 @@
    "source": "editorial"
   },
   {
+   "id": "technical_fabric",
    "zh": "科技面料",
    "en": "technical fabric",
    "aliases": [
@@ -1200,6 +1298,7 @@
    "source": "editorial"
   },
   {
+   "id": "acetate",
    "zh": "醋酸",
    "en": "acetate",
    "aliases": [],
@@ -1211,6 +1310,7 @@
    "source": "editorial"
   },
   {
+   "id": "viscose",
    "zh": "粘胶",
    "en": "viscose",
    "aliases": [
@@ -1224,6 +1324,7 @@
    "source": "editorial"
   },
   {
+   "id": "linen",
    "zh": "亚麻",
    "en": "linen",
    "aliases": [],
@@ -1235,6 +1336,7 @@
    "source": "editorial"
   },
   {
+   "id": "cotton",
    "zh": "棉",
    "en": "cotton",
    "aliases": [],
@@ -1246,6 +1348,7 @@
    "source": "editorial"
   },
   {
+   "id": "seersucker",
    "zh": "泡泡纱",
    "en": "seersucker",
    "aliases": [],
@@ -1257,6 +1360,7 @@
    "source": "editorial"
   },
   {
+   "id": "metallic_thread",
    "zh": "金属丝",
    "en": "metallic thread",
    "aliases": [
@@ -1270,6 +1374,7 @@
    "source": "editorial"
   },
   {
+   "id": "embossed",
    "zh": "压纹",
    "en": "embossed",
    "aliases": [],
@@ -1281,6 +1386,7 @@
    "source": "editorial"
   },
   {
+   "id": "washed",
    "zh": "做旧",
    "en": "washed",
    "aliases": [
@@ -1294,6 +1400,7 @@
    "source": "editorial"
   },
   {
+   "id": "brushed",
    "zh": "磨毛",
    "en": "brushed",
    "aliases": [],
@@ -1301,10 +1408,11 @@
    "board": "material",
    "parent": "后整理",
    "criterion": "表面一层细绒、光泽变哑",
-   "confusable": "拉毛：磨毛更细，拉毛绒更长",
+   "confusable": "与抓绒相比：磨毛是后整理起出的细短绒，抓绒是整体起绒面料",
    "source": "editorial"
   },
   {
+   "id": "sheen",
    "zh": "光泽",
    "en": "sheen",
    "aliases": [
@@ -1318,6 +1426,7 @@
    "source": "editorial"
   },
   {
+   "id": "matte",
    "zh": "哑光",
    "en": "matte",
    "aliases": [],
@@ -1329,6 +1438,7 @@
    "source": "editorial"
   },
   {
+   "id": "heavyweight",
    "zh": "厚重",
    "en": "heavyweight",
    "aliases": [],
@@ -1340,6 +1450,7 @@
    "source": "editorial"
   },
   {
+   "id": "lightweight",
    "zh": "轻薄",
    "en": "lightweight",
    "aliases": [],
@@ -1351,6 +1462,7 @@
    "source": "editorial"
   },
   {
+   "id": "earth_tone",
    "zh": "大地色",
    "en": "earth tone",
    "aliases": [
@@ -1364,6 +1476,7 @@
    "source": "editorial"
   },
   {
+   "id": "camel",
    "zh": "驼色",
    "en": "camel",
    "aliases": [],
@@ -1375,6 +1488,7 @@
    "source": "editorial"
   },
   {
+   "id": "caramel",
    "zh": "焦糖",
    "en": "caramel",
    "aliases": [],
@@ -1386,6 +1500,7 @@
    "source": "editorial"
   },
   {
+   "id": "chocolate_brown",
    "zh": "巧克力棕",
    "en": "chocolate brown",
    "aliases": [
@@ -1399,6 +1514,7 @@
    "source": "editorial"
   },
   {
+   "id": "brown",
    "zh": "咖啡棕",
    "en": "brown",
    "aliases": [
@@ -1412,6 +1528,7 @@
    "source": "editorial"
   },
   {
+   "id": "beige",
    "zh": "米色",
    "en": "beige",
    "aliases": [],
@@ -1423,6 +1540,7 @@
    "source": "editorial"
   },
   {
+   "id": "ivory",
    "zh": "象牙白",
    "en": "ivory",
    "aliases": [],
@@ -1434,6 +1552,7 @@
    "source": "editorial"
   },
   {
+   "id": "white",
    "zh": "纯白",
    "en": "white",
    "aliases": [],
@@ -1445,6 +1564,7 @@
    "source": "editorial"
   },
   {
+   "id": "black",
    "zh": "黑色",
    "en": "black",
    "aliases": [],
@@ -1456,17 +1576,19 @@
    "source": "editorial"
   },
   {
+   "id": "charcoal",
    "zh": "炭灰",
    "en": "charcoal",
    "aliases": [],
    "def": "接近黑的深灰",
    "board": "color",
    "parent": "色相",
-   "criterion": "深灰近黑",
+   "criterion": "明度很低、接近黑但仍能看出灰调，与黑色并列时略浅",
    "confusable": "鸽灰：鸽灰更浅",
    "source": "editorial"
   },
   {
+   "id": "dove_grey",
    "zh": "鸽灰",
    "en": "dove grey",
    "aliases": [
@@ -1480,6 +1602,7 @@
    "source": "editorial"
   },
   {
+   "id": "burgundy",
    "zh": "酒红",
    "en": "burgundy",
    "aliases": [
@@ -1493,6 +1616,7 @@
    "source": "editorial"
   },
   {
+   "id": "cherry_red",
    "zh": "樱桃红",
    "en": "cherry red",
    "aliases": [
@@ -1506,6 +1630,7 @@
    "source": "editorial"
   },
   {
+   "id": "chili_red",
    "zh": "辣椒红",
    "en": "chili red",
    "aliases": [],
@@ -1517,6 +1642,7 @@
    "source": "editorial"
   },
   {
+   "id": "red",
    "zh": "正红",
    "en": "red",
    "aliases": [],
@@ -1528,17 +1654,19 @@
    "source": "editorial"
   },
   {
+   "id": "coral",
    "zh": "珊瑚粉",
    "en": "coral",
    "aliases": [],
    "def": "偏橙的粉色",
    "board": "color",
    "parent": "色相",
-   "criterion": "粉中带橙",
+   "criterion": "粉中带橙、明度中高，与玫瑰粉并列时更暖",
    "confusable": "玫瑰粉：玫瑰粉带灰",
    "source": "editorial"
   },
   {
+   "id": "rose",
    "zh": "玫瑰粉",
    "en": "rose",
    "aliases": [
@@ -1547,11 +1675,12 @@
    "def": "带灰调的粉",
    "board": "color",
    "parent": "色相",
-   "criterion": "粉中带灰紫",
+   "criterion": "粉中带灰紫、明度中等，与珊瑚粉并列时更冷更灰",
    "confusable": "珊瑚粉：珊瑚粉偏橙",
    "source": "editorial"
   },
   {
+   "id": "nude_pink",
    "zh": "裸粉",
    "en": "nude pink",
    "aliases": [
@@ -1565,6 +1694,7 @@
    "source": "editorial"
   },
   {
+   "id": "dusty_blue",
    "zh": "雾霾蓝",
    "en": "dusty blue",
    "aliases": [],
@@ -1576,6 +1706,7 @@
    "source": "editorial"
   },
   {
+   "id": "princess_blue",
    "zh": "公主蓝",
    "en": "princess blue",
    "aliases": [],
@@ -1587,6 +1718,7 @@
    "source": "editorial"
   },
   {
+   "id": "luminous_blue",
    "zh": "夜光蓝",
    "en": "luminous blue",
    "aliases": [],
@@ -1598,17 +1730,19 @@
    "source": "editorial"
   },
   {
+   "id": "navy",
    "zh": "藏青",
    "en": "navy",
    "aliases": [],
    "def": "偏黑的深蓝",
    "board": "color",
    "parent": "色相",
-   "criterion": "深蓝近黑",
+   "criterion": "深蓝接近黑、饱和度低，与黑色并列时泛蓝",
    "confusable": "夜光蓝：夜光蓝更亮",
    "source": "editorial"
   },
   {
+   "id": "denim_blue",
    "zh": "牛仔蓝",
    "en": "denim blue",
    "aliases": [],
@@ -1620,6 +1754,7 @@
    "source": "editorial"
   },
   {
+   "id": "lagoon",
    "zh": "湖绿",
    "en": "lagoon",
    "aliases": [],
@@ -1631,6 +1766,7 @@
    "source": "editorial"
   },
   {
+   "id": "olive",
    "zh": "橄榄绿",
    "en": "olive",
    "aliases": [],
@@ -1642,6 +1778,7 @@
    "source": "editorial"
   },
   {
+   "id": "moss",
    "zh": "苔藓绿",
    "en": "moss",
    "aliases": [],
@@ -1653,6 +1790,7 @@
    "source": "editorial"
   },
   {
+   "id": "mint",
    "zh": "薄荷绿",
    "en": "mint",
    "aliases": [],
@@ -1664,6 +1802,7 @@
    "source": "editorial"
   },
   {
+   "id": "butter_yellow",
    "zh": "黄油黄",
    "en": "butter yellow",
    "aliases": [
@@ -1672,11 +1811,12 @@
    "def": "柔和的浅黄",
    "board": "color",
    "parent": "色相",
-   "criterion": "浅黄带奶感",
+   "criterion": "浅黄带奶感、饱和低，与茴香黄并列时更暖",
    "confusable": "茴香黄：茴香黄偏绿",
    "source": "editorial"
   },
   {
+   "id": "anise",
    "zh": "茴香黄",
    "en": "anise",
    "aliases": [],
@@ -1688,17 +1828,19 @@
    "source": "editorial"
   },
   {
+   "id": "turmeric",
    "zh": "姜黄",
    "en": "turmeric",
    "aliases": [],
    "def": "偏橙的深黄",
    "board": "color",
    "parent": "色相",
-   "criterion": "深黄带橙",
+   "criterion": "深黄带橙、饱和高，与琥珀并列时更黄更艳",
    "confusable": "琥珀：琥珀更棕",
    "source": "editorial"
   },
   {
+   "id": "amber",
    "zh": "琥珀",
    "en": "amber",
    "aliases": [],
@@ -1710,6 +1852,7 @@
    "source": "editorial"
   },
   {
+   "id": "metallic",
    "zh": "金属色",
    "en": "metallic",
    "aliases": [],
@@ -1721,6 +1864,7 @@
    "source": "editorial"
   },
   {
+   "id": "champagne",
    "zh": "香槟金",
    "en": "champagne",
    "aliases": [],
@@ -1732,17 +1876,19 @@
    "source": "editorial"
   },
   {
+   "id": "silver",
    "zh": "银色",
    "en": "silver",
    "aliases": [],
    "def": "金属银灰",
    "board": "color",
    "parent": "色相",
-   "criterion": "冷灰金属光",
+   "criterion": "冷灰金属光，与金色并列时明显偏冷",
    "confusable": "金属色：金属色偏暖",
    "source": "editorial"
   },
   {
+   "id": "purple",
    "zh": "紫色",
    "en": "purple",
    "aliases": [],
@@ -1754,17 +1900,19 @@
    "source": "editorial"
   },
   {
+   "id": "plum",
    "zh": "梅子紫",
    "en": "plum",
    "aliases": [],
    "def": "偏红的深紫",
    "board": "color",
    "parent": "色相",
-   "criterion": "深紫带红",
+   "criterion": "深紫带红、明度低，与紫色并列时更暗更偏红",
    "confusable": "紫色：紫色更纯更亮",
    "source": "editorial"
   },
   {
+   "id": "neon",
    "zh": "荧光色",
    "en": "neon",
    "aliases": [
@@ -1778,6 +1926,7 @@
    "source": "editorial"
   },
   {
+   "id": "color_block",
    "zh": "撞色",
    "en": "color-block",
    "aliases": [
@@ -1791,6 +1940,7 @@
    "source": "editorial"
   },
   {
+   "id": "quiet_luxury",
    "zh": "静奢",
    "en": "quiet luxury",
    "aliases": [
@@ -1804,6 +1954,7 @@
    "source": "editorial"
   },
   {
+   "id": "old_money",
    "zh": "老钱",
    "en": "old money",
    "aliases": [],
@@ -1815,6 +1966,7 @@
    "source": "editorial"
   },
   {
+   "id": "minimalism",
    "zh": "极简",
    "en": "minimalism",
    "aliases": [
@@ -1828,6 +1980,7 @@
    "source": "editorial"
   },
   {
+   "id": "maximalism",
    "zh": "繁复",
    "en": "maximalism",
    "aliases": [
@@ -1841,6 +1994,7 @@
    "source": "editorial"
   },
   {
+   "id": "light_chinese",
    "zh": "新中式",
    "en": "light Chinese",
    "aliases": [
@@ -1854,6 +2008,7 @@
    "source": "editorial"
   },
   {
+   "id": "guofeng",
    "zh": "国风",
    "en": "guofeng",
    "aliases": [
@@ -1867,6 +2022,7 @@
    "source": "editorial"
   },
   {
+   "id": "oriental_aesthetic",
    "zh": "东方美学",
    "en": "oriental aesthetic",
    "aliases": [
@@ -1880,6 +2036,7 @@
    "source": "editorial"
   },
   {
+   "id": "romanticism",
    "zh": "浪漫主义",
    "en": "romanticism",
    "aliases": [
@@ -1893,6 +2050,7 @@
    "source": "editorial"
   },
   {
+   "id": "bohemian",
    "zh": "波西米亚",
    "en": "bohemian",
    "aliases": [
@@ -1906,6 +2064,7 @@
    "source": "editorial"
   },
   {
+   "id": "preppy",
    "zh": "学院风",
    "en": "preppy",
    "aliases": [
@@ -1919,6 +2078,7 @@
    "source": "editorial"
   },
   {
+   "id": "rock",
    "zh": "摇滚",
    "en": "rock",
    "aliases": [
@@ -1932,6 +2092,7 @@
    "source": "editorial"
   },
   {
+   "id": "grunge",
    "zh": "垃圾摇滚",
    "en": "grunge",
    "aliases": [],
@@ -1943,6 +2104,7 @@
    "source": "editorial"
   },
   {
+   "id": "dark",
    "zh": "暗黑",
    "en": "dark",
    "aliases": [
@@ -1956,6 +2118,7 @@
    "source": "editorial"
   },
   {
+   "id": "vintage",
    "zh": "复古",
    "en": "vintage",
    "aliases": [
@@ -1965,10 +2128,11 @@
    "board": "aesthetic",
    "parent": "风格",
    "criterion": "宽肩或垫肩＋老式印花或色彩，比例偏八十至九十年代",
-   "confusable": "怀旧：复古是造型手法",
+   "confusable": "与整体照搬相比：复古只取宽肩、老印花等元素重新组合",
    "source": "editorial"
   },
   {
+   "id": "futurism",
    "zh": "未来主义",
    "en": "futurism",
    "aliases": [
@@ -1982,6 +2146,7 @@
    "source": "editorial"
   },
   {
+   "id": "techwear",
    "zh": "机能",
    "en": "techwear",
    "aliases": [
@@ -1995,6 +2160,7 @@
    "source": "editorial"
   },
   {
+   "id": "gorpcore",
    "zh": "户外",
    "en": "gorpcore",
    "aliases": [
@@ -2008,6 +2174,7 @@
    "source": "editorial"
   },
   {
+   "id": "sporty",
    "zh": "运动风",
    "en": "sporty",
    "aliases": [
@@ -2021,6 +2188,7 @@
    "source": "editorial"
   },
   {
+   "id": "streetwear",
    "zh": "街头",
    "en": "streetwear",
    "aliases": [
@@ -2034,6 +2202,7 @@
    "source": "editorial"
   },
   {
+   "id": "resort",
    "zh": "度假风",
    "en": "resort",
    "aliases": [
@@ -2047,6 +2216,7 @@
    "source": "editorial"
   },
   {
+   "id": "cottagecore",
    "zh": "田园",
    "en": "cottagecore",
    "aliases": [],
@@ -2058,6 +2228,7 @@
    "source": "editorial"
   },
   {
+   "id": "garden_core",
    "zh": "菜园",
    "en": "garden-core",
    "aliases": [],
@@ -2069,6 +2240,7 @@
    "source": "editorial"
   },
   {
+   "id": "goddess_core",
    "zh": "女神",
    "en": "goddess-core",
    "aliases": [],
@@ -2080,6 +2252,7 @@
    "source": "editorial"
   },
   {
+   "id": "balletcore",
    "zh": "芭蕾风",
    "en": "balletcore",
    "aliases": [],
@@ -2091,6 +2264,7 @@
    "source": "editorial"
   },
   {
+   "id": "coquette",
    "zh": "少女",
    "en": "coquette",
    "aliases": [],
@@ -2102,6 +2276,7 @@
    "source": "editorial"
   },
   {
+   "id": "power_dressing",
    "zh": "权力着装",
    "en": "power dressing",
    "aliases": [],
@@ -2113,6 +2288,7 @@
    "source": "editorial"
   },
   {
+   "id": "utilitarianism",
    "zh": "实用主义",
    "en": "utilitarianism",
    "aliases": [
@@ -2126,6 +2302,7 @@
    "source": "editorial"
   },
   {
+   "id": "ornamentalism",
    "zh": "装饰主义",
    "en": "ornamentalism",
    "aliases": [
@@ -2139,6 +2316,7 @@
    "source": "editorial"
   },
   {
+   "id": "surrealism",
    "zh": "超现实",
    "en": "surrealism",
    "aliases": [
@@ -2152,6 +2330,7 @@
    "source": "editorial"
   },
   {
+   "id": "unisex",
    "zh": "中性",
    "en": "unisex",
    "aliases": [],
@@ -2163,6 +2342,7 @@
    "source": "editorial"
   },
   {
+   "id": "genderless",
    "zh": "无性别",
    "en": "genderless",
    "aliases": [
@@ -2176,6 +2356,7 @@
    "source": "editorial"
   },
   {
+   "id": "craft",
    "zh": "手作",
    "en": "craft",
    "aliases": [
@@ -2189,6 +2370,7 @@
    "source": "editorial"
   },
   {
+   "id": "wabi_sabi",
    "zh": "侘寂",
    "en": "wabi-sabi",
    "aliases": [],
@@ -2200,6 +2382,7 @@
    "source": "editorial"
   },
   {
+   "id": "office",
    "zh": "通勤",
    "en": "office",
    "aliases": [
@@ -2213,6 +2396,7 @@
    "source": "editorial"
   },
   {
+   "id": "workwear",
    "zh": "职场",
    "en": "workwear",
    "aliases": [
@@ -2226,6 +2410,7 @@
    "source": "editorial"
   },
   {
+   "id": "everyday",
    "zh": "日常",
    "en": "everyday",
    "aliases": [
@@ -2239,6 +2424,7 @@
    "source": "editorial"
   },
   {
+   "id": "weekend",
    "zh": "周末",
    "en": "weekend",
    "aliases": [],
@@ -2250,6 +2436,7 @@
    "source": "editorial"
   },
   {
+   "id": "resort_wear",
    "zh": "度假",
    "en": "resort wear",
    "aliases": [
@@ -2263,6 +2450,7 @@
    "source": "editorial"
   },
   {
+   "id": "party",
    "zh": "派对",
    "en": "party",
    "aliases": [],
@@ -2274,6 +2462,7 @@
    "source": "editorial"
   },
   {
+   "id": "evening",
    "zh": "晚宴",
    "en": "evening",
    "aliases": [
@@ -2287,6 +2476,7 @@
    "source": "editorial"
   },
   {
+   "id": "red_carpet",
    "zh": "红毯",
    "en": "red carpet",
    "aliases": [],
@@ -2298,6 +2488,7 @@
    "source": "editorial"
   },
   {
+   "id": "wedding",
    "zh": "婚礼",
    "en": "wedding",
    "aliases": [
@@ -2311,6 +2502,7 @@
    "source": "editorial"
   },
   {
+   "id": "festival",
    "zh": "音乐节",
    "en": "festival",
    "aliases": [],
@@ -2322,10 +2514,12 @@
    "source": "editorial"
   },
   {
+   "id": "hiking",
    "zh": "徒步",
    "en": "hiking",
    "aliases": [
-    "outdoor"
+    "hiking",
+    "hiking trail"
    ],
    "def": "户外行走的装备",
    "board": "occasion",
@@ -2335,6 +2529,7 @@
    "source": "editorial"
   },
   {
+   "id": "gym",
    "zh": "运动健身",
    "en": "gym",
    "aliases": [
@@ -2348,6 +2543,7 @@
    "source": "editorial"
   },
   {
+   "id": "yoga",
    "zh": "瑜伽",
    "en": "yoga",
    "aliases": [],
@@ -2359,6 +2555,7 @@
    "source": "editorial"
   },
   {
+   "id": "cycling",
    "zh": "骑行",
    "en": "cycling",
    "aliases": [],
@@ -2370,6 +2567,7 @@
    "source": "editorial"
   },
   {
+   "id": "travel",
    "zh": "旅行",
    "en": "travel",
    "aliases": [],
@@ -2381,6 +2579,7 @@
    "source": "editorial"
   },
   {
+   "id": "loungewear",
    "zh": "居家",
    "en": "loungewear",
    "aliases": [
@@ -2394,6 +2593,7 @@
    "source": "editorial"
   },
   {
+   "id": "swimwear",
    "zh": "泳装",
    "en": "swimwear",
    "aliases": [
@@ -2407,6 +2607,7 @@
    "source": "editorial"
   },
   {
+   "id": "performance",
    "zh": "演出",
    "en": "performance",
    "aliases": [
@@ -2420,6 +2621,7 @@
    "source": "editorial"
   },
   {
+   "id": "date",
    "zh": "约会",
    "en": "date",
    "aliases": [],
@@ -2431,6 +2633,7 @@
    "source": "editorial"
   },
   {
+   "id": "campus",
    "zh": "开学",
    "en": "campus",
    "aliases": [
@@ -2444,6 +2647,7 @@
    "source": "editorial"
   },
   {
+   "id": "lunar_new_year",
    "zh": "新年",
    "en": "lunar new year",
    "aliases": [
@@ -2457,6 +2661,7 @@
    "source": "editorial"
   },
   {
+   "id": "transitional",
    "zh": "换季",
    "en": "transitional",
    "aliases": [],
@@ -2468,6 +2673,7 @@
    "source": "editorial"
   },
   {
+   "id": "raglan_sleeve",
    "zh": "插肩",
    "en": "raglan sleeve",
    "aliases": [
@@ -2482,6 +2688,7 @@
    "source": "editorial"
   },
   {
+   "id": "set_in_sleeve",
    "zh": "装袖",
    "en": "set-in sleeve",
    "aliases": [
@@ -2496,6 +2703,7 @@
    "source": "editorial"
   },
   {
+   "id": "topstitching",
    "zh": "明线",
    "en": "topstitching",
    "aliases": [
@@ -2510,6 +2718,7 @@
    "source": "editorial"
   },
   {
+   "id": "placket",
    "zh": "门襟",
    "en": "placket",
    "aliases": [
@@ -2524,6 +2733,7 @@
    "source": "editorial"
   },
   {
+   "id": "yoke",
    "zh": "育克",
    "en": "yoke",
    "aliases": [
@@ -2538,6 +2748,7 @@
    "source": "editorial"
   },
   {
+   "id": "worsted",
    "zh": "精纺",
    "en": "worsted",
    "aliases": [
@@ -2552,6 +2763,7 @@
    "source": "editorial"
   },
   {
+   "id": "poplin",
    "zh": "府绸",
    "en": "poplin",
    "aliases": [
@@ -2565,6 +2777,7 @@
    "source": "editorial"
   },
   {
+   "id": "gabardine",
    "zh": "华达呢",
    "en": "gabardine",
    "aliases": [
@@ -2575,10 +2788,11 @@
    "board": "material",
    "parent": "羊毛织物",
    "criterion": "斜纹角度陡（约 60 度以上），表面光滑耐磨",
-   "confusable": "斜纹布：斜纹角度更平缓，密度更低",
+   "confusable": "普通斜纹布：角度更平缓、密度更低",
    "source": "editorial"
   },
   {
+   "id": "cupro",
    "zh": "铜氨丝",
    "en": "cupro",
    "aliases": [
@@ -2593,6 +2807,7 @@
    "source": "editorial"
   },
   {
+   "id": "puff_sleeve",
    "zh": "泡泡袖",
    "en": "puff sleeve",
    "aliases": [
@@ -2607,6 +2822,7 @@
    "source": "editorial"
   },
   {
+   "id": "shawl_collar",
    "zh": "青果领",
    "en": "shawl collar",
    "aliases": [
@@ -2621,6 +2837,7 @@
    "source": "editorial"
   },
   {
+   "id": "peak_lapel",
    "zh": "戗驳领",
    "en": "peak lapel",
    "aliases": [
@@ -2635,6 +2852,7 @@
    "source": "editorial"
   },
   {
+   "id": "notch_lapel",
    "zh": "平驳领",
    "en": "notch lapel",
    "aliases": [
@@ -2648,6 +2866,7 @@
    "source": "editorial"
   },
   {
+   "id": "princess_seam",
    "zh": "公主线",
    "en": "princess seam",
    "aliases": [
@@ -2662,6 +2881,7 @@
    "source": "editorial"
   },
   {
+   "id": "binding",
    "zh": "包边",
    "en": "binding",
    "aliases": [
@@ -2676,6 +2896,7 @@
    "source": "editorial"
   },
   {
+   "id": "piping",
    "zh": "嵌线",
    "en": "piping",
    "aliases": [
@@ -2690,6 +2911,7 @@
    "source": "editorial"
   },
   {
+   "id": "pleating",
    "zh": "压褶",
    "en": "pleating",
    "aliases": [
@@ -2704,6 +2926,7 @@
    "source": "editorial"
   },
   {
+   "id": "ruching",
    "zh": "抽褶",
    "en": "ruching",
    "aliases": [
@@ -2718,6 +2941,7 @@
    "source": "editorial"
   },
   {
+   "id": "slash_pocket",
    "zh": "斜插袋",
    "en": "slash pocket",
    "aliases": [
@@ -2732,6 +2956,7 @@
    "source": "editorial"
   },
   {
+   "id": "patch_pocket",
    "zh": "贴袋",
    "en": "patch pocket",
    "aliases": [
@@ -2745,6 +2970,7 @@
    "source": "editorial"
   },
   {
+   "id": "back_vent",
    "zh": "后中开衩",
    "en": "back vent",
    "aliases": [
@@ -2759,6 +2985,7 @@
    "source": "editorial"
   },
   {
+   "id": "hidden_placket",
    "zh": "暗门襟",
    "en": "hidden placket",
    "aliases": [
@@ -2773,6 +3000,7 @@
    "source": "editorial"
   },
   {
+   "id": "cowl_neck",
    "zh": "堆堆领",
    "en": "cowl neck",
    "aliases": [
@@ -2787,6 +3015,7 @@
    "source": "editorial"
   },
   {
+   "id": "collarless",
    "zh": "无领",
    "en": "collarless",
    "aliases": [
@@ -2801,6 +3030,7 @@
    "source": "editorial"
   },
   {
+   "id": "melton",
    "zh": "麦尔登呢",
    "en": "melton",
    "aliases": [
@@ -2815,6 +3045,7 @@
    "source": "editorial"
   },
   {
+   "id": "oxford",
    "zh": "牛津纺",
    "en": "oxford",
    "aliases": [
@@ -2829,6 +3060,7 @@
    "source": "editorial"
   },
   {
+   "id": "burnout",
    "zh": "烂花",
    "en": "burnout",
    "aliases": [
@@ -2843,6 +3075,7 @@
    "source": "editorial"
   },
   {
+   "id": "crinkle",
    "zh": "压皱",
    "en": "crinkle",
    "aliases": [
@@ -2857,6 +3090,7 @@
    "source": "editorial"
   },
   {
+   "id": "modal",
    "zh": "莫代尔",
    "en": "modal",
    "aliases": [
@@ -2870,6 +3104,7 @@
    "source": "editorial"
   },
   {
+   "id": "lyocell",
    "zh": "莱赛尔",
    "en": "lyocell",
    "aliases": [
@@ -2884,6 +3119,7 @@
    "source": "editorial"
   },
   {
+   "id": "nylon",
    "zh": "锦纶",
    "en": "nylon",
    "aliases": [
@@ -2898,6 +3134,7 @@
    "source": "editorial"
   },
   {
+   "id": "spandex",
    "zh": "氨纶",
    "en": "spandex",
    "aliases": [
@@ -2913,6 +3150,7 @@
    "source": "editorial"
   },
   {
+   "id": "alpaca",
    "zh": "阿尔帕卡",
    "en": "alpaca",
    "aliases": [
@@ -2927,6 +3165,7 @@
    "source": "editorial"
   },
   {
+   "id": "fleece",
    "zh": "抓绒",
    "en": "fleece",
    "aliases": [
@@ -2941,6 +3180,7 @@
    "source": "editorial"
   },
   {
+   "id": "piqu",
    "zh": "珠地布",
    "en": "piqué",
    "aliases": [
@@ -2955,6 +3195,7 @@
    "source": "editorial"
   },
   {
+   "id": "chenille",
    "zh": "雪尼尔",
    "en": "chenille",
    "aliases": [
@@ -2969,6 +3210,7 @@
    "source": "editorial"
   },
   {
+   "id": "coated_fabric",
    "zh": "涂层布",
    "en": "coated fabric",
    "aliases": [
@@ -2983,6 +3225,7 @@
    "source": "editorial"
   },
   {
+   "id": "leg_of_mutton_sleeve",
    "zh": "羊腿袖",
    "en": "leg-of-mutton sleeve",
    "aliases": [
@@ -2997,6 +3240,7 @@
    "source": "editorial"
   },
   {
+   "id": "batwing_sleeve",
    "zh": "蝙蝠袖",
    "en": "batwing sleeve",
    "aliases": [
@@ -3011,6 +3255,7 @@
    "source": "editorial"
   },
   {
+   "id": "turtleneck",
    "zh": "高领",
    "en": "turtleneck",
    "aliases": [
@@ -3025,6 +3270,7 @@
    "source": "editorial"
   },
   {
+   "id": "boat_neck",
    "zh": "一字领",
    "en": "boat neck",
    "aliases": [
@@ -3039,6 +3285,7 @@
    "source": "editorial"
   },
   {
+   "id": "square_neck",
    "zh": "方领",
    "en": "square neck",
    "aliases": [
@@ -3052,6 +3299,7 @@
    "source": "editorial"
   },
   {
+   "id": "halter",
    "zh": "挂脖",
    "en": "halter",
    "aliases": [
@@ -3066,6 +3314,7 @@
    "source": "editorial"
   },
   {
+   "id": "off_shoulder",
    "zh": "露肩",
    "en": "off-shoulder",
    "aliases": [
@@ -3080,6 +3329,7 @@
    "source": "editorial"
   },
   {
+   "id": "zipper",
    "zh": "拉链",
    "en": "zipper",
    "aliases": [
@@ -3094,6 +3344,7 @@
    "source": "editorial"
   },
   {
+   "id": "button",
    "zh": "纽扣",
    "en": "button",
    "aliases": [
@@ -3107,6 +3358,7 @@
    "source": "editorial"
   },
   {
+   "id": "tuck",
    "zh": "打褶",
    "en": "tuck",
    "aliases": [
@@ -3121,6 +3373,7 @@
    "source": "editorial"
   },
   {
+   "id": "tab",
    "zh": "袢带",
    "en": "tab",
    "aliases": [
@@ -3131,10 +3384,11 @@
    "board": "construction",
    "parent": "细节",
    "criterion": "有一小段横向或纵向的带状结构，两端缝死、中间可穿带",
-   "confusable": "肩章：肩章固定在肩线，袢带位置更自由",
+   "confusable": "与肩章相比：袢带两端固定、中间可穿带，肩章固定在肩线",
    "source": "editorial"
   },
   {
+   "id": "bust_dart",
    "zh": "胸省",
    "en": "bust dart",
    "aliases": [
@@ -3144,10 +3398,11 @@
    "board": "construction",
    "parent": "省道",
    "criterion": "从胸点向侧缝、肩或腰方向有一条逐渐收窄的缝线",
-   "confusable": "腰省：腰省在腰部收，胸省从胸点出发",
+   "confusable": "省道：胸省是从胸点出发的一种省道",
    "source": "editorial"
   },
   {
+   "id": "polyester",
    "zh": "涤纶",
    "en": "polyester",
    "aliases": [
@@ -3162,6 +3417,7 @@
    "source": "editorial"
   },
   {
+   "id": "mercerized_cotton",
    "zh": "丝光棉",
    "en": "mercerized cotton",
    "aliases": [
@@ -3175,6 +3431,7 @@
    "source": "editorial"
   },
   {
+   "id": "terry",
    "zh": "毛圈布",
    "en": "terry",
    "aliases": [
@@ -3189,6 +3446,7 @@
    "source": "editorial"
   },
   {
+   "id": "mesh",
    "zh": "网眼布",
    "en": "mesh",
    "aliases": [
@@ -3203,6 +3461,7 @@
    "source": "editorial"
   },
   {
+   "id": "down",
    "zh": "羽绒",
    "en": "down",
    "aliases": [
@@ -3217,6 +3476,7 @@
    "source": "editorial"
   },
   {
+   "id": "brocade",
    "zh": "织锦",
    "en": "brocade",
    "aliases": [
@@ -3231,6 +3491,7 @@
    "source": "editorial"
   },
   {
+   "id": "nonwoven",
    "zh": "无纺布",
    "en": "nonwoven",
    "aliases": [
@@ -3244,6 +3505,7 @@
    "source": "editorial"
   },
   {
+   "id": "vegan_leather",
    "zh": "素皮",
    "en": "vegan leather",
    "aliases": [
@@ -3258,6 +3520,7 @@
    "source": "editorial"
   },
   {
+   "id": "bamboo_fiber",
    "zh": "竹纤维",
    "en": "bamboo fiber",
    "aliases": [
@@ -3271,6 +3534,7 @@
    "source": "editorial"
   },
   {
+   "id": "faux_shearling",
    "zh": "羊羔绒",
    "en": "faux shearling",
    "aliases": [
@@ -3285,6 +3549,7 @@
    "source": "editorial"
   },
   {
+   "id": "metallic_yarn",
    "zh": "金银丝",
    "en": "metallic yarn",
    "aliases": [
@@ -3299,6 +3564,7 @@
    "source": "editorial"
   },
   {
+   "id": "foil_print",
    "zh": "烫金",
    "en": "foil print",
    "aliases": [
@@ -3313,6 +3579,7 @@
    "source": "editorial"
   },
   {
+   "id": "seam_sealing",
    "zh": "压胶",
    "en": "seam sealing",
    "aliases": [
@@ -3327,6 +3594,7 @@
    "source": "editorial"
   },
   {
+   "id": "3d_applique",
    "zh": "立体花",
    "en": "3d applique",
    "aliases": [
@@ -3341,6 +3609,7 @@
    "source": "editorial"
   },
   {
+   "id": "reflective_fabric",
    "zh": "反光面料",
    "en": "reflective fabric",
    "aliases": [
@@ -3355,6 +3624,7 @@
    "source": "editorial"
   },
   {
+   "id": "memory_fabric",
    "zh": "记忆面料",
    "en": "memory fabric",
    "aliases": [
@@ -3368,6 +3638,7 @@
    "source": "editorial"
   },
   {
+   "id": "recycled_polyester",
    "zh": "再生涤纶",
    "en": "recycled polyester",
    "aliases": [
@@ -3382,6 +3653,7 @@
    "source": "editorial"
   },
   {
+   "id": "organic_cotton",
    "zh": "有机棉",
    "en": "organic cotton",
    "aliases": [
@@ -3395,6 +3667,7 @@
    "source": "editorial"
   },
   {
+   "id": "buckle",
    "zh": "搭扣",
    "en": "buckle",
    "aliases": [
@@ -3409,6 +3682,7 @@
    "source": "editorial"
   },
   {
+   "id": "rivet",
    "zh": "铆钉",
    "en": "rivet",
    "aliases": [
@@ -3423,6 +3697,7 @@
    "source": "editorial"
   },
   {
+   "id": "collar_stand",
    "zh": "领座",
    "en": "collar stand",
    "aliases": [
@@ -3437,6 +3712,7 @@
    "source": "editorial"
   },
   {
+   "id": "waistline",
    "zh": "腰线",
    "en": "waistline",
    "aliases": [
@@ -3451,6 +3727,7 @@
    "source": "editorial"
   },
   {
+   "id": "pocket_flap",
    "zh": "口袋盖",
    "en": "pocket flap",
    "aliases": [
@@ -3465,6 +3742,7 @@
    "source": "editorial"
   },
   {
+   "id": "lace_up",
    "zh": "绑带",
    "en": "lace-up",
    "aliases": [
@@ -3479,6 +3757,7 @@
    "source": "editorial"
   },
   {
+   "id": "shoulder_seam",
    "zh": "肩线",
    "en": "shoulder seam",
    "aliases": [
@@ -3492,6 +3771,7 @@
    "source": "editorial"
   },
   {
+   "id": "armhole",
    "zh": "袖窿",
    "en": "armhole",
    "aliases": [
@@ -3506,6 +3786,7 @@
    "source": "editorial"
   },
   {
+   "id": "snap_button",
    "zh": "按扣",
    "en": "snap button",
    "aliases": [
@@ -3520,6 +3801,7 @@
    "source": "editorial"
   },
   {
+   "id": "velcro",
    "zh": "魔术贴",
    "en": "velcro",
    "aliases": [
@@ -3534,6 +3816,7 @@
    "source": "editorial"
   },
   {
+   "id": "elastic_waist",
    "zh": "松紧腰",
    "en": "elastic waist",
    "aliases": [
@@ -3548,6 +3831,7 @@
    "source": "editorial"
   },
   {
+   "id": "sleeveless",
    "zh": "无袖",
    "en": "sleeveless",
    "aliases": [
@@ -3557,10 +3841,11 @@
    "board": "construction",
    "parent": "袖型",
    "criterion": "肩部以下没有袖片，袖窿边缘直接包边或贴边",
-   "confusable": "盖袖：盖袖有一小段覆盖肩头的袖片，无袖完全没有",
+   "confusable": "袖窿：无袖只是没有袖片，袖窿仍然是结构",
    "source": "editorial"
   },
   {
+   "id": "ponte",
    "zh": "罗马布",
    "en": "ponte",
    "aliases": [
@@ -3575,6 +3860,7 @@
    "source": "editorial"
   },
   {
+   "id": "scuba",
    "zh": "太空棉",
    "en": "scuba",
    "aliases": [
@@ -3589,6 +3875,7 @@
    "source": "editorial"
   },
   {
+   "id": "slub_yarn",
    "zh": "竹节纱",
    "en": "slub yarn",
    "aliases": [
@@ -3603,6 +3890,7 @@
    "source": "editorial"
   },
   {
+   "id": "jute",
    "zh": "黄麻",
    "en": "jute",
    "aliases": [
@@ -3616,6 +3904,7 @@
    "source": "editorial"
   },
   {
+   "id": "hemp",
    "zh": "大麻",
    "en": "hemp",
    "aliases": [
@@ -3630,6 +3919,7 @@
    "source": "editorial"
   },
   {
+   "id": "stone_wash",
    "zh": "石磨水洗",
    "en": "stone wash",
    "aliases": [
@@ -3644,6 +3934,7 @@
    "source": "editorial"
   },
   {
+   "id": "stretch_cotton",
    "zh": "弹力棉",
    "en": "stretch cotton",
    "aliases": [
@@ -3658,6 +3949,7 @@
    "source": "editorial"
   },
   {
+   "id": "velour",
    "zh": "天鹅绒",
    "en": "velour",
    "aliases": [
@@ -3672,6 +3964,7 @@
    "source": "editorial"
   },
   {
+   "id": "jacquard_velvet",
    "zh": "提花绒",
    "en": "jacquard velvet",
    "aliases": [
@@ -3685,6 +3978,7 @@
    "source": "editorial"
   },
   {
+   "id": "alpaca_wool",
    "zh": "羊驼呢",
    "en": "alpaca wool",
    "aliases": [
@@ -3698,6 +3992,7 @@
    "source": "editorial"
   },
   {
+   "id": "flocking",
    "zh": "植绒",
    "en": "flocking",
    "aliases": [
@@ -3712,6 +4007,7 @@
    "source": "editorial"
   },
   {
+   "id": "laminated_fabric",
    "zh": "复合面料",
    "en": "laminated fabric",
    "aliases": [
@@ -3726,6 +4022,7 @@
    "source": "editorial"
   },
   {
+   "id": "shirt_collar",
    "zh": "衬衫领",
    "en": "shirt collar",
    "aliases": [
@@ -3740,6 +4037,7 @@
    "source": "editorial"
   },
   {
+   "id": "overlock",
    "zh": "锁边",
    "en": "overlock",
    "aliases": [
@@ -3754,6 +4052,7 @@
    "source": "editorial"
   },
   {
+   "id": "rolled_hem",
    "zh": "卷边",
    "en": "rolled hem",
    "aliases": [
@@ -3768,6 +4067,7 @@
    "source": "editorial"
   },
   {
+   "id": "poly_cotton",
    "zh": "涤棉",
    "en": "poly-cotton",
    "aliases": [
@@ -3782,6 +4082,7 @@
    "source": "editorial"
   },
   {
+   "id": "wool_polyester",
    "zh": "毛涤",
    "en": "wool-polyester",
    "aliases": [
@@ -3793,6 +4094,310 @@
    "parent": "混纺织物",
    "criterion": "有羊毛的哑光与垂感，但比纯羊毛更挺、更耐磨",
    "confusable": "精纺：精纺指纱线与织法，毛涤指纤维成分",
+   "source": "editorial"
+  },
+  {
+   "id": "print",
+   "zh": "印花",
+   "en": "print",
+   "aliases": [
+    "印花布",
+    "printed"
+   ],
+   "def": "把图案印在织物表面的工艺",
+   "board": "material",
+   "parent": "图案",
+   "criterion": "布面有清晰图案且正反两面图案相同（印花不织入）",
+   "confusable": "提花：提花是织出来的，正反不同；印花是印上去的",
+   "source": "editorial"
+  },
+  {
+   "id": "check",
+   "zh": "格纹",
+   "en": "check",
+   "aliases": [
+    "格子",
+    "plaid",
+    "tartan"
+   ],
+   "def": "由纵横线条交织形成的方格图案",
+   "board": "material",
+   "parent": "图案",
+   "criterion": "布面有正交的横竖线，形成大小均匀的方格",
+   "confusable": "条纹：条纹只有单向线条",
+   "source": "editorial"
+  },
+  {
+   "id": "stripe",
+   "zh": "条纹",
+   "en": "stripe",
+   "aliases": [
+    "条子"
+   ],
+   "def": "单向平行线条构成的图案",
+   "board": "material",
+   "parent": "图案",
+   "criterion": "布面只有一组平行直线，方向单一",
+   "confusable": "格纹：格纹是横竖两组线交叉",
+   "source": "editorial"
+  },
+  {
+   "id": "abstract_print",
+   "zh": "抽象印花",
+   "en": "abstract print",
+   "aliases": [
+    "抽象图案"
+   ],
+   "def": "不以具象物体为对象的图形印花",
+   "board": "material",
+   "parent": "图案",
+   "criterion": "图案由色块、线条或不规则形状构成，看不出具体物体",
+   "confusable": "花卉印花：花卉能辨认出花叶",
+   "source": "editorial"
+  },
+  {
+   "id": "floral_print",
+   "zh": "花卉印花",
+   "en": "floral print",
+   "aliases": [
+    "碎花",
+    "花朵印花"
+   ],
+   "def": "以花、叶为母题的印花",
+   "board": "material",
+   "parent": "图案",
+   "criterion": "图案中能辨认出花瓣、叶片的轮廓，疏密不定",
+   "confusable": "抽象印花：抽象印花认不出具体花形",
+   "source": "editorial"
+  },
+  {
+   "id": "houndstooth",
+   "zh": "千鸟格",
+   "en": "houndstooth",
+   "aliases": [
+    "千鸟纹"
+   ],
+   "def": "由断裂小方格组成的锯齿状格纹",
+   "board": "material",
+   "parent": "图案",
+   "criterion": "图案呈细小犬牙交错的锯齿格，远看有颗粒感",
+   "confusable": "格纹：千鸟格是断裂锯齿，格纹是完整方格",
+   "source": "editorial"
+  },
+  {
+   "id": "polka_dot",
+   "zh": "波点",
+   "en": "polka dot",
+   "aliases": [
+    "圆点",
+    "dots"
+   ],
+   "def": "规则排列的圆点图案",
+   "board": "material",
+   "parent": "图案",
+   "criterion": "布面有等距圆形斑点，大小一致",
+   "confusable": "豹纹：豹纹是不规则花斑",
+   "source": "editorial"
+  },
+  {
+   "id": "leopard_print",
+   "zh": "豹纹",
+   "en": "leopard print",
+   "aliases": [
+    "动物纹",
+    "animal print"
+   ],
+   "def": "模仿豹皮毛的花斑图案",
+   "board": "material",
+   "parent": "图案",
+   "criterion": "不规则斑点外有深色描边，形态接近动物皮毛",
+   "confusable": "波点：波点是规整圆点",
+   "source": "editorial"
+  },
+  {
+   "id": "color_block_panel",
+   "zh": "拼色",
+   "en": "color block",
+   "aliases": [
+    "色块拼接",
+    "colour block"
+   ],
+   "def": "两种以上高对比色块直接拼接",
+   "board": "material",
+   "parent": "图案",
+   "criterion": "同件衣服上出现两块以上饱和色块，边界清晰",
+   "confusable": "撞色：撞色是配色关系，拼色是结构上的色块拼接",
+   "source": "editorial"
+  },
+  {
+   "id": "twill",
+   "zh": "斜纹",
+   "en": "twill",
+   "aliases": [
+    "斜纹布"
+   ],
+   "def": "经纬线以斜向组织交织、表面呈斜线的织法",
+   "board": "material",
+   "parent": "织法",
+   "criterion": "表面有连续的斜向纹路，角度一致",
+   "confusable": "平纹：平纹是正交格状，没有斜线",
+   "source": "editorial"
+  },
+  {
+   "id": "gauze",
+   "zh": "纱罗",
+   "en": "gauze",
+   "aliases": [
+    "绉纱",
+    "纱"
+   ],
+   "def": "经纬稀疏、轻薄透气的平纹织物",
+   "board": "material",
+   "parent": "纱质",
+   "criterion": "布面轻薄透光、纱线间有明显空隙，手感干爽",
+   "confusable": "薄纱：纱罗更稀疏更干，薄纱更滑更垂",
+   "source": "editorial"
+  },
+  {
+   "id": "opaque",
+   "zh": "不透明",
+   "en": "opaque",
+   "aliases": [
+    "不透"
+   ],
+   "def": "完全不透光、看不到底层",
+   "board": "material",
+   "parent": "外观",
+   "criterion": "对着光源看不到手影或底层颜色",
+   "confusable": "轻薄：轻薄会透光；不透明完全不透",
+   "source": "editorial"
+  },
+  {
+   "id": "underlayer",
+   "zh": "内搭",
+   "en": "underlayer",
+   "aliases": [
+    "打底",
+    "layer"
+   ],
+   "def": "穿在外层之下、露出领口或下摆的一层",
+   "board": "construction",
+   "parent": "层叠",
+   "criterion": "同一套造型里能看到两层领口、袖口或下摆叠在一起",
+   "confusable": "层叠：内搭只是其中一层，层叠指整体穿法",
+   "source": "editorial"
+  },
+  {
+   "id": "padded_jacket",
+   "zh": "棉服",
+   "en": "padded jacket",
+   "aliases": [
+    "棉夹克"
+   ],
+   "def": "填充化纤棉的绗缝外套",
+   "board": "silhouette",
+   "parent": "外套",
+   "criterion": "分格绗缝但蓬松度低于羽绒，按压回弹快",
+   "confusable": "羽绒服：羽绒回弹慢、更轻",
+   "source": "editorial"
+  },
+  {
+   "id": "short_skirt",
+   "zh": "短裙",
+   "en": "short skirt",
+   "aliases": [
+    "短半裙"
+   ],
+   "def": "下摆止于膝上十厘米以内的裙装",
+   "board": "silhouette",
+   "parent": "半裙",
+   "criterion": "下摆在膝盖上方，站立时露出大腿",
+   "confusable": "迷你裙：迷你裙更短，在大腿中段以上",
+   "source": "editorial"
+  },
+  {
+   "id": "straight",
+   "zh": "直筒",
+   "en": "straight",
+   "aliases": [
+    "H 型"
+   ],
+   "def": "肩、腰、下摆宽度基本一致的廓形",
+   "board": "silhouette",
+   "parent": "廓形",
+   "criterion": "腰宽与肩宽、摆宽相差很小",
+   "confusable": "收腰：收腰在腰部明显内收",
+   "source": "editorial"
+  },
+  {
+   "id": "skirt_hem",
+   "zh": "裙摆",
+   "en": "skirt hem",
+   "aliases": [
+    "裙下摆"
+   ],
+   "def": "裙装最下端的边缘形态",
+   "board": "construction",
+   "parent": "边缘",
+   "criterion": "看裙子最低边缘：散开、收拢、还是前短后长",
+   "confusable": "下摆：下摆泛指所有衣物底边",
+   "source": "editorial"
+  },
+  {
+   "id": "seam_line",
+   "zh": "分割线",
+   "en": "seam line",
+   "aliases": [
+    "结构线",
+    "拼接线"
+   ],
+   "def": "把衣片裁开后重新缝合形成的线",
+   "board": "construction",
+   "parent": "分割",
+   "criterion": "布面上有一条贯穿的缝线，两侧面料被裁开再拼",
+   "confusable": "省道：省道是直接缝掉多余量，不裁开",
+   "source": "editorial"
+  },
+  {
+   "id": "woven",
+   "zh": "梭织",
+   "en": "woven",
+   "aliases": [
+    "机织"
+   ],
+   "def": "经纬纱交织而成的织物，弹性小",
+   "board": "material",
+   "parent": "结构",
+   "criterion": "布面有经纬交织的格状结构，横向几乎不拉伸",
+   "confusable": "针织：针织是线圈套接，有弹性",
+   "source": "editorial"
+  },
+  {
+   "id": "plain_weave",
+   "zh": "平纹",
+   "en": "plain weave",
+   "aliases": [
+    "平织"
+   ],
+   "def": "经纬一上一下交织、表面平整的织法",
+   "board": "material",
+   "parent": "织法",
+   "criterion": "表面平整无斜线或凸起，经纬呈棋盘状交织",
+   "confusable": "斜纹：斜纹表面有连续斜线",
+   "source": "editorial"
+  },
+  {
+   "id": "straight_cut",
+   "zh": "直裁",
+   "en": "straight cut",
+   "aliases": [
+    "直丝裁剪"
+   ],
+   "def": "沿织物经纱方向裁剪的方式",
+   "board": "construction",
+   "parent": "剪裁",
+   "criterion": "布边与经纱平行，下摆平直不起波浪",
+   "confusable": "斜裁：斜裁与经纱成四十五度，下摆起波浪",
    "source": "editorial"
   }
  ]
